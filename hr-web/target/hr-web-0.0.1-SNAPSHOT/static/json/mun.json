@@ -1,0 +1,415 @@
+[
+  {
+    "F_ModuleId": "L1",
+    "F_ParentId": "0",
+    "F_FullName": "招聘管理",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": "/default"
+  },
+  {
+    "F_ModuleId": "L101",
+    "F_ParentId": "L1",
+    "F_FullName": "职位发布管理",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "/default"
+  },
+  {
+    "F_ModuleId": "L102",
+    "F_ParentId": "L1",
+    "F_FullName": "简历管理",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "/default"
+  },
+  {
+    "F_ModuleId": "L10201",
+    "F_ParentId": "L102",
+    "F_FullName": "简历登记",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "简历登记.html"
+  },
+  {
+    "F_ModuleId": "L10202",
+    "F_ParentId": "L102",
+    "F_FullName": "简历筛选",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "简历筛选.html"
+  },
+  {
+    "F_ModuleId": "L10203",
+    "F_ParentId": "L102",
+    "F_FullName": "有效简历查询",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "有效简历查询.html"
+  },
+  {
+    "F_ModuleId": "L103",
+    "F_ParentId": "L1",
+    "F_FullName": "面试管理",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "/default"
+  },
+  {
+    "F_ModuleId": "L10301",
+    "F_ParentId": "L103",
+    "F_FullName": "面试登记",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "面试登记.html"
+  },
+  {
+    "F_ModuleId": "L10302",
+    "F_ParentId": "L103",
+    "F_FullName": "面试结果筛选",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "面试结果筛选.html"
+  },
+  {
+    "F_ModuleId": "L104",
+    "F_ParentId": "L1",
+    "F_FullName": "录用管理",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "/default"
+  },
+  {
+    "F_ModuleId": "L10401",
+    "F_ParentId": "L104",
+    "F_FullName": "录用申请",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "录用申请.html"
+  },
+  {
+    "F_ModuleId": "L10402",
+    "F_ParentId": "L104",
+    "F_FullName": "录用审批",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "录用审批.html"
+  },
+  {
+    "F_ModuleId": "L10403",
+    "F_ParentId": "L104",
+    "F_FullName": "录用查询",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "录用查询.html"
+  },
+  {
+    "F_ModuleId": "L10101",
+    "F_ParentId": "L101",
+    "F_FullName": "职位发布登记",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "职位发布登记.html"
+  },
+  {
+    "F_ModuleId": "L10102",
+    "F_ParentId": "L101",
+    "F_FullName": "职位发布变更",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "职位发布变更.html"
+  },
+  {
+    "F_ModuleId": "L10103",
+    "F_ParentId": "L101",
+    "F_FullName": "职位发布查询",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "职位发布查询.html"
+  },
+  {
+    "F_ModuleId": "L2",
+    "F_ParentId": "0",
+    "F_FullName": "薪酬发放管理",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": "职位发布查询.html"
+  },
+  {
+    "F_ModuleId": "L201",
+    "F_ParentId": "L2",
+    "F_FullName": "薪酬发放登记",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "薪酬发放登记.html"
+  },
+  {
+    "F_ModuleId": "L202",
+    "F_ParentId": "L2",
+    "F_FullName": "薪酬发放登记复核",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "薪酬发放登记审核.html"
+  },
+  {
+    "F_ModuleId": "L203",
+    "F_ParentId": "L2",
+    "F_FullName": "薪酬发放查询",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "薪酬发放查询.html"
+  },
+  {
+    "F_ModuleId": "L3",
+    "F_ParentId": "0",
+    "F_FullName": "调用管理",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": "调用管理.html"
+  },
+  {
+    "F_ModuleId": "L301",
+    "F_ParentId": "L3",
+    "F_FullName": "调用登记",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "调用登记.html"
+  },
+  {
+    "F_ModuleId": "L302",
+    "F_ParentId": "L3",
+    "F_FullName": "调用审核",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "调动审核列表.html"
+  },
+  {
+    "F_ModuleId": "L303",
+    "F_ParentId": "L3",
+    "F_FullName": "调用查询",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "调动查询列表.html"
+  },
+  {
+    "F_ModuleId": "L4",
+    "F_ParentId": "0",
+    "F_FullName": "标准数据报表",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L401",
+    "F_ParentId": "L4",
+    "F_FullName": "Excel标准数据报表",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "Excel标准数据报表.html"
+  },
+  {
+    "F_ModuleId": "L402",
+    "F_ParentId": "L4",
+    "F_FullName": "Pdt标准数据报表",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "Pdf标准数据报表.html"
+  },
+  {
+    "F_ModuleId": "L403",
+    "F_ParentId": "L4",
+    "F_FullName": "Xml标准数据报表",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "Xml标准数据报表.html"
+  },
+  {
+    "F_ModuleId": "L5",
+    "F_ParentId": "0",
+    "F_FullName": "人力资源档案管理",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L501",
+    "F_ParentId": "L5",
+    "F_FullName": "人力资源档案登记 ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "人力资源档案登记.html"
+  },
+  {
+    "F_ModuleId": "L502",
+    "F_ParentId": "L5",
+    "F_FullName": "人力资源档案登记复核 ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "人力资源档案登记复核.html"
+  },
+  {
+    "F_ModuleId": "L503",
+    "F_ParentId": "L5",
+    "F_FullName": "人力资源档案查询 ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "人力资源档案查询.html"
+  },
+  {
+    "F_ModuleId": "L504",
+    "F_ParentId": "L5",
+    "F_FullName": "人力资源档案变更 ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "人力资源档案变更.html"
+  },
+  {
+    "F_ModuleId": "L505",
+    "F_ParentId": "L5",
+    "F_FullName": "人力资源档案删除管理 ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L50501",
+    "F_ParentId": "L505",
+    "F_FullName": "人力资源档案删除 ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L50502",
+    "F_ParentId": "L505",
+    "F_FullName": "人力资源档案恢复 ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "人力资源档案恢复.html"
+  },
+  {
+    "F_ModuleId": "L50503",
+    "F_ParentId": "L505",
+    "F_FullName": "人力资源档案永久删除 ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "人力资源档案永久删除.html"
+  },
+  {
+    "F_ModuleId": "L6",
+    "F_ParentId": "0",
+    "F_FullName": "权限管理",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L601",
+    "F_ParentId": "L6",
+    "F_FullName": "用户管理",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": "/hr/user/users"
+  },
+  {
+    "F_ModuleId": "L602",
+    "F_ParentId": "L6",
+    "F_FullName": "角色管理",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": "/hr/role/roles"
+  },
+  {
+    "F_ModuleId": "L7",
+    "F_ParentId": "0",
+    "F_FullName": "薪酬标准管理",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L701",
+    "F_ParentId": "L7",
+    "F_FullName": "薪酬标准登记",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "薪酬标准登记.html"
+  },
+  {
+    "F_ModuleId": "L702",
+    "F_ParentId": "L7",
+    "F_FullName": "薪酬标准登记复核",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "薪酬标准登记复核.html"
+  },
+  {
+    "F_ModuleId": "L703",
+    "F_ParentId": "L7",
+    "F_FullName": "薪酬标准查询",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "薪酬标准查询.html"
+  },
+  {
+    "F_ModuleId": "L703",
+    "F_ParentId": "L7",
+    "F_FullName": "薪酬标准变更",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "薪酬标准变更.html"
+  },
+  {
+    "F_ModuleId": "L8",
+    "F_ParentId": "0",
+    "F_FullName": "客户化设置",
+    "F_Icon": "fa fa-desktop",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L801",
+    "F_ParentId": "L8",
+    "F_FullName": "人力资源档案管理设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L80101",
+    "F_ParentId": "L801",
+    "F_FullName": "I级机构设置 ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "I级机构设置.html"
+  },
+  {
+    "F_ModuleId": "L80102",
+    "F_ParentId": "L801",
+    "F_FullName": "II级机构设置  ",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "II级机构设置.html"
+  },
+  {
+    "F_ModuleId": "L80103",
+    "F_ParentId": "L801",
+    "F_FullName": "III级机构设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "III级机构设置.html"
+  },
+  {
+    "F_ModuleId": "L80104",
+    "F_ParentId": "L801",
+    "F_FullName": "职称设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "职称设置.html"
+  },
+  {
+    "F_ModuleId": "L80105",
+    "F_ParentId": "L801",
+    "F_FullName": "职位分类设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "职位分类设置.html"
+  },
+  {
+    "F_ModuleId": "L80106",
+    "F_ParentId": "L801",
+    "F_FullName": "职位设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "职位设置.html"
+  },
+  {
+    "F_ModuleId": "L80107",
+    "F_ParentId": "L801",
+    "F_FullName": "公共属性设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "公共属性设置.html"
+  },
+  {
+    "F_ModuleId": "L802",
+    "F_ParentId": "L8",
+    "F_FullName": "薪酬管理设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L80201",
+    "F_ParentId": "L802",
+    "F_FullName": "薪酬项目设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "薪酬项目设置.html"
+  },
+  {
+    "F_ModuleId": "L80202",
+    "F_ParentId": "L802",
+    "F_FullName": "薪酬发放方式设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "薪酬发放方式设置.html"
+  },
+  {
+    "F_ModuleId": "L803",
+    "F_ParentId": "L8",
+    "F_FullName": "其他设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": ""
+  },
+  {
+    "F_ModuleId": "L80301",
+    "F_ParentId": "L803",
+    "F_FullName": "关键字查询设置",
+    "F_Icon": "fa fa-sitemap",
+    "F_UrlAddress": "关键字查询.html"
+  }
+]

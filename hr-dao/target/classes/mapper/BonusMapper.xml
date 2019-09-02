@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.BonusMapper">
+    <resultMap id="BaseResultMap" type="com.kexun.hr.model.Bonus">
+        <id column="bonId" jdbcType="INTEGER" property="bonid"/>
+        <result column="majorKindId" jdbcType="INTEGER" property="majorkindid"/>
+        <result column="majorKindName" jdbcType="VARCHAR" property="majorkindname"/>
+        <result column="majorId" jdbcType="INTEGER" property="majorid"/>
+        <result column="majorName" jdbcType="VARCHAR" property="majorname"/>
+        <result column="humanId" jdbcType="VARCHAR" property="humanid"/>
+        <result column="humanName" jdbcType="VARCHAR" property="humanname"/>
+        <result column="bonusItem" jdbcType="VARCHAR" property="bonusitem"/>
+        <result column="bonusWorth" jdbcType="INTEGER" property="bonusworth"/>
+        <result column="bonusDegree" jdbcType="VARCHAR" property="bonusdegree"/>
+        <result column="register" jdbcType="VARCHAR" property="register"/>
+        <result column="checker" jdbcType="VARCHAR" property="checker"/>
+        <result column="registTime" jdbcType="DATE" property="registtime"/>
+        <result column="checkTime" jdbcType="DATE" property="checktime"/>
+        <result column="checkStatus" jdbcType="INTEGER" property="checkstatus"/>
+    </resultMap>
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+</mapper>

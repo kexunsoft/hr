@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+    <!--拦截器-->
+    <mvc:interceptors>
+        <!--登录拦截器-->
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <mvc:mapping path="/user/**"/>
+            <mvc:mapping path="/role/**"/>
+            <mvc:mapping path="/right/**"/>
+            <mvc:mapping path="/Configpublicchar/**"/>
+            <mvc:mapping path="/HumanFile/**"/>
+            <mvc:mapping path="/Configfilefirstkind/**"/>
+            <mvc:mapping path="/Configfilesecondkind/**"/>
+            <mvc:mapping path="/Configfilethirdkind/**"/>
+            <mvc:mapping path="/Configmajor/**"/>
+            <mvc:mapping path="/Configmajordesignation/**"/>
+            <mvc:mapping path="/Configmajorkind/**"/>
+            <mvc:mapping path="/engageResume/**"/>
+            <mvc:mapping path="/Salarystandarddetails/**"/>
+            <mvc:mapping path="/salarystandardController/**"/>
+            <mvc:mapping path="/salaryGrant/**"/>
+            <mvc:exclude-mapping path="/user/login"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/parm"/>
+            <mvc:exclude-mapping path="/danger"/>
+            <mvc:exclude-mapping path="/error"/>
+            <bean class="com.kexun.hr.interceptor.LoginInterceptor">
+            </bean>
+        </mvc:interceptor>
+        <!--授权拦截器-->
+
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <mvc:mapping path="/user/**"/>
+            <mvc:exclude-mapping path="/index"/>
+            <mvc:exclude-mapping path="/home"/>
+            <mvc:exclude-mapping path="/user/loginout"/>
+            <mvc:exclude-mapping path="/user/login"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/parm"/>
+            <mvc:exclude-mapping path="/danger"/>
+            <mvc:exclude-mapping path="/error"/>
+            <bean class="com.kexun.hr.interceptor.AuthorInterceptor">
+            </bean>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
+
+    <!--视图控制器-->
+    <mvc:view-controller path="/login"
+                         view-name="login"></mvc:view-controller>
+    <mvc:view-controller path="/index"
+                         view-name="index"></mvc:view-controller>
+
+    <mvc:view-controller path="/home"
+                         view-name="home"></mvc:view-controller>
+
+    <mvc:resources mapping="/static/**" location="/static/"/>
+    <!-- 扫描Controller包 -->
+    <context:component-scan
+            base-package="com.kexun.hr.controller"/>
+    <mvc:annotation-driven
+            conversion-service="conversionService"/>
+    <mvc:default-servlet-handler/>
+    <!-- 视图解析器 -->
+    <bean
+            class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+            id="internalResourceViewResolver">
+        <property name="suffix" value=".jsp"/>
+        <property name="prefix" value="/WEB-INF/page/"></property>
+    </bean>
+
+    <!--文件上传配置-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="104857600"/>
+        <property name="maxInMemorySize" value="4096"/>
+        <property name="defaultEncoding" value="UTF-8"></property>
+    </bean>
+
+    <!--String转换Date 转换器-->
+    <bean id="stringToDate"
+          class="com.kexun.hr.converter.StringToDate"></bean>
+    <!--空String转换null 转换器-->
+    <bean id="stringToNull" class="com.kexun.hr.converter.StringToNull"></bean>
+
+    <!--注册转换器-->
+    <bean id="conversionService"
+          class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <ref bean="stringToDate"/>
+                <ref bean="stringToNull"/>
+            </set>
+        </property>
+    </bean>
+
+
+</beans>

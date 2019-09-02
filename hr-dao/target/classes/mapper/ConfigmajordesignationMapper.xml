@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.ConfigmajordesignationMapper">
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+  <resultMap id="BaseResultMap" type="com.kexun.hr.model.Configmajordesignation">
+    <id column="cmdId" jdbcType="INTEGER" property="cmdid" />
+    <result column="cmdName" jdbcType="VARCHAR" property="cmdname" />
+  </resultMap>
+  
+ 	<!-- 查询所有职称 -->
+ 	<select id="findConfigmajordesignation" resultMap="BaseResultMap">
+ 		select * from configmajordesignation
+ 	</select>
+ 	<!-- 查询所有职称分页 -->
+ 	<select id="findtechnicalQueryAll" resultMap="BaseResultMap">
+ 		select * from configmajordesignation
+ 	</select>
+ 	
+ 	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from configmajordesignation
+    where cmdId = #{cmdid,jdbcType=INTEGER}
+  </delete>
+</mapper>

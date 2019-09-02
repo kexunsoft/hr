@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.ConfigfilethirdkindMapper">
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
+	<resultMap id="BaseResultMap"
+		type="com.kexun.hr.model.Configfilethirdkind">
+		<id column="thirdKindId" jdbcType="INTEGER" property="thirdkindid" />
+		<result column="thirdKindName" jdbcType="VARCHAR"
+			property="thirdkindname" />
+		<result column="firstKindId" jdbcType="INTEGER"
+			property="firstkindid" />
+		<result column="secondKindId" jdbcType="INTEGER"
+			property="secondkindid" />
+		<result column="thirdKindSaleId" jdbcType="VARCHAR"
+			property="thirdkindsaleid" />
+		<result column="thirdKindIsRetail" jdbcType="VARCHAR"
+			property="thirdkindisretail" />
+	</resultMap>
+
+	<!-- 查询所有三级机构 -->
+	<select id="findConfigfilethirdkind" resultMap="BaseResultMap">
+		SELECT * from
+		configfilethirdkind
+	</select>
+	<!-- 三表联查 ，查询所有 -->
+	<select id="findConfigfilethirdkindQueryAll" resultType="map">
+		SELECT
+		cf.firstKindName,cs.secondKindName,cs.secondKindId,ct.thirdKindId,ct.thirdKindName,ct.thirdKindSaleId,ct.thirdKindIsRetail
+		from configfilethirdkind ct LEFT JOIN configfilefirstkind cf on
+		ct.firstKindId=cf.firstKindId JOIN configfilesecondkind cs on
+		ct.secondKindId=cs.secondKindId
+	</select>
+	<!-- 查询单个三级机构 -->
+	<select id="inquireConfigfilethirdkind" resultType="map"
+		parameterType="int">
+		SELECT
+		cf.firstKindName,cs.secondKindName,ct.thirdKindId,ct.thirdKindName,ct.thirdKindSaleId,ct.thirdKindIsRetail
+		from configfilethirdkind ct LEFT JOIN configfilefirstkind cf on
+		ct.firstKindId=cf.firstKindId JOIN configfilesecondkind cs on
+		ct.secondKindId=cs.secondKindId where thirdKindId =
+		#{thirdkindid,jdbcType=INTEGER}
+	</select>
+
+
+
+	<!-- 添加 -->
+	<insert id="insertSelective" parameterType="configfilethirdkind">
+		insert into configfilethirdkind
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="thirdkindid != null">
+				thirdKindId,
+			</if>
+			<if test="thirdkindname != null">
+				thirdKindName,
+			</if>
+			<if test="firstkindid != null">
+				firstKindId,
+			</if>
+			<if test="secondkindid != null">
+				secondKindId,
+			</if>
+			<if test="thirdkindsaleid != null">
+				thirdKindSaleId,
+			</if>
+			<if test="thirdkindisretail != null">
+				thirdKindIsRetail,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="thirdkindid != null">
+				#{thirdkindid,jdbcType=INTEGER},
+			</if>
+			<if test="thirdkindname != null">
+				#{thirdkindname,jdbcType=VARCHAR},
+			</if>
+			<if test="firstkindid != null">
+				#{firstkindid,jdbcType=INTEGER},
+			</if>
+			<if test="secondkindid != null">
+				#{secondkindid,jdbcType=INTEGER},
+			</if>
+			<if test="thirdkindsaleid != null">
+				#{thirdkindsaleid,jdbcType=VARCHAR},
+			</if>
+			<if test="thirdkindisretail != null">
+				#{thirdkindisretail,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 修改 -->
+	<update id="updateByPrimaryKeySelective"
+		parameterType="configfilethirdkind">
+		update configfilethirdkind
+		<set>
+			<if test="thirdkindname != null">
+				thirdKindName = #{thirdkindname,jdbcType=VARCHAR},
+			</if>
+			<if test="firstkindid != null">
+				firstKindId = #{firstkindid,jdbcType=INTEGER},
+			</if>
+			<if test="secondkindid != null">
+				secondKindId = #{secondkindid,jdbcType=INTEGER},
+			</if>
+			<if test="thirdkindsaleid != null">
+				thirdKindSaleId = #{thirdkindsaleid,jdbcType=VARCHAR},
+			</if>
+			<if test="thirdkindisretail != null">
+				thirdKindIsRetail =
+				#{thirdkindisretail,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where thirdKindId = #{thirdkindid,jdbcType=INTEGER}
+	</update>
+
+	<!-- 删除 -->
+	<delete id="deleteByPrimaryKey"
+		parameterType="java.lang.Integer">
+		delete from configfilethirdkind
+		where thirdKindId =
+		#{thirdkindid,jdbcType=INTEGER}
+	</delete>
+
+	<!-- 根据传入的二级机构主键查询三级机构 -->
+	<select id="findBysecondKindIdConfigfilethirdkind"
+		parameterType="Integer" resultMap="BaseResultMap">
+		select * from configfilethirdkind
+		where secondKindId=#{secondKindId}
+	</select>
+</mapper>

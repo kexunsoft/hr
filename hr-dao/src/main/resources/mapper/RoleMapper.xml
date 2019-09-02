@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.RoleMapper">
+    <select id="findRoleById" resultMap="roleMap" parameterType="int">
+		SELECT * FROM role WHERE roleId=#{id}
+	</select>
+
+    <select id="findRoles" resultType="role">
+		SELECT * FROM role ORDER BY roleId DESC
+	</select>
+
+    <insert id="addRole" parameterType="role">
+        INSERT INTO role(roleName,roleDesc) VALUES(#{roleName},#{roleDesc})
+    </insert>
+
+    <update id="updRole" parameterType="role">
+        UPDATE role SET roleDesc=#{roleDesc} WHERE roleId=#{roleId}
+    </update>
+
+    <delete id="delRole" parameterType="int">
+      DELETE FROM role WHERE roleId=#{roleId}
+    </delete>
+
+    <insert id="allocationRight" parameterType="map">
+        INSERT INTO roleright(roleId,rightId) VALUES(#{roleId},#{rightId})
+    </insert>
+
+    <select id="findByRoleName" resultType="role">
+        SELECT * FROM role WHERE roleName=#{roleName}
+    </select>
+
+
+    <delete id="delRoleRightByRoleId" parameterType="int">
+        DELETE FROM roleright WHERE roleId=#{roleId}
+    </delete>
+
+    <delete id="removeRoleRight" parameterType="map">
+        DELETE FROM roleright WHERE roleId=#{roleId} and rightId=#{rightId}
+    </delete>
+
+    <select id="sonCount" parameterType="map" resultType="int">
+        SELECT COUNT(*) FROM roleright t1 JOIN `right` t2 ON t1.rightId=t2.id WHERE t1.roleId=#{roleId} AND t2.pid=#{rightId}
+    </select>
+
+
+    <resultMap type="role" id="roleMap" autoMapping="true">
+        <id column="roleId" property="roleId"/>
+        <collection property="roleRights" column="roleId"
+                    autoMapping="true"
+                    select="com.kexun.hr.dao.RightMapper.findRightByRoleId"/>
+    </resultMap>
+
+
+</mapper>

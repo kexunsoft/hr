@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.TableMapper">
+
+    <select id="findAllTable" resultType="map">
+        SELECT table_name FROM information_schema.tables WHERE table_schema='hr'
+    </select>
+
+    <select id="findColumnsByTableName" parameterType="string" resultType="map">
+        SELECT
+          column_name columnName,
+          column_comment columnComment
+        FROM
+          information_schema.columns
+        WHERE table_name = #{tableName}
+          AND table_schema = 'hr'
+    </select>
+
+    <select id="findDateByTableName" parameterType="string" resultType="map">
+        select * from `${value}`
+    </select>
+</mapper>

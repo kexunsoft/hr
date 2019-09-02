@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.SalarystandarddetailsMapper">
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+    <resultMap id="BaseResultMap"
+               type="com.kexun.hr.model.Salarystandarddetails">
+        <id column="itemId" jdbcType="INTEGER" property="itemid"/>
+        <result column="itemName" jdbcType="VARCHAR"
+                property="itemname"/>
+        <result column="salary" jdbcType="DOUBLE" property="salary"/>
+        <result column="standardId" jdbcType="VARCHAR"
+                property="standardid"/>
+    </resultMap>
+    <!-- 删除 -->
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from salarystandarddetails
+    where itemId = #{itemid,jdbcType=INTEGER}
+  	</delete>
+
+    <!-- 添加 -->
+    <insert id="insertSelective" parameterType="salarystandarddetails">
+        insert into salarystandarddetails
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="itemid != null">
+                itemId,
+            </if>
+            <if test="itemname != null">
+                itemName,
+            </if>
+            <if test="salary != null">
+                salary,
+            </if>
+            <if test="standardid != null">
+                standardId,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="itemid != null">
+                #{itemid,jdbcType=INTEGER},
+            </if>
+            <if test="itemname != null">
+                #{itemname,jdbcType=VARCHAR},
+            </if>
+            <if test="salary != null">
+                #{salary,jdbcType=INTEGER},
+            </if>
+            <if test="standardid != null">
+                #{standardid,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <!-- 查询所有薪酬项目分页 -->
+    <select id="findSalarystandarddetailsQueryAll" resultMap="BaseResultMap">
+		select * from salarystandarddetails
+	</select>
+
+    <!-- 查询所有薪酬项目 -->
+    <select id="findSalarystandarddetails" resultMap="BaseResultMap">
+		select * from salarystandarddetails
+	</select>
+
+    <!--查询所有standardId的薪酬项目-->
+    <select id="findBystandardId" resultType="com.kexun.hr.model.Salarystandarddetails" parameterType="string">
+		SELECT * FROM salarystandarddetails  WHERE standardId=#{standardId}
+	</select>
+    <!--根据主键修改薪酬项目-->
+    <update id="updateByPrimaryKeySelective" parameterType="com.kexun.hr.model.Salarystandarddetails">
+        update salarystandarddetails
+        <set>
+            <if test="itemname != null">
+                itemName = #{itemname,jdbcType=VARCHAR},
+            </if>
+            <if test="salary != null">
+                salary = #{salary,jdbcType=INTEGER},
+            </if>
+            <if test="standardid != null">
+                standardId = #{standardid,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where itemId = #{itemid,jdbcType=INTEGER}
+    </update>
+
+
+</mapper>

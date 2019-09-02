@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.SalarygrantdetailsMapper">
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+    <resultMap id="BaseResultMap"
+               type="com.kexun.hr.model.Salarygrantdetails">
+        <result column="grdId" jdbcType="INTEGER" property="grdid"/>
+        <result column="salaryGrantId" jdbcType="VARCHAR"
+                property="salarygrantid"/>
+        <result column="humanId" jdbcType="VARCHAR" property="humanid"/>
+        <result column="bounsSum" jdbcType="DOUBLE" property="bounssum"/>
+        <result column="saleSum" jdbcType="DOUBLE" property="salesum"/>
+        <result column="deductSum" jdbcType="DOUBLE"
+                property="deductsum"/>
+        <result column="salaryStandardSum" jdbcType="DOUBLE"
+                property="salarystandardsum"/>
+        <result column="salaryPaidSum" jdbcType="DOUBLE"
+                property="salarypaidsum"/>
+    </resultMap>
+
+
+    <select id="findBysalaryGrantId" parameterType="string" resultType="map">
+        SELECT
+          t1.*,
+          t2.`humanId`,
+          t2.`humanName`,
+          t3.`standardName`
+        FROM
+          `salarygrantdetails` t1
+          LEFT JOIN `humanfile` t2
+            ON t1.`humanId` = t2.`humanId`
+            LEFT JOIN `salarystandard` t3
+            ON t2.`salaryStandardId`=t3.`standardId`
+        WHERE t1.`salaryGrantId` = #{salaryGrantId}
+    </select>
+
+    <insert id="insertSelective"
+            parameterType="com.kexun.hr.model.Salarygrantdetails">
+        insert into salarygrantdetails
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="grdid != null">
+                grdId,
+            </if>
+            <if test="salarygrantid != null">
+                salaryGrantId,
+            </if>
+            <if test="humanid != null">
+                humanId,
+            </if>
+            <if test="bounssum != null">
+                bounsSum,
+            </if>
+            <if test="salesum != null">
+                saleSum,
+            </if>
+            <if test="deductsum != null">
+                deductSum,
+            </if>
+            <if test="salarystandardsum != null">
+                salaryStandardSum,
+            </if>
+            <if test="salarypaidsum != null">
+                salaryPaidSum,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="grdid != null">
+                #{grdid,jdbcType=INTEGER},
+            </if>
+            <if test="salarygrantid != null">
+                #{salarygrantid,jdbcType=VARCHAR},
+            </if>
+            <if test="humanid != null">
+                #{humanid,jdbcType=VARCHAR},
+            </if>
+            <if test="bounssum != null">
+                #{bounssum,jdbcType=DOUBLE},
+            </if>
+            <if test="salesum != null">
+                #{salesum,jdbcType=DOUBLE},
+            </if>
+            <if test="deductsum != null">
+                #{deductsum,jdbcType=DOUBLE},
+            </if>
+            <if test="salarystandardsum != null">
+                #{salarystandardsum,jdbcType=DOUBLE},
+            </if>
+            <if test="salarypaidsum != null">
+                #{salarypaidsum,jdbcType=DOUBLE},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.kexun.hr.model.Salarygrantdetails">
+        update salarygrantdetails
+        <set>
+            <if test="salarygrantid != null">
+                salaryGrantId = #{salarygrantid,jdbcType=VARCHAR},
+            </if>
+            <if test="humanid != null">
+                humanId = #{humanid,jdbcType=VARCHAR},
+            </if>
+            <if test="bounssum != null">
+                bounsSum = #{bounssum,jdbcType=DOUBLE},
+            </if>
+            <if test="salesum != null">
+                saleSum = #{salesum,jdbcType=DOUBLE},
+            </if>
+            <if test="deductsum != null">
+                deductSum = #{deductsum,jdbcType=DOUBLE},
+            </if>
+            <if test="salarystandardsum != null">
+                salaryStandardSum = #{salarystandardsum,jdbcType=DOUBLE},
+            </if>
+            <if test="salarypaidsum != null">
+                salaryPaidSum = #{salarypaidsum,jdbcType=DOUBLE},
+            </if>
+        </set>
+        where grdId = #{grdid,jdbcType=INTEGER}
+    </update>
+
+</mapper>

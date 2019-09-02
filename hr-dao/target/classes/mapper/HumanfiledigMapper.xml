@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.HumanfiledigMapper">
+  <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+  <resultMap id="BaseResultMap" type="com.kexun.hr.model.Humanfiledig">
+    <id column="hfdId" jdbcType="INTEGER" property="hfdid" />
+    <result column="humanId" jdbcType="VARCHAR" property="humanid" />
+    <result column="thirdKindId" jdbcType="INTEGER" property="thirdkindid" />
+    <result column="humanName" jdbcType="VARCHAR" property="humanname" />
+    <result column="humanAddress" jdbcType="VARCHAR" property="humanaddress" />
+    <result column="humanPostcode" jdbcType="VARCHAR" property="humanpostcode" />
+    <result column="humanProDesignation" jdbcType="VARCHAR" property="humanprodesignation" />
+    <result column="humanMajorId" jdbcType="INTEGER" property="humanmajorid" />
+    <result column="humanTelephone" jdbcType="VARCHAR" property="humantelephone" />
+    <result column="humanMobilephone" jdbcType="VARCHAR" property="humanmobilephone" />
+    <result column="humanBank" jdbcType="VARCHAR" property="humanbank" />
+    <result column="humanAccount" jdbcType="VARCHAR" property="humanaccount" />
+    <result column="humanQq" jdbcType="VARCHAR" property="humanqq" />
+    <result column="humanEmail" jdbcType="VARCHAR" property="humanemail" />
+    <result column="humanHobby" jdbcType="VARCHAR" property="humanhobby" />
+    <result column="humanSpecility" jdbcType="VARCHAR" property="humanspecility" />
+    <result column="humanSex" jdbcType="VARCHAR" property="humansex" />
+    <result column="humanReligion" jdbcType="VARCHAR" property="humanreligion" />
+    <result column="humanParty" jdbcType="VARCHAR" property="humanparty" />
+    <result column="humanNationality" jdbcType="VARCHAR" property="humannationality" />
+    <result column="humanRace" jdbcType="VARCHAR" property="humanrace" />
+    <result column="humanBirthday" jdbcType="DATE" property="humanbirthday" />
+    <result column="humanBirthplace" jdbcType="VARCHAR" property="humanbirthplace" />
+    <result column="humanAge" jdbcType="INTEGER" property="humanage" />
+    <result column="humanEducatedDegree" jdbcType="VARCHAR" property="humaneducateddegree" />
+    <result column="humanEducatedYears" jdbcType="INTEGER" property="humaneducatedyears" />
+    <result column="humanEducatedMajor" jdbcType="VARCHAR" property="humaneducatedmajor" />
+    <result column="humanSocietySecurityId" jdbcType="VARCHAR" property="humansocietysecurityid" />
+    <result column="humanIdcard" jdbcType="VARCHAR" property="humanidcard" />
+    <result column="salaryStandardId" jdbcType="VARCHAR" property="salarystandardid" />
+    <result column="salarySum" jdbcType="INTEGER" property="salarysum" />
+    <result column="demandSalaraySum" jdbcType="INTEGER" property="demandsalaraysum" />
+    <result column="paidSalarySum" jdbcType="INTEGER" property="paidsalarysum" />
+    <result column="majorChangeAmount" jdbcType="INTEGER" property="majorchangeamount" />
+    <result column="bonusAmount" jdbcType="INTEGER" property="bonusamount" />
+    <result column="trainingAmount" jdbcType="INTEGER" property="trainingamount" />
+    <result column="fileChangAmount" jdbcType="INTEGER" property="filechangamount" />
+    <result column="humanPicture" jdbcType="VARCHAR" property="humanpicture" />
+    <result column="attachmentName" jdbcType="VARCHAR" property="attachmentname" />
+    <result column="checkStatus" jdbcType="INTEGER" property="checkstatus" />
+    <result column="register" jdbcType="VARCHAR" property="register" />
+    <result column="checker" jdbcType="VARCHAR" property="checker" />
+    <result column="changer" jdbcType="VARCHAR" property="changer" />
+    <result column="registTime" jdbcType="DATE" property="registtime" />
+    <result column="checkTime" jdbcType="DATE" property="checktime" />
+    <result column="changeTime" jdbcType="DATE" property="changetime" />
+    <result column="lastlyChangeTime" jdbcType="DATE" property="lastlychangetime" />
+    <result column="deleteTime" jdbcType="DATE" property="deletetime" />
+    <result column="recoveryTime" jdbcType="DATE" property="recoverytime" />
+    <result column="humanFileStatus" jdbcType="INTEGER" property="humanfilestatus" />
+  </resultMap>
+ 
+</mapper>

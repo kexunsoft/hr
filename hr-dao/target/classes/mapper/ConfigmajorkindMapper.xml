@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.ConfigmajorkindMapper">
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
+	<resultMap id="BaseResultMap"
+		type="com.kexun.hr.model.Configmajorkind">
+		<id column="majorKindId" jdbcType="INTEGER" property="majorkindid" />
+		<result column="majorKindName" jdbcType="VARCHAR"
+			property="majorKindName" />
+	</resultMap>
+	<!-- 查询所有职位分类分页 -->
+	<select id="findconfigmajorkindQueryAll"
+		resultMap="BaseResultMap">
+		select * from configmajorkind
+	</select>
+	<!-- 查询所有 -->
+	<select id="findConfigmajorkindQueryAll"
+		resultMap="BaseResultMap">
+		SELECT * from
+		configmajorkind
+	</select>
+	<!-- 删除 -->
+	<delete id="deleteByPrimaryKey"
+		parameterType="java.lang.Integer">
+		delete from configmajorkind
+		where majorKindId = #{majorkindid,jdbcType=INTEGER}
+	</delete>
+
+	<!-- 添加 -->
+	<insert id="insertSelective" parameterType="configmajorkind">
+		insert into configmajorkind
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="majorkindid != null">
+				majorKindId,
+			</if>
+			<if test="majorKindName != null">
+				majorKindName,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="majorkindid != null">
+				#{majorkindid,jdbcType=INTEGER},
+			</if>
+			<if test="majorKindName != null">
+				#{majorKindName,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+
+
+	<!-- 查询所有职位分类 -->
+	<select id="findConfigmajorkind" resultMap="BaseResultMap">
+		select * from
+		configmajorkind
+	</select>
+</mapper>

@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.HumanfileMapper">
+
+    <sql id="Base_Column_List">
+    humanId, firstKindId, secondKindId, thirdKindId, humanName, humanAddress, humanPostcode, 
+    humanProDesignation, humanMajorId, humanTelephone, humanMobilephone, humanBank, humanAccount, 
+    humanQq, humanEmail, humanHobby, humanSpecility, humanSex, humanReligion, humanParty, 
+    humanNationality, humanRace, humanBirthday, humanBirthplace, humanAge, humanEducatedDegree, 
+    humanEducatedYears, humanEducatedMajor, humanSocietySecurityId, humanIdcard, remark, 
+    salaryStandardId, salarySum, demandSalaraySum, paidSalarySum, majorChangeAmount, 
+    bonusAmount, trainingAmount, fileChangAmount, humanHistroyRecords, humanFamilyMembership, 
+    humanPicture, attachmentName, checkStatus, register, checker, changer, registTime, 
+    checkTime, changeTime, lastlyChangeTime, deleteTime, recoveryTime, humanFileStatus
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="com.kexun.hr.model.Humanfile">
+        select
+        <include refid="Base_Column_List"/>
+        from humanfile
+        where humanId = #{humanid,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from humanfile
+    where humanId = #{humanid,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.kexun.hr.model.Humanfile">
+    insert into humanfile (humanId, firstKindId, secondKindId, 
+      thirdKindId, humanName, humanAddress, 
+      humanPostcode, humanProDesignation, humanMajorId, 
+      humanTelephone, humanMobilephone, humanBank, 
+      humanAccount, humanQq, humanEmail, 
+      humanHobby, humanSpecility, humanSex, 
+      humanReligion, humanParty, humanNationality, 
+      humanRace, humanBirthday, humanBirthplace, 
+      humanAge, humanEducatedDegree, humanEducatedYears, 
+      humanEducatedMajor, humanSocietySecurityId, 
+      humanIdcard, remark, salaryStandardId, 
+      salarySum, demandSalaraySum, paidSalarySum, 
+      majorChangeAmount, bonusAmount, trainingAmount, 
+      fileChangAmount, humanHistroyRecords, humanFamilyMembership, 
+      humanPicture, attachmentName, checkStatus, 
+      register, checker, changer, 
+      registTime, checkTime, changeTime, 
+      lastlyChangeTime, deleteTime, recoveryTime, 
+      humanFileStatus)
+    values (#{humanid,jdbcType=INTEGER}, #{firstkindid,jdbcType=INTEGER}, #{secondkindid,jdbcType=INTEGER}, 
+      #{thirdkindid,jdbcType=INTEGER}, #{humanname,jdbcType=VARCHAR}, #{humanaddress,jdbcType=VARCHAR}, 
+      #{humanpostcode,jdbcType=VARCHAR}, #{humanprodesignation,jdbcType=VARCHAR}, #{humanmajorid,jdbcType=INTEGER}, 
+      #{humantelephone,jdbcType=VARCHAR}, #{humanmobilephone,jdbcType=VARCHAR}, #{humanbank,jdbcType=VARCHAR}, 
+      #{humanaccount,jdbcType=VARCHAR}, #{humanqq,jdbcType=VARCHAR}, #{humanemail,jdbcType=VARCHAR}, 
+      #{humanhobby,jdbcType=VARCHAR}, #{humanspecility,jdbcType=VARCHAR}, #{humansex,jdbcType=VARCHAR},
+      #{humanreligion,jdbcType=VARCHAR}, #{humanparty,jdbcType=VARCHAR}, #{humannationality,jdbcType=VARCHAR}, 
+      #{humanrace,jdbcType=VARCHAR}, #{humanbirthday,jdbcType=DATE}, #{humanbirthplace,jdbcType=VARCHAR}, 
+      #{humanage,jdbcType=INTEGER}, #{humaneducateddegree,jdbcType=VARCHAR}, #{humaneducatedyears,jdbcType=VARCHAR},
+      #{humaneducatedmajor,jdbcType=VARCHAR}, #{humansocietysecurityid,jdbcType=VARCHAR}, 
+      #{humanidcard,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{salarystandardid,jdbcType=VARCHAR}, 
+      #{salarysum,jdbcType=DOUBLE}, #{demandsalaraysum,jdbcType=DOUBLE}, #{paidsalarysum,jdbcType=DOUBLE},
+      #{majorchangeamount,jdbcType=INTEGER}, #{bonusamount,jdbcType=INTEGER}, #{trainingamount,jdbcType=INTEGER}, 
+      #{filechangamount,jdbcType=INTEGER}, #{humanhistroyrecords,jdbcType=VARCHAR}, #{humanfamilymembership,jdbcType=VARCHAR}, 
+      #{humanpicture,jdbcType=VARCHAR}, #{attachmentname,jdbcType=VARCHAR}, #{checkstatus,jdbcType=INTEGER}, 
+      #{register,jdbcType=VARCHAR}, #{checker,jdbcType=VARCHAR}, #{changer,jdbcType=VARCHAR}, 
+      #{registtime,jdbcType=DATE}, #{checktime,jdbcType=DATE}, #{changetime,jdbcType=DATE}, 
+      #{lastlychangetime,jdbcType=DATE}, #{deletetime,jdbcType=DATE}, #{recoverytime,jdbcType=DATE}, 
+      #{humanfilestatus,jdbcType=INTEGER})
+  </insert>
+    <insert id="insertSelective" parameterType="com.kexun.hr.model.Humanfile">
+        insert into humanfile
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="humanid != null">
+                humanId,
+            </if>
+            <if test="firstkindid != null">
+                firstKindId,
+            </if>
+            <if test="secondkindid != null">
+                secondKindId,
+            </if>
+            <if test="thirdkindid != null">
+                thirdKindId,
+            </if>
+            <if test="humanname != null">
+                humanName,
+            </if>
+            <if test="humanaddress != null">
+                humanAddress,
+            </if>
+            <if test="humanpostcode != null">
+                humanPostcode,
+            </if>
+            <if test="humanprodesignation != null">
+                humanProDesignation,
+            </if>
+            <if test="humanmajorid != null">
+                humanMajorId,
+            </if>
+            <if test="humantelephone != null">
+                humanTelephone,
+            </if>
+            <if test="humanmobilephone != null">
+                humanMobilephone,
+            </if>
+            <if test="humanbank != null">
+                humanBank,
+            </if>
+            <if test="humanaccount != null">
+                humanAccount,
+            </if>
+            <if test="humanqq != null">
+                humanQq,
+            </if>
+            <if test="humanemail != null">
+                humanEmail,
+            </if>
+            <if test="humanhobby != null">
+                humanHobby,
+            </if>
+            <if test="humanspecility != null">
+                humanSpecility,
+            </if>
+            <if test="humansex != null">
+                humanSex,
+            </if>
+            <if test="humanreligion != null">
+                humanReligion,
+            </if>
+            <if test="humanparty != null">
+                humanParty,
+            </if>
+            <if test="humannationality != null">
+                humanNationality,
+            </if>
+            <if test="humanrace != null">
+                humanRace,
+            </if>
+            <if test="humanbirthday != null">
+                humanBirthday,
+            </if>
+            <if test="humanbirthplace != null">
+                humanBirthplace,
+            </if>
+            <if test="humanage != null">
+                humanAge,
+            </if>
+            <if test="humaneducateddegree != null">
+                humanEducatedDegree,
+            </if>
+            <if test="humaneducatedyears != null">
+                humanEducatedYears,
+            </if>
+            <if test="humaneducatedmajor != null">
+                humanEducatedMajor,
+            </if>
+            <if test="humansocietysecurityid != null">
+                humanSocietySecurityId,
+            </if>
+            <if test="humanidcard != null">
+                humanIdcard,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="salarystandardid != null">
+                salaryStandardId,
+            </if>
+            <if test="salarysum != null">
+                salarySum,
+            </if>
+            <if test="demandsalaraysum != null">
+                demandSalaraySum,
+            </if>
+            <if test="paidsalarysum != null">
+                paidSalarySum,
+            </if>
+            <if test="majorchangeamount != null">
+                majorChangeAmount,
+            </if>
+            <if test="bonusamount != null">
+                bonusAmount,
+            </if>
+            <if test="trainingamount != null">
+                trainingAmount,
+            </if>
+            <if test="filechangamount != null">
+                fileChangAmount,
+            </if>
+            <if test="humanhistroyrecords != null">
+                humanHistroyRecords,
+            </if>
+            <if test="humanfamilymembership != null">
+                humanFamilyMembership,
+            </if>
+            <if test="humanpicture != null">
+                humanPicture,
+            </if>
+            <if test="attachmentname != null">
+                attachmentName,
+            </if>
+            <if test="checkstatus != null">
+                checkStatus,
+            </if>
+            <if test="register != null">
+                register,
+            </if>
+            <if test="checker != null">
+                checker,
+            </if>
+            <if test="changer != null">
+                changer,
+            </if>
+            <if test="registtime != null">
+                registTime,
+            </if>
+            <if test="checktime != null">
+                checkTime,
+            </if>
+            <if test="changetime != null">
+                changeTime,
+            </if>
+            <if test="lastlychangetime != null">
+                lastlyChangeTime,
+            </if>
+            <if test="deletetime != null">
+                deleteTime,
+            </if>
+            <if test="recoverytime != null">
+                recoveryTime,
+            </if>
+            <if test="humanfilestatus != null">
+                humanFileStatus,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="humanid != null">
+                #{humanid,jdbcType=INTEGER},
+            </if>
+            <if test="firstkindid != null">
+                #{firstkindid,jdbcType=INTEGER},
+            </if>
+            <if test="secondkindid != null">
+                #{secondkindid,jdbcType=INTEGER},
+            </if>
+            <if test="thirdkindid != null">
+                #{thirdkindid,jdbcType=INTEGER},
+            </if>
+            <if test="humanname != null">
+                #{humanname,jdbcType=VARCHAR},
+            </if>
+            <if test="humanaddress != null">
+                #{humanaddress,jdbcType=VARCHAR},
+            </if>
+            <if test="humanpostcode != null">
+                #{humanpostcode,jdbcType=VARCHAR},
+            </if>
+            <if test="humanprodesignation != null">
+                #{humanprodesignation,jdbcType=VARCHAR},
+            </if>
+            <if test="humanmajorid != null">
+                #{humanmajorid,jdbcType=INTEGER},
+            </if>
+            <if test="humantelephone != null">
+                #{humantelephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanmobilephone != null">
+                #{humanmobilephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanbank != null">
+                #{humanbank,jdbcType=VARCHAR},
+            </if>
+            <if test="humanaccount != null">
+                #{humanaccount,jdbcType=VARCHAR},
+            </if>
+            <if test="humanqq != null">
+                #{humanqq,jdbcType=VARCHAR},
+            </if>
+            <if test="humanemail != null">
+                #{humanemail,jdbcType=VARCHAR},
+            </if>
+            <if test="humanhobby != null">
+                #{humanhobby,jdbcType=VARCHAR},
+            </if>
+            <if test="humanspecility != null">
+                #{humanspecility,jdbcType=VARCHAR},
+            </if>
+            <if test="humansex != null">
+                #{humansex,jdbcType=VARCHAR},
+            </if>
+            <if test="humanreligion != null">
+                #{humanreligion,jdbcType=VARCHAR},
+            </if>
+            <if test="humanparty != null">
+                #{humanparty,jdbcType=VARCHAR},
+            </if>
+            <if test="humannationality != null">
+                #{humannationality,jdbcType=VARCHAR},
+            </if>
+            <if test="humanrace != null">
+                #{humanrace,jdbcType=VARCHAR},
+            </if>
+            <if test="humanbirthday != null">
+                #{humanbirthday,jdbcType=DATE},
+            </if>
+            <if test="humanbirthplace != null">
+                #{humanbirthplace,jdbcType=VARCHAR},
+            </if>
+            <if test="humanage != null">
+                #{humanage,jdbcType=INTEGER},
+            </if>
+            <if test="humaneducateddegree != null">
+                #{humaneducateddegree,jdbcType=VARCHAR},
+            </if>
+            <if test="humaneducatedyears != null">
+                #{humaneducatedyears,jdbcType=VARCHAR},
+            </if>
+            <if test="humaneducatedmajor != null">
+                #{humaneducatedmajor,jdbcType=VARCHAR},
+            </if>
+            <if test="humansocietysecurityid != null">
+                #{humansocietysecurityid,jdbcType=VARCHAR},
+            </if>
+            <if test="humanidcard != null">
+                #{humanidcard,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="salarystandardid != null">
+                #{salarystandardid,jdbcType=VARCHAR},
+            </if>
+            <if test="salarysum != null">
+                #{salarysum,jdbcType=DOUBLE},
+            </if>
+            <if test="demandsalaraysum != null">
+                #{demandsalaraysum,jdbcType=DOUBLE},
+            </if>
+            <if test="paidsalarysum != null">
+                #{paidsalarysum,jdbcType=DOUBLE},
+            </if>
+            <if test="majorchangeamount != null">
+                #{majorchangeamount,jdbcType=INTEGER},
+            </if>
+            <if test="bonusamount != null">
+                #{bonusamount,jdbcType=INTEGER},
+            </if>
+            <if test="trainingamount != null">
+                #{trainingamount,jdbcType=INTEGER},
+            </if>
+            <if test="filechangamount != null">
+                #{filechangamount,jdbcType=INTEGER},
+            </if>
+            <if test="humanhistroyrecords != null">
+                #{humanhistroyrecords,jdbcType=VARCHAR},
+            </if>
+            <if test="humanfamilymembership != null">
+                #{humanfamilymembership,jdbcType=VARCHAR},
+            </if>
+            <if test="humanpicture != null">
+                #{humanpicture,jdbcType=VARCHAR},
+            </if>
+            <if test="attachmentname != null">
+                #{attachmentname,jdbcType=VARCHAR},
+            </if>
+            <if test="checkstatus != null">
+                #{checkstatus,jdbcType=INTEGER},
+            </if>
+            <if test="register != null">
+                #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="checker != null">
+                #{checker,jdbcType=VARCHAR},
+            </if>
+            <if test="changer != null">
+                #{changer,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                #{registtime,jdbcType=DATE},
+            </if>
+            <if test="checktime != null">
+                #{checktime,jdbcType=DATE},
+            </if>
+            <if test="changetime != null">
+                #{changetime,jdbcType=DATE},
+            </if>
+            <if test="lastlychangetime != null">
+                #{lastlychangetime,jdbcType=DATE},
+            </if>
+            <if test="deletetime != null">
+                #{deletetime,jdbcType=DATE},
+            </if>
+            <if test="recoverytime != null">
+                #{recoverytime,jdbcType=DATE},
+            </if>
+            <if test="humanfilestatus != null">
+                #{humanfilestatus,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.kexun.hr.model.Humanfile">
+        update humanfile
+        <set>
+            fileChangAmount=fileChangAmount+1,
+            <if test="firstkindid != null">
+                firstKindId = #{firstkindid,jdbcType=INTEGER},
+            </if>
+            <if test="secondkindid != null">
+                secondKindId = #{secondkindid,jdbcType=INTEGER},
+            </if>
+            <if test="thirdkindid != null">
+                thirdKindId = #{thirdkindid,jdbcType=INTEGER},
+            </if>
+            <if test="humanname != null">
+                humanName = #{humanname,jdbcType=VARCHAR},
+            </if>
+            <if test="humanaddress != null">
+                humanAddress = #{humanaddress,jdbcType=VARCHAR},
+            </if>
+            <if test="humanpostcode != null">
+                humanPostcode = #{humanpostcode,jdbcType=VARCHAR},
+            </if>
+            <if test="humanprodesignation != null">
+                humanProDesignation = #{humanprodesignation,jdbcType=VARCHAR},
+            </if>
+            <if test="humanmajorid != null">
+                humanMajorId = #{humanmajorid,jdbcType=INTEGER},
+            </if>
+            <if test="humantelephone != null">
+                humanTelephone = #{humantelephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanmobilephone != null">
+                humanMobilephone = #{humanmobilephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanbank != null">
+                humanBank = #{humanbank,jdbcType=VARCHAR},
+            </if>
+            <if test="humanaccount != null">
+                humanAccount = #{humanaccount,jdbcType=VARCHAR},
+            </if>
+            <if test="humanqq != null">
+                humanQq = #{humanqq,jdbcType=VARCHAR},
+            </if>
+            <if test="humanemail != null">
+                humanEmail = #{humanemail,jdbcType=VARCHAR},
+            </if>
+            <if test="humanhobby != null">
+                humanHobby = #{humanhobby,jdbcType=VARCHAR},
+            </if>
+            <if test="humanspecility != null">
+                humanSpecility = #{humanspecility,jdbcType=VARCHAR},
+            </if>
+            <if test="humansex != null">
+                humanSex = #{humansex,jdbcType=VARCHAR},
+            </if>
+            <if test="humanreligion != null">
+                humanReligion = #{humanreligion,jdbcType=VARCHAR},
+            </if>
+            <if test="humanparty != null">
+                humanParty = #{humanparty,jdbcType=VARCHAR},
+            </if>
+            <if test="humannationality != null">
+                humanNationality = #{humannationality,jdbcType=VARCHAR},
+            </if>
+            <if test="humanrace != null">
+                humanRace = #{humanrace,jdbcType=VARCHAR},
+            </if>
+            <if test="humanbirthday != null">
+                humanBirthday = #{humanbirthday,jdbcType=DATE},
+            </if>
+            <if test="humanbirthplace != null">
+                humanBirthplace = #{humanbirthplace,jdbcType=VARCHAR},
+            </if>
+            <if test="humanage != null">
+                humanAge = #{humanage,jdbcType=INTEGER},
+            </if>
+            <if test="humaneducateddegree != null">
+                humanEducatedDegree = #{humaneducateddegree,jdbcType=VARCHAR},
+            </if>
+            <if test="humaneducatedyears != null">
+                humanEducatedYears = #{humaneducatedyears,jdbcType=VARCHAR},
+            </if>
+            <if test="humaneducatedmajor != null">
+                humanEducatedMajor = #{humaneducatedmajor,jdbcType=VARCHAR},
+            </if>
+            <if test="humansocietysecurityid != null">
+                humanSocietySecurityId = #{humansocietysecurityid,jdbcType=VARCHAR},
+            </if>
+            <if test="humanidcard != null">
+                humanIdcard = #{humanidcard,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="salarystandardid != null">
+                salaryStandardId = #{salarystandardid,jdbcType=VARCHAR},
+            </if>
+            <if test="salarysum != null">
+                salarySum = #{salarysum,jdbcType=DOUBLE},
+            </if>
+            <if test="demandsalaraysum != null">
+                demandSalaraySum = #{demandsalaraysum,jdbcType=DOUBLE},
+            </if>
+            <if test="paidsalarysum != null">
+                paidSalarySum = #{paidsalarysum,jdbcType=DOUBLE},
+            </if>
+            <if test="majorchangeamount != null">
+                majorChangeAmount = majorChangeAmount+1,
+            </if>
+            <if test="bonusamount != null">
+                bonusAmount = #{bonusamount,jdbcType=INTEGER},
+            </if>
+            <if test="trainingamount != null">
+                trainingAmount = #{trainingamount,jdbcType=INTEGER},
+            </if>
+            <if test="filechangamount != null">
+                fileChangAmount = #{filechangamount,jdbcType=INTEGER},
+            </if>
+            <if test="humanhistroyrecords != null">
+                humanHistroyRecords = #{humanhistroyrecords,jdbcType=VARCHAR},
+            </if>
+            <if test="humanfamilymembership != null">
+                humanFamilyMembership = #{humanfamilymembership,jdbcType=VARCHAR},
+            </if>
+            <if test="humanpicture != null">
+                humanPicture = #{humanpicture,jdbcType=VARCHAR},
+            </if>
+            <if test="attachmentname != null">
+                attachmentName = #{attachmentname,jdbcType=VARCHAR},
+            </if>
+            <if test="checkstatus != null">
+                checkStatus = #{checkstatus,jdbcType=INTEGER},
+            </if>
+            <if test="register != null">
+                register = #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="checker != null">
+                checker = #{checker,jdbcType=VARCHAR},
+            </if>
+            <if test="changer != null">
+                changer = #{changer,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                registTime = #{registtime,jdbcType=DATE},
+            </if>
+            <if test="checktime != null">
+                checkTime = #{checktime,jdbcType=DATE},
+            </if>
+            <if test="changetime != null">
+                changeTime = #{changetime,jdbcType=DATE},
+            </if>
+            <if test="lastlychangetime != null">
+                lastlyChangeTime = #{lastlychangetime,jdbcType=DATE},
+            </if>
+            <if test="deletetime != null">
+                deleteTime = #{deletetime,jdbcType=DATE},
+            </if>
+            <if test="recoverytime != null">
+                recoveryTime = #{recoverytime,jdbcType=DATE},
+            </if>
+            <if test="humanfilestatus != null">
+                humanFileStatus = #{humanfilestatus,jdbcType=INTEGER},
+            </if>
+        </set>
+        where humanId = #{humanid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.kexun.hr.model.Humanfile">
+    update humanfile
+    set firstKindId = #{firstkindid,jdbcType=INTEGER},
+      secondKindId = #{secondkindid,jdbcType=INTEGER},
+      thirdKindId = #{thirdkindid,jdbcType=INTEGER},
+      humanName = #{humanname,jdbcType=VARCHAR},
+      humanAddress = #{humanaddress,jdbcType=VARCHAR},
+      humanPostcode = #{humanpostcode,jdbcType=VARCHAR},
+      humanProDesignation = #{humanprodesignation,jdbcType=VARCHAR},
+      humanMajorId = #{humanmajorid,jdbcType=INTEGER},
+      humanTelephone = #{humantelephone,jdbcType=VARCHAR},
+      humanMobilephone = #{humanmobilephone,jdbcType=VARCHAR},
+      humanBank = #{humanbank,jdbcType=VARCHAR},
+      humanAccount = #{humanaccount,jdbcType=VARCHAR},
+      humanQq = #{humanqq,jdbcType=VARCHAR},
+      humanEmail = #{humanemail,jdbcType=VARCHAR},
+      humanHobby = #{humanhobby,jdbcType=VARCHAR},
+      humanSpecility = #{humanspecility,jdbcType=VARCHAR},
+      humanSex = #{humansex,jdbcType=VARCHAR},
+      humanReligion = #{humanreligion,jdbcType=VARCHAR},
+      humanParty = #{humanparty,jdbcType=VARCHAR},
+      humanNationality = #{humannationality,jdbcType=VARCHAR},
+      humanRace = #{humanrace,jdbcType=VARCHAR},
+      humanBirthday = #{humanbirthday,jdbcType=DATE},
+      humanBirthplace = #{humanbirthplace,jdbcType=VARCHAR},
+      humanAge = #{humanage,jdbcType=INTEGER},
+      humanEducatedDegree = #{humaneducateddegree,jdbcType=VARCHAR},
+      humanEducatedYears = #{humaneducatedyears,jdbcType=VARCHAR},
+      humanEducatedMajor = #{humaneducatedmajor,jdbcType=VARCHAR},
+      humanSocietySecurityId = #{humansocietysecurityid,jdbcType=VARCHAR},
+      humanIdcard = #{humanidcard,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      salaryStandardId = #{salarystandardid,jdbcType=VARCHAR},
+      salarySum = #{salarysum,jdbcType=DOUBLE},
+      demandSalaraySum = #{demandsalaraysum,jdbcType=DOUBLE},
+      paidSalarySum = #{paidsalarysum,jdbcType=DOUBLE},
+      majorChangeAmount = #{majorchangeamount,jdbcType=INTEGER},
+      bonusAmount = #{bonusamount,jdbcType=INTEGER},
+      trainingAmount = #{trainingamount,jdbcType=INTEGER},
+      fileChangAmount = #{filechangamount,jdbcType=INTEGER},
+      humanHistroyRecords = #{humanhistroyrecords,jdbcType=VARCHAR},
+      humanFamilyMembership = #{humanfamilymembership,jdbcType=VARCHAR},
+      humanPicture = #{humanpicture,jdbcType=VARCHAR},
+      attachmentName = #{attachmentname,jdbcType=VARCHAR},
+      checkStatus = #{checkstatus,jdbcType=INTEGER},
+      register = #{register,jdbcType=VARCHAR},
+      checker = #{checker,jdbcType=VARCHAR},
+      changer = #{changer,jdbcType=VARCHAR},
+      registTime = #{registtime,jdbcType=DATE},
+      checkTime = #{checktime,jdbcType=DATE},
+      changeTime = #{changetime,jdbcType=DATE},
+      lastlyChangeTime = #{lastlychangetime,jdbcType=DATE},
+      deleteTime = #{deletetime,jdbcType=DATE},
+      recoveryTime = #{recoverytime,jdbcType=DATE},
+      humanFileStatus = #{humanfilestatus,jdbcType=INTEGER}
+    where humanId = #{humanid,jdbcType=INTEGER}
+  </update>
+
+    <!-- 多表联查 查询人力资源登记过的数据 -->
+    <select id="findMoreTableHumanfile" resultType="map">
+  		select hf.humanId,hf.humanName,hf.humanSex,cffk.firstKindName,cfsk.secondKindName,cftk.thirdKindName,hf.humanProDesignation
+ 		from humanfile hf LEFT JOIN configfilefirstkind cffk on hf.firstKindId=cffk.firstKindId
+		LEFT JOIN configfilesecondkind cfsk on hf.secondKindId=cfsk.secondKindId LEFT JOIN configfilethirdkind cftk on hf.thirdKindId=cftk.thirdKindId
+		where checkStatus=0 order by hf.humanId DESC
+  	</select>
+
+    <!--根据主键查询单个对象 多表  -->
+    <select id="selectByPrimaryKeyMoreTable" parameterType="int" resultType="map">
+  		SELECT
+          hf.*,
+          cffk.firstKindName,
+          cfsk.secondKindName,
+          cftk.thirdKindName,
+          cfk.majorKindId,
+          cfj.majorId,
+          cfk.majorKindName,
+          cfj.majorName,
+          xcbz.salarySum 'param',
+          xcbz.standardName
+        FROM
+          humanfile hf
+          LEFT JOIN configfilefirstkind cffk
+            ON hf.firstKindId = cffk.firstKindId
+          LEFT JOIN configfilesecondkind cfsk
+            ON hf.secondKindId = cfsk.secondKindId
+          LEFT JOIN configfilethirdkind cftk
+            ON hf.thirdKindId = cftk.thirdKindId
+          LEFT JOIN configmajor cfj
+            ON hf.humanMajorId = cfj.majorId
+          LEFT JOIN configmajorkind cfk
+            ON cfj.majorKindId = cfk.majorKindId
+          LEFT JOIN salaryStandard xcbz
+            ON hf.`salaryStandardId`=xcbz.`standardId`
+		where humanId=#{humanid} LIMIT 1
+  	</select>
+
+    <!-- 多表联查 查询人力资源复核通过的数据 -->
+    <select id="findMoreTableHumanfileYes" resultType="map">
+  		SELECT
+          hf.humanId,
+          hf.humanName,
+          hf.humanSex,
+          cffk.firstKindName,
+          cfsk.secondKindName,
+          cftk.thirdKindName,
+          hf.humanProDesignation,
+          cfjk.majorKindName,
+          ssd.`standardName`
+        FROM
+          humanfile hf
+          LEFT JOIN configfilefirstkind cffk
+            ON hf.firstKindId = cffk.firstKindId
+          LEFT JOIN configfilesecondkind cfsk
+            ON hf.secondKindId = cfsk.secondKindId
+          LEFT JOIN configfilethirdkind cftk
+            ON hf.thirdKindId = cftk.thirdKindId
+          LEFT JOIN configMajor cfm
+            ON hf.humanMajorId = cfm.majorId
+          LEFT JOIN configmajorkind cfjk
+            ON cfm.majorKindId = cfjk.majorKindId
+          LEFT JOIN salarystandard ssd
+            ON hf.salaryStandardId = ssd.`standardId`
+        WHERE hf.checkStatus = 1
+          AND humanFileStatus = 0
+        ORDER BY hf.humanId DESC
+  	</select>
+
+    <!-- 根据主键 删除 条件为已复核通过的  修改状态 -->
+    <update id="deleteByKeyHumanfileYes" parameterType="com.kexun.hr.model.Humanfile">
+  		update humanfile set humanFileStatus=1,deleteTime=#{deletetime} where checkStatus=1 and humanId=#{humanid}
+  	</update>
+
+    <!-- 根据主键恢复被删除的档案 条件为已被删除并且为已复核通过的   -->
+    <update id="huiguByKeyHumanfileBy1" parameterType="com.kexun.hr.model.Humanfile">
+  		update humanfile set humanFileStatus=0,recoveryTime=#{recoverytime} where checkStatus=1 and humanId=#{humanid}
+  	</update>
+
+    <!-- 多表联查 查询人力资源被删除的数据-->
+    <select id="selectBydelete" resultType="map">
+  		select hf.humanId,hf.humanName,hf.humanSex,cffk.firstKindName,cfsk.secondKindName,cftk.thirdKindName,hf.humanProDesignation,cfjk.majorKindName
+ 		from humanfile hf LEFT JOIN configfilefirstkind cffk on hf.firstKindId=cffk.firstKindId
+		LEFT JOIN configfilesecondkind cfsk on hf.secondKindId=cfsk.secondKindId LEFT JOIN configfilethirdkind cftk on hf.thirdKindId=cftk.thirdKindId
+		LEFT JOIN configMajor cfm on hf.humanMajorId=cfm.majorId LEFT JOIN configmajorkind cfjk on cfm.majorKindId=cfjk.majorKindId
+		where checkStatus=1 and humanFileStatus=1 order by hf.humanId DESC
+  	</select>
+
+    <!-- 永久删除 -->
+    <delete id="deleteByKeyHumanfile" parameterType="int">
+  		delete from humanfile where humanId=#{humanid}
+  	</delete>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.UserMapper">
+    <select id="findUserByName" resultMap="userMap"
+            parameterType="string">
+		SELECT * FROM users WHERE `uName`=#{name} LIMIT 1
+	</select>
+
+    <select id="findUsers" resultMap="userMap">
+		SELECT * FROM users
+	</select>
+
+    <select id="findUserById" resultType="users">
+        SELECT * FROM users WHERE uId=#{uid}
+    </select>
+
+
+    <insert id="addUser" parameterType="users">
+		INSERT INTO users(uName,trueName,uPassword,roleId) VALUES(#{uName},#{trueName},#{uPassword},#{roleId})
+	</insert>
+
+    <delete id="delUser" parameterType="int">
+        DELETE FROM users WHERE uId=#{uid}
+    </delete>
+    <!--sdjkashdahsj-->
+    <update id="updUser" parameterType="users">
+       UPDATE  users SET trueName=#{trueName},uPassword=#{uPassword},roleId=#{roleId} WHERE uId=#{uId}
+    </update>
+
+
+    <resultMap type="users" id="userMap" autoMapping="true">
+        <result column="roleId" property="roleId"/>
+        <association property="uRole" column="roleId"
+                     autoMapping="true" select="com.kexun.hr.dao.RoleMapper.findRoleById"/>
+    </resultMap>
+</mapper>

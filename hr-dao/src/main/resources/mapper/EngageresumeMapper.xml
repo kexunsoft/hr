@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.EngageresumeMapper">
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+    <resultMap id="BaseResultMap" type="com.kexun.hr.model.Engageresume">
+        <id column="resId" jdbcType="INTEGER" property="resid"/>
+        <result column="humanName" jdbcType="VARCHAR" property="humanname"/>
+        <result column="engageType" jdbcType="VARCHAR" property="engagetype"/>
+        <result column="humanAddress" jdbcType="VARCHAR" property="humanaddress"/>
+        <result column="humanPostcode" jdbcType="VARCHAR" property="humanpostcode"/>
+        <result column="humanMajorId" jdbcType="INTEGER" property="humanmajorid"/>
+        <result column="humanTelephone" jdbcType="VARCHAR" property="humantelephone"/>
+        <result column="humanHomephone" jdbcType="VARCHAR" property="humanhomephone"/>
+        <result column="humanMobilephone" jdbcType="VARCHAR" property="humanmobilephone"/>
+        <result column="humanEmail" jdbcType="VARCHAR" property="humanemail"/>
+        <result column="humanHobby" jdbcType="VARCHAR" property="humanhobby"/>
+        <result column="humanSpecility" jdbcType="VARCHAR" property="humanspecility"/>
+        <result column="humanSex" jdbcType="VARCHAR" property="humansex"/>
+        <result column="humanReligion" jdbcType="VARCHAR" property="humanreligion"/>
+        <result column="humanParty" jdbcType="VARCHAR" property="humanparty"/>
+        <result column="humanNationality" jdbcType="VARCHAR" property="humannationality"/>
+        <result column="humanRace" jdbcType="VARCHAR" property="humanrace"/>
+        <result column="humanBirthday" jdbcType="DATE" property="humanbirthday"/>
+        <result column="humanAge" jdbcType="INTEGER" property="humanage"/>
+        <result column="humanEducatedDegree" jdbcType="VARCHAR" property="humaneducateddegree"/>
+        <result column="humanEducatedYears" jdbcType="VARCHAR" property="humaneducatedyears"/>
+        <result column="humanEducatedMajor" jdbcType="VARCHAR" property="humaneducatedmajor"/>
+        <result column="humanCollege" jdbcType="VARCHAR" property="humancollege"/>
+        <result column="humanIdcard" jdbcType="VARCHAR" property="humanidcard"/>
+        <result column="humanBirthplace" jdbcType="VARCHAR" property="humanbirthplace"/>
+        <result column="demandSalaryStandard" jdbcType="INTEGER" property="demandsalarystandard"/>
+        <result column="humanHistoryRecords" jdbcType="VARCHAR" property="humanhistoryrecords"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="recomandation" jdbcType="VARCHAR" property="recomandation"/>
+        <result column="humanPicture" jdbcType="VARCHAR" property="humanpicture"/>
+        <result column="attachmentName" jdbcType="VARCHAR" property="attachmentname"/>
+        <result column="checkStatus" jdbcType="INTEGER" property="checkstatus"/>
+        <result column="register" jdbcType="VARCHAR" property="register"/>
+        <result column="registTime" jdbcType="DATE" property="registtime"/>
+        <result column="checker" jdbcType="VARCHAR" property="checker"/>
+        <result column="checkTime" jdbcType="DATE" property="checktime"/>
+        <result column="interviewStatus" jdbcType="INTEGER" property="interviewstatus"/>
+        <result column="interviewAmount" jdbcType="INTEGER" property="interviewamount"/>
+        <result column="totalPoints" jdbcType="INTEGER" property="totalpoints"/>
+        <result column="testAmount" jdbcType="INTEGER" property="testamount"/>
+        <result column="testChecker" jdbcType="VARCHAR" property="testchecker"/>
+        <result column="testCheckTime" jdbcType="DATE" property="testchecktime"/>
+        <result column="passRegister" jdbcType="VARCHAR" property="passregister"/>
+        <result column="passRegistTime" jdbcType="DATE" property="passregisttime"/>
+        <result column="passChecker" jdbcType="VARCHAR" property="passchecker"/>
+        <result column="passCheckTime" jdbcType="DATE" property="passchecktime"/>
+        <result column="passCheckStatus" jdbcType="INTEGER" property="passcheckstatus"/>
+        <result column="passCheckComment" jdbcType="VARCHAR" property="passcheckcomment"/>
+        <result column="passPassComment" jdbcType="VARCHAR" property="passpasscomment"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    resId, humanName, engageType, humanAddress, humanPostcode, humanMajorId, humanTelephone,
+    humanHomephone, humanMobilephone, humanEmail, humanHobby, humanSpecility, humanSex,
+    humanReligion, humanParty, humanNationality, humanRace, humanBirthday, humanAge,
+    humanEducatedDegree, humanEducatedYears, humanEducatedMajor, humanCollege, humanIdcard,
+    humanBirthplace, demandSalaryStandard, humanHistoryRecords, remark, recomandation,
+    humanPicture, attachmentName, checkStatus, register, registTime, checker, checkTime,
+    interviewStatus, interviewAmount, totalPoints, testAmount, testChecker, testCheckTime,
+    passRegister, passRegistTime, passChecker, passCheckTime, passCheckStatus, passCheckComment,
+    passPassComment
+  </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from engageresume
+        where resId = #{resid,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from engageresume where resId = #{resid,jdbcType=INTEGER}
+    </delete>
+
+    <select id="findByExample" parameterType="map" resultType="map">
+        SELECT
+        *
+        FROM
+        (
+        SELECT
+        t1.*,
+        t2.`majorName`,
+        t3.`majorKindName`
+        FROM
+        `engageresume` t1
+        LEFT JOIN `configmajor` t2
+        ON t1.`humanMajorId` = t2.`majorId`
+        LEFT JOIN `configmajorkind` t3
+        ON t2.`majorKindId` = t3.`majorKindId`
+        <where>
+
+            <if test="majorKindId!=0">
+                and t2.`majorKindId`=#{majorKindId}
+            </if>
+            <if test="majorId!=0">
+                and t1.`humanMajorId`=#{majorId}
+            </if>
+            <if test="keyword!=null">
+                or t1.humanname like #{keyword}
+                or t1.humanmobilephone like #{keyword}
+                or t1.humanidcard like #{keyword}
+                or t1.humanhistoryrecords like #{keyword}
+            </if>
+
+            <if test="startDate!=null">
+                and t1.`registTime`&gt;=#{startDate}
+            </if>
+
+            <if test="endDate!=null">
+                and t1.`registTime`&lt;=#{endDate}
+            </if>
+
+            <if test="interviewStatus!=null">
+                and t1.`interviewStatus`=#{interviewStatus}
+            </if>
+        </where>
+        ) t4 where t4.checkStatus =#{checkStatus}
+    </select>
+
+    <select id="findOneById" parameterType="int" resultType="map">
+        SELECT
+          t1.*,
+          t2.`majorName`,
+          t3.`majorKindName`
+        FROM
+          `engageresume` t1
+          LEFT JOIN `configmajor` t2
+            ON t1.`humanMajorId` = t2.`majorId`
+          LEFT JOIN `configmajorkind` t3
+            ON t2.`majorKindId` = t3.`majorKindId`
+            WHERE t1.`resId`=#{resumeId} LIMIT 1
+    </select>
+
+
+    <insert id="insertSelective" parameterType="com.kexun.hr.model.Engageresume">
+        insert into engageresume
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="resid != null">
+                resId,
+            </if>
+            <if test="humanname != null">
+                humanName,
+            </if>
+            <if test="engagetype != null">
+                engageType,
+            </if>
+            <if test="humanaddress != null">
+                humanAddress,
+            </if>
+            <if test="humanpostcode != null">
+                humanPostcode,
+            </if>
+            <if test="humanmajorid != null">
+                humanMajorId,
+            </if>
+            <if test="humantelephone != null">
+                humanTelephone,
+            </if>
+            <if test="humanhomephone != null">
+                humanHomephone,
+            </if>
+            <if test="humanmobilephone != null">
+                humanMobilephone,
+            </if>
+            <if test="humanemail != null">
+                humanEmail,
+            </if>
+            <if test="humanhobby != null">
+                humanHobby,
+            </if>
+            <if test="humanspecility != null">
+                humanSpecility,
+            </if>
+            <if test="humansex != null">
+                humanSex,
+            </if>
+            <if test="humanreligion != null">
+                humanReligion,
+            </if>
+            <if test="humanparty != null">
+                humanParty,
+            </if>
+            <if test="humannationality != null">
+                humanNationality,
+            </if>
+            <if test="humanrace != null">
+                humanRace,
+            </if>
+            <if test="humanbirthday != null">
+                humanBirthday,
+            </if>
+            <if test="humanage != null">
+                humanAge,
+            </if>
+            <if test="humaneducateddegree != null">
+                humanEducatedDegree,
+            </if>
+            <if test="humaneducatedyears != null">
+                humanEducatedYears,
+            </if>
+            <if test="humaneducatedmajor != null">
+                humanEducatedMajor,
+            </if>
+            <if test="humancollege != null">
+                humanCollege,
+            </if>
+            <if test="humanidcard != null">
+                humanIdcard,
+            </if>
+            <if test="humanbirthplace != null">
+                humanBirthplace,
+            </if>
+            <if test="demandsalarystandard != null">
+                demandSalaryStandard,
+            </if>
+            <if test="humanhistoryrecords != null">
+                humanHistoryRecords,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="recomandation != null">
+                recomandation,
+            </if>
+            <if test="humanpicture != null">
+                humanPicture,
+            </if>
+            <if test="attachmentname != null">
+                attachmentName,
+            </if>
+            <if test="checkstatus != null">
+                checkStatus,
+            </if>
+            <if test="register != null">
+                register,
+            </if>
+            <if test="registtime != null">
+                registTime,
+            </if>
+            <if test="checker != null">
+                checker,
+            </if>
+            <if test="checktime != null">
+                checkTime,
+            </if>
+            <if test="interviewstatus != null">
+                interviewStatus,
+            </if>
+            <if test="interviewamount != null">
+                interviewAmount,
+            </if>
+            <if test="totalpoints != null">
+                totalPoints,
+            </if>
+            <if test="testamount != null">
+                testAmount,
+            </if>
+            <if test="testchecker != null">
+                testChecker,
+            </if>
+            <if test="testchecktime != null">
+                testCheckTime,
+            </if>
+            <if test="passregister != null">
+                passRegister,
+            </if>
+            <if test="passregisttime != null">
+                passRegistTime,
+            </if>
+            <if test="passchecker != null">
+                passChecker,
+            </if>
+            <if test="passchecktime != null">
+                passCheckTime,
+            </if>
+            <if test="passcheckstatus != null">
+                passCheckStatus,
+            </if>
+            <if test="passcheckcomment != null">
+                passCheckComment,
+            </if>
+            <if test="passpasscomment != null">
+                passPassComment,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="resid != null">
+                #{resid,jdbcType=INTEGER},
+            </if>
+            <if test="humanname != null">
+                #{humanname,jdbcType=VARCHAR},
+            </if>
+            <if test="engagetype != null">
+                #{engagetype,jdbcType=VARCHAR},
+            </if>
+            <if test="humanaddress != null">
+                #{humanaddress,jdbcType=VARCHAR},
+            </if>
+            <if test="humanpostcode != null">
+                #{humanpostcode,jdbcType=VARCHAR},
+            </if>
+            <if test="humanmajorid != null">
+                #{humanmajorid,jdbcType=INTEGER},
+            </if>
+            <if test="humantelephone != null">
+                #{humantelephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanhomephone != null">
+                #{humanhomephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanmobilephone != null">
+                #{humanmobilephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanemail != null">
+                #{humanemail,jdbcType=VARCHAR},
+            </if>
+            <if test="humanhobby != null">
+                #{humanhobby,jdbcType=VARCHAR},
+            </if>
+            <if test="humanspecility != null">
+                #{humanspecility,jdbcType=VARCHAR},
+            </if>
+            <if test="humansex != null">
+                #{humansex,jdbcType=VARCHAR},
+            </if>
+            <if test="humanreligion != null">
+                #{humanreligion,jdbcType=VARCHAR},
+            </if>
+            <if test="humanparty != null">
+                #{humanparty,jdbcType=VARCHAR},
+            </if>
+            <if test="humannationality != null">
+                #{humannationality,jdbcType=VARCHAR},
+            </if>
+            <if test="humanrace != null">
+                #{humanrace,jdbcType=VARCHAR},
+            </if>
+            <if test="humanbirthday != null">
+                #{humanbirthday,jdbcType=DATE},
+            </if>
+            <if test="humanage != null">
+                #{humanage,jdbcType=INTEGER},
+            </if>
+            <if test="humaneducateddegree != null">
+                #{humaneducateddegree,jdbcType=VARCHAR},
+            </if>
+            <if test="humaneducatedyears != null">
+                #{humaneducatedyears,jdbcType=VARCHAR},
+            </if>
+            <if test="humaneducatedmajor != null">
+                #{humaneducatedmajor,jdbcType=VARCHAR},
+            </if>
+            <if test="humancollege != null">
+                #{humancollege,jdbcType=VARCHAR},
+            </if>
+            <if test="humanidcard != null">
+                #{humanidcard,jdbcType=VARCHAR},
+            </if>
+            <if test="humanbirthplace != null">
+                #{humanbirthplace,jdbcType=VARCHAR},
+            </if>
+            <if test="demandsalarystandard != null">
+                #{demandsalarystandard,jdbcType=INTEGER},
+            </if>
+            <if test="humanhistoryrecords != null">
+                #{humanhistoryrecords,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="recomandation != null">
+                #{recomandation,jdbcType=VARCHAR},
+            </if>
+            <if test="humanpicture != null">
+                #{humanpicture,jdbcType=VARCHAR},
+            </if>
+            <if test="attachmentname != null">
+                #{attachmentname,jdbcType=VARCHAR},
+            </if>
+            <if test="checkstatus != null">
+                #{checkstatus,jdbcType=INTEGER},
+            </if>
+            <if test="register != null">
+                #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                #{registtime,jdbcType=DATE},
+            </if>
+            <if test="checker != null">
+                #{checker,jdbcType=VARCHAR},
+            </if>
+            <if test="checktime != null">
+                #{checktime,jdbcType=DATE},
+            </if>
+            <if test="interviewstatus != null">
+                #{interviewstatus,jdbcType=INTEGER},
+            </if>
+            <if test="interviewamount != null">
+                #{interviewamount,jdbcType=INTEGER},
+            </if>
+            <if test="totalpoints != null">
+                #{totalpoints,jdbcType=INTEGER},
+            </if>
+            <if test="testamount != null">
+                #{testamount,jdbcType=INTEGER},
+            </if>
+            <if test="testchecker != null">
+                #{testchecker,jdbcType=VARCHAR},
+            </if>
+            <if test="testchecktime != null">
+                #{testchecktime,jdbcType=DATE},
+            </if>
+            <if test="passregister != null">
+                #{passregister,jdbcType=VARCHAR},
+            </if>
+            <if test="passregisttime != null">
+                #{passregisttime,jdbcType=DATE},
+            </if>
+            <if test="passchecker != null">
+                #{passchecker,jdbcType=VARCHAR},
+            </if>
+            <if test="passchecktime != null">
+                #{passchecktime,jdbcType=DATE},
+            </if>
+            <if test="passcheckstatus != null">
+                #{passcheckstatus,jdbcType=INTEGER},
+            </if>
+            <if test="passcheckcomment != null">
+                #{passcheckcomment,jdbcType=VARCHAR},
+            </if>
+            <if test="passpasscomment != null">
+                #{passpasscomment,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.kexun.hr.model.Engageresume">
+        update engageresume
+        <set>
+            <if test="humanname != null">
+                humanName = #{humanname,jdbcType=VARCHAR},
+            </if>
+            <if test="engagetype != null">
+                engageType = #{engagetype,jdbcType=VARCHAR},
+            </if>
+            <if test="humanaddress != null">
+                humanAddress = #{humanaddress,jdbcType=VARCHAR},
+            </if>
+            <if test="humanpostcode != null">
+                humanPostcode = #{humanpostcode,jdbcType=VARCHAR},
+            </if>
+            <if test="humanmajorid != null">
+                humanMajorId = #{humanmajorid,jdbcType=INTEGER},
+            </if>
+            <if test="humantelephone != null">
+                humanTelephone = #{humantelephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanhomephone != null">
+                humanHomephone = #{humanhomephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanmobilephone != null">
+                humanMobilephone = #{humanmobilephone,jdbcType=VARCHAR},
+            </if>
+            <if test="humanemail != null">
+                humanEmail = #{humanemail,jdbcType=VARCHAR},
+            </if>
+            <if test="humanhobby != null">
+                humanHobby = #{humanhobby,jdbcType=VARCHAR},
+            </if>
+            <if test="humanspecility != null">
+                humanSpecility = #{humanspecility,jdbcType=VARCHAR},
+            </if>
+            <if test="humansex != null">
+                humanSex = #{humansex,jdbcType=VARCHAR},
+            </if>
+            <if test="humanreligion != null">
+                humanReligion = #{humanreligion,jdbcType=VARCHAR},
+            </if>
+            <if test="humanparty != null">
+                humanParty = #{humanparty,jdbcType=VARCHAR},
+            </if>
+            <if test="humannationality != null">
+                humanNationality = #{humannationality,jdbcType=VARCHAR},
+            </if>
+            <if test="humanrace != null">
+                humanRace = #{humanrace,jdbcType=VARCHAR},
+            </if>
+            <if test="humanbirthday != null">
+                humanBirthday = #{humanbirthday,jdbcType=DATE},
+            </if>
+            <if test="humanage != null">
+                humanAge = #{humanage,jdbcType=INTEGER},
+            </if>
+            <if test="humaneducateddegree != null">
+                humanEducatedDegree = #{humaneducateddegree,jdbcType=VARCHAR},
+            </if>
+            <if test="humaneducatedyears != null">
+                humanEducatedYears = #{humaneducatedyears,jdbcType=VARCHAR},
+            </if>
+            <if test="humaneducatedmajor != null">
+                humanEducatedMajor = #{humaneducatedmajor,jdbcType=VARCHAR},
+            </if>
+            <if test="humancollege != null">
+                humanCollege = #{humancollege,jdbcType=VARCHAR},
+            </if>
+            <if test="humanidcard != null">
+                humanIdcard = #{humanidcard,jdbcType=VARCHAR},
+            </if>
+            <if test="humanbirthplace != null">
+                humanBirthplace = #{humanbirthplace,jdbcType=VARCHAR},
+            </if>
+            <if test="demandsalarystandard != null">
+                demandSalaryStandard = #{demandsalarystandard,jdbcType=INTEGER},
+            </if>
+            <if test="humanhistoryrecords != null">
+                humanHistoryRecords = #{humanhistoryrecords,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="recomandation != null">
+                recomandation = #{recomandation,jdbcType=VARCHAR},
+            </if>
+            <if test="humanpicture != null">
+                humanPicture = #{humanpicture,jdbcType=VARCHAR},
+            </if>
+            <if test="attachmentname != null">
+                attachmentName = #{attachmentname,jdbcType=VARCHAR},
+            </if>
+            <if test="checkstatus != null">
+                checkStatus = #{checkstatus,jdbcType=INTEGER},
+            </if>
+            <if test="register != null">
+                register = #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                registTime = #{registtime,jdbcType=DATE},
+            </if>
+            <if test="checker != null">
+                checker = #{checker,jdbcType=VARCHAR},
+            </if>
+            <if test="checktime != null">
+                checkTime = #{checktime,jdbcType=DATE},
+            </if>
+            <if test="interviewstatus != null">
+                interviewStatus = #{interviewstatus,jdbcType=INTEGER},
+            </if>
+            <if test="interviewamount != null">
+                interviewAmount = #{interviewamount,jdbcType=INTEGER},
+            </if>
+            <if test="totalpoints != null">
+                totalPoints = #{totalpoints,jdbcType=INTEGER},
+            </if>
+            <if test="testamount != null">
+                testAmount = #{testamount,jdbcType=INTEGER},
+            </if>
+            <if test="testchecker != null">
+                testChecker = #{testchecker,jdbcType=VARCHAR},
+            </if>
+            <if test="testchecktime != null">
+                testCheckTime = #{testchecktime,jdbcType=DATE},
+            </if>
+            <if test="passregister != null">
+                passRegister = #{passregister,jdbcType=VARCHAR},
+            </if>
+            <if test="passregisttime != null">
+                passRegistTime = #{passregisttime,jdbcType=DATE},
+            </if>
+            <if test="passchecker != null">
+                passChecker = #{passchecker,jdbcType=VARCHAR},
+            </if>
+            <if test="passchecktime != null">
+                passCheckTime = #{passchecktime,jdbcType=DATE},
+            </if>
+            <if test="passcheckstatus != null">
+                passCheckStatus = #{passcheckstatus,jdbcType=INTEGER},
+            </if>
+            <if test="passcheckcomment != null">
+                passCheckComment = #{passcheckcomment,jdbcType=VARCHAR},
+            </if>
+            <if test="passpasscomment != null">
+                passPassComment = #{passpasscomment,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where resId = #{resid,jdbcType=INTEGER}
+    </update>
+
+</mapper>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.ConfigfilesecondkindMapper">
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+	<resultMap id="BaseResultMap"
+		type="com.kexun.hr.model.Configfilesecondkind">
+		<id column="secondKindId" jdbcType="INTEGER"
+			property="secondkindid" />
+		<result column="secondKindName" jdbcType="VARCHAR"
+			property="secondkindname" />
+		<result column="firstKindId" jdbcType="INTEGER"
+			property="firstkindid" />
+		<result column="secondSalaryId" jdbcType="VARCHAR"
+			property="secondsalaryid" />
+		<result column="secondSaleId" jdbcType="VARCHAR"
+			property="secondsaleid" />
+	</resultMap>
+	
+	 <!-- 查询所有二级机构 -->
+  <select id="findConfigfilesecondkind" resultMap="BaseResultMap">
+  SELECT * from configfilesecondkind
+  </select>
+	<!-- 两表联查 -->
+	<select id="findByFirstKindQueryAll" resultType="map" >
+		select cf.firstKindName,cs.* from configfilesecondkind cs LEFT JOIN
+		configfilefirstkind cf ON cf.firstKindId=cs.firstKindId
+	</select>
+	<!-- 查询单个 -->
+	<select id="inquireSecondkindSingle" resultType="map" parameterType="int">
+		select cf.firstKindName,cs.* from configfilesecondkind cs LEFT JOIN
+		configfilefirstkind cf ON cf.firstKindId=cs.firstKindId where secondKindId=#{secondkindid,jdbcType=INTEGER} 
+	</select>
+	
+		<!-- 删除 -->
+	 <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from configfilesecondkind
+    where secondKindId = #{secondkindid,jdbcType=INTEGER}
+  </delete>
+		<!-- 添加 -->
+	 <insert id="insertSelective" parameterType="configfilesecondkind">
+    insert into configfilesecondkind
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="secondkindid != null">
+        secondKindId,
+      </if>
+      <if test="secondkindname != null">
+        secondKindName,
+      </if>
+      <if test="firstkindid != null">
+        firstKindId,
+      </if>
+      <if test="secondsalaryid != null">
+        secondSalaryId,
+      </if>
+      <if test="secondsaleid != null">
+        secondSaleId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="secondkindid != null">
+        #{secondkindid,jdbcType=INTEGER},
+      </if>
+      <if test="secondkindname != null">
+        #{secondkindname,jdbcType=VARCHAR},
+      </if>
+      <if test="firstkindid != null">
+        #{firstkindid,jdbcType=INTEGER},
+      </if>
+      <if test="secondsalaryid != null">
+        #{secondsalaryid,jdbcType=VARCHAR},
+      </if>
+      <if test="secondsaleid != null">
+        #{secondsaleid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+	<!-- 修改 -->
+	<update id="updateByPrimaryKeySelective" parameterType="configfilesecondkind">
+    update configfilesecondkind
+    <set>
+      <if test="secondkindname != null">
+        secondKindName = #{secondkindname,jdbcType=VARCHAR},
+      </if>
+      <if test="firstkindid != null">
+        firstKindId = #{firstkindid,jdbcType=INTEGER},
+      </if>
+      <if test="secondsalaryid != null">
+        secondSalaryId = #{secondsalaryid,jdbcType=VARCHAR},
+      </if>
+      <if test="secondsaleid != null">
+        secondSaleId = #{secondsaleid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where secondKindId = #{secondkindid,jdbcType=INTEGER}
+  </update>
+	
+	
+	<!-- 根据传入的一级机构的主键查询二级机构 -->
+	<select id="findByFirstKindId" parameterType="Integer" resultMap="BaseResultMap">
+		select * from configfilesecondkind where firstKindId=#{firstKindId}
+	</select>
+</mapper>

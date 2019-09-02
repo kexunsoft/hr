@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.EngageanswerdetailsMapper">
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+	<resultMap id="BaseResultMap"
+		type="com.kexun.hr.model.Engageanswerdetails">
+		<id column="andId" jdbcType="INTEGER" property="andid" />
+		<result column="ansId" jdbcType="INTEGER" property="ansid" />
+		<result column="subjectId" jdbcType="VARCHAR"
+			property="subjectid" />
+		<result column="answer" jdbcType="VARCHAR" property="answer" />
+	</resultMap>
+
+	<delete id="deleteByPrimaryKey"
+		parameterType="java.lang.Integer">
+		delete from engageanswerdetails
+		where andId = #{andid,jdbcType=INTEGER}
+	</delete>
+
+	<insert id="insertSelective"
+		parameterType="com.kexun.hr.model.Engageanswerdetails">
+		insert into engageanswerdetails
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="andid != null">
+				andId,
+			</if>
+			<if test="ansid != null">
+				ansId,
+			</if>
+			<if test="subjectid != null">
+				subjectId,
+			</if>
+			<if test="answer != null">
+				answer,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="andid != null">
+				#{andid,jdbcType=INTEGER},
+			</if>
+			<if test="ansid != null">
+				#{ansid,jdbcType=INTEGER},
+			</if>
+			<if test="subjectid != null">
+				#{subjectid,jdbcType=VARCHAR},
+			</if>
+			<if test="answer != null">
+				#{answer,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateByPrimaryKeySelective"
+		parameterType="com.kexun.hr.model.Engageanswerdetails">
+		update engageanswerdetails
+		<set>
+			<if test="ansid != null">
+				ansId = #{ansid,jdbcType=INTEGER},
+			</if>
+			<if test="subjectid != null">
+				subjectId = #{subjectid,jdbcType=VARCHAR},
+			</if>
+			<if test="answer != null">
+				answer = #{answer,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where andId = #{andid,jdbcType=INTEGER}
+	</update>
+
+</mapper>

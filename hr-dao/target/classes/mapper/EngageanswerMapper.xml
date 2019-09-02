@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.EngageanswerMapper">
+  <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+  <resultMap id="BaseResultMap" type="com.kexun.hr.model.Engageanswer">
+    <id column="ansId" jdbcType="INTEGER" property="ansid" />
+    <result column="examNumber" jdbcType="VARCHAR" property="examnumber" />
+    <result column="resumeId" jdbcType="INTEGER" property="resumeid" />
+    <result column="humanName" jdbcType="VARCHAR" property="humanname" />
+    <result column="humanIdcard" jdbcType="VARCHAR" property="humanidcard" />
+    <result column="majorId" jdbcType="VARCHAR" property="majorid" />
+    <result column="testTime" jdbcType="DATE" property="testtime" />
+    <result column="useTime" jdbcType="INTEGER" property="usetime" />
+    <result column="totalPoint" jdbcType="INTEGER" property="totalpoint" />
+  </resultMap>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from engageanswer
+    where ansId = #{ansid,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insertSelective" parameterType="com.kexun.hr.model.Engageanswer">
+    insert into engageanswer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="ansid != null">
+        ansId,
+      </if>
+      <if test="examnumber != null">
+        examNumber,
+      </if>
+      <if test="resumeid != null">
+        resumeId,
+      </if>
+      <if test="humanname != null">
+        humanName,
+      </if>
+      <if test="humanidcard != null">
+        humanIdcard,
+      </if>
+      <if test="majorid != null">
+        majorId,
+      </if>
+      <if test="testtime != null">
+        testTime,
+      </if>
+      <if test="usetime != null">
+        useTime,
+      </if>
+      <if test="totalpoint != null">
+        totalPoint,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="ansid != null">
+        #{ansid,jdbcType=INTEGER},
+      </if>
+      <if test="examnumber != null">
+        #{examnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeid != null">
+        #{resumeid,jdbcType=INTEGER},
+      </if>
+      <if test="humanname != null">
+        #{humanname,jdbcType=VARCHAR},
+      </if>
+      <if test="humanidcard != null">
+        #{humanidcard,jdbcType=VARCHAR},
+      </if>
+      <if test="majorid != null">
+        #{majorid,jdbcType=VARCHAR},
+      </if>
+      <if test="testtime != null">
+        #{testtime,jdbcType=DATE},
+      </if>
+      <if test="usetime != null">
+        #{usetime,jdbcType=INTEGER},
+      </if>
+      <if test="totalpoint != null">
+        #{totalpoint,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.kexun.hr.model.Engageanswer">
+    update engageanswer
+    <set>
+      <if test="examnumber != null">
+        examNumber = #{examnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="resumeid != null">
+        resumeId = #{resumeid,jdbcType=INTEGER},
+      </if>
+      <if test="humanname != null">
+        humanName = #{humanname,jdbcType=VARCHAR},
+      </if>
+      <if test="humanidcard != null">
+        humanIdcard = #{humanidcard,jdbcType=VARCHAR},
+      </if>
+      <if test="majorid != null">
+        majorId = #{majorid,jdbcType=VARCHAR},
+      </if>
+      <if test="testtime != null">
+        testTime = #{testtime,jdbcType=DATE},
+      </if>
+      <if test="usetime != null">
+        useTime = #{usetime,jdbcType=INTEGER},
+      </if>
+      <if test="totalpoint != null">
+        totalPoint = #{totalpoint,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ansId = #{ansid,jdbcType=INTEGER}
+  </update>
+  
+</mapper>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.EngagemajorreleaseMapper">
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+    <!--返回映射-->
+    <resultMap id="BaseResultMap" type="com.kexun.hr.model.Engagemajorrelease">
+        <id column="mreId" jdbcType="INTEGER" property="mreid"/>
+        <result column="thirdKindId" jdbcType="INTEGER" property="thirdkindid"/>
+        <result column="majorId" jdbcType="INTEGER" property="majorid"/>
+        <result column="humanAmount" jdbcType="INTEGER" property="humanamount"/>
+        <result column="engageType" jdbcType="VARCHAR" property="engagetype"/>
+        <result column="deadline" jdbcType="DATE" property="deadline"/>
+        <result column="register" jdbcType="VARCHAR" property="register"/>
+        <result column="changer" jdbcType="VARCHAR" property="changer"/>
+        <result column="registTime" jdbcType="DATE" property="registtime"/>
+        <result column="changeTime" jdbcType="DATE" property="changetime"/>
+        <result column="majorDescribe" jdbcType="VARCHAR" property="majordescribe"/>
+        <result column="engageRequired" jdbcType="VARCHAR" property="engagerequired"/>
+    </resultMap>
+    <!--SQL片段-->
+    <sql id="Base_Column_List">
+    mreId, thirdKindId, majorId, humanAmount, engageType, deadline, register, changer,
+    registTime, changeTime, majorDescribe, engageRequired
+  </sql>
+    <!--根据主键查询-->
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from engagemajorrelease
+        where mreId = #{mreid,jdbcType=INTEGER}
+    </select>
+
+
+    <select id="findAll" resultType="map">
+    SELECT
+      t1.`mreId`,
+      t2.`majorName`,
+      t3.`thirdKindName`,
+      t1.`humanAmount`,
+      t1.`registtime`,
+      t1.`deadline`
+    FROM
+      `engagemajorrelease` t1
+      LEFT JOIN configMajor t2
+        ON t1.`majorId` = t2.`majorId`
+      LEFT JOIN `configfilethirdkind` t3
+        ON t1.`thirdKindId` = t3.`thirdKindId` ORDER BY t1.`mreId` DESC
+    </select>
+
+
+    <!--根据主键删除-->
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from engagemajorrelease where mreId = #{mreid,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insertSelective" parameterType="com.kexun.hr.model.Engagemajorrelease">
+        insert into engagemajorrelease
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="mreid != null">
+                mreId,
+            </if>
+            <if test="thirdkindid != null">
+                thirdKindId,
+            </if>
+            <if test="majorid != null">
+                majorId,
+            </if>
+            <if test="humanamount != null">
+                humanAmount,
+            </if>
+            <if test="engagetype != null">
+                engageType,
+            </if>
+            <if test="deadline != null">
+                deadline,
+            </if>
+            <if test="register != null">
+                register,
+            </if>
+            <if test="changer != null">
+                changer,
+            </if>
+            <if test="registtime != null">
+                registTime,
+            </if>
+            <if test="changetime != null">
+                changeTime,
+            </if>
+            <if test="majordescribe != null">
+                majorDescribe,
+            </if>
+            <if test="engagerequired != null">
+                engageRequired,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="mreid != null">
+                #{mreid,jdbcType=INTEGER},
+            </if>
+            <if test="thirdkindid != null">
+                #{thirdkindid,jdbcType=INTEGER},
+            </if>
+            <if test="majorid != null">
+                #{majorid,jdbcType=INTEGER},
+            </if>
+            <if test="humanamount != null">
+                #{humanamount,jdbcType=INTEGER},
+            </if>
+            <if test="engagetype != null">
+                #{engagetype,jdbcType=VARCHAR},
+            </if>
+            <if test="deadline != null">
+                #{deadline,jdbcType=DATE},
+            </if>
+            <if test="register != null">
+                #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="changer != null">
+                #{changer,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                #{registtime,jdbcType=DATE},
+            </if>
+            <if test="changetime != null">
+                #{changetime,jdbcType=DATE},
+            </if>
+            <if test="majordescribe != null">
+                #{majordescribe,jdbcType=VARCHAR},
+            </if>
+            <if test="engagerequired != null">
+                #{engagerequired,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--修改不为空的-->
+    <update id="updateByPrimaryKeySelective" parameterType="com.kexun.hr.model.Engagemajorrelease">
+        update engagemajorrelease
+        <set>
+            <if test="thirdkindid != null">
+                thirdKindId = #{thirdkindid,jdbcType=INTEGER},
+            </if>
+            <if test="majorid != null">
+                majorId = #{majorid,jdbcType=INTEGER},
+            </if>
+            <if test="humanamount != null">
+                humanAmount = #{humanamount,jdbcType=INTEGER},
+            </if>
+            <if test="engagetype != null">
+                engageType = #{engagetype,jdbcType=VARCHAR},
+            </if>
+            <if test="deadline != null">
+                deadline = #{deadline,jdbcType=DATE},
+            </if>
+            <if test="register != null">
+                register = #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="changer != null">
+                changer = #{changer,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                registTime = #{registtime,jdbcType=DATE},
+            </if>
+            <if test="changetime != null">
+                changeTime = #{changetime,jdbcType=DATE},
+            </if>
+            <if test="majordescribe != null">
+                majorDescribe = #{majordescribe,jdbcType=VARCHAR},
+            </if>
+            <if test="engagerequired != null">
+                engageRequired = #{engagerequired,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where mreId = #{mreid,jdbcType=INTEGER}
+    </update>
+
+
+    <select id="findOneById" parameterType="int" resultType="map">
+        SELECT
+          t1.`mreId`,
+          t2.`thirdKindName`,
+          t3.`secondKindName`,
+          t4.`firstKindName`,
+          t1.`engageType`,
+          t5.`majorName`,
+          t6.`majorKindName` ,
+          t1.`humanAmount`,
+          t1.`deadline`,
+          t1.`register`,
+          t1.`registTime`,
+          t1.`majorDescribe`,
+          t1.`engageRequired`,
+          t6.`majorKindId`,
+          t5.`majorId`
+        FROM
+          `engagemajorrelease` t1
+          LEFT JOIN `configfilethirdkind` t2
+            ON t1.`thirdKindId` = t2.`thirdKindId`
+          LEFT JOIN `configfilesecondkind` t3
+            ON t2.`secondKindId` = t3.`secondKindId`
+          LEFT JOIN `configfilefirstkind` t4
+            ON t3.`firstKindId` = t4.`firstKindId`
+          LEFT JOIN configMajor t5
+            ON t1.`majorId` = t5.`majorId`
+          LEFT JOIN `configmajorkind` t6
+            ON t5.`majorKindId` = t6.`majorKindId`
+            WHERE t1.`mreId`=#{mreId} limit 1
+    </select>
+
+
+</mapper>

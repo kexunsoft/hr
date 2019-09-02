@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.ConfigmajorMapper">
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+    <resultMap id="BaseResultMap"
+               type="com.kexun.hr.model.Configmajor">
+        <id column="majorId" jdbcType="INTEGER" property="majorid"/>
+        <result column="majorName" jdbcType="VARCHAR"
+                property="majorname"/>
+        <result column="majorKindId" jdbcType="VARCHAR"
+                property="majorkindid"/>
+        <result column="testAmount" jdbcType="INTEGER"
+                property="testamount"/>
+    </resultMap>
+
+    <!-- 删除职位 -->
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from configmajor
+    where majorId = #{majorid,jdbcType=INTEGER}
+  </delete>
+
+    <!-- 添加职位 -->
+    <insert id="insertSelective" parameterType="configmajor">
+        insert into configmajor
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="majorid != null">
+                majorId,
+            </if>
+            <if test="majorname != null">
+                majorName,
+            </if>
+            <if test="majorkindid != null">
+                majorKindId,
+            </if>
+            <if test="testamount != null">
+                testAmount,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="majorid != null">
+                #{majorid,jdbcType=INTEGER},
+            </if>
+            <if test="majorname != null">
+                #{majorname,jdbcType=VARCHAR},
+            </if>
+            <if test="majorkindid != null">
+                #{majorkindid,jdbcType=VARCHAR},
+            </if>
+            <if test="testamount != null">
+                #{testamount,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <!-- 查询所有职位分类分页 -->
+    <select id="findconConfigmajorQueryAll"
+            resultType="map">
+		SELECT cm.*,cj.majorId,cj.majorName from configmajor cj  LEFT JOIN configmajorkind cm on cm.majorKindId=cj.majorKindId
+	</select>
+    <!-- 查询所有 -->
+    <select id="findQueryAllAdd"
+            resultMap="BaseResultMap">
+		SELECT * from
+		configmajor
+	</select>
+
+    <!--findByidMajorKindIdConfigmajor-->
+    <select id="findByidMajorKindIdConfigmajor" parameterType="int" resultType="com.kexun.hr.model.Configmajor">
+        SELECT * FROM `configmajor` WHERE majorKindId=#{majorKindId}
+    </select>
+
+
+</mapper>

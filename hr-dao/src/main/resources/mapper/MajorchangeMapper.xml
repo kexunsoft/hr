@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.MajorchangeMapper">
+    <resultMap id="BaseResultMap" type="com.kexun.hr.model.Majorchange">
+        <id column="mchId" jdbcType="INTEGER" property="mchid"/>
+        <result column="thirdKindId" jdbcType="INTEGER" property="thirdkindid"/>
+        <result column="majorId" jdbcType="INTEGER" property="majorid"/>
+        <result column="newThirdKindId" jdbcType="INTEGER" property="newthirdkindid"/>
+        <result column="newMajorId" jdbcType="INTEGER" property="newmajorid"/>
+        <result column="humanId" jdbcType="VARCHAR" property="humanid"/>
+        <result column="salaryStandardId" jdbcType="VARCHAR" property="salarystandardid"/>
+        <result column="salarySum" jdbcType="DOUBLE" property="salarysum"/>
+        <result column="newSalaryStandardId" jdbcType="VARCHAR" property="newsalarystandardid"/>
+        <result column="newSalarySum" jdbcType="DOUBLE" property="newsalarysum"/>
+        <result column="changeReason" jdbcType="VARCHAR" property="changereason"/>
+        <result column="checkReason" jdbcType="VARCHAR" property="checkreason"/>
+        <result column="checkStatus" jdbcType="INTEGER" property="checkstatus"/>
+        <result column="register" jdbcType="VARCHAR" property="register"/>
+        <result column="checker" jdbcType="VARCHAR" property="checker"/>
+        <result column="registTime" jdbcType="DATE" property="registtime"/>
+        <result column="checkTime" jdbcType="DATE" property="checktime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    mchId, thirdKindId, majorId, newThirdKindId, newMajorId, humanId, salaryStandardId, 
+    salarySum, newSalaryStandardId, newSalarySum, changeReason, checkReason, checkStatus, 
+    register, checker, registTime, checkTime
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from majorchange
+        where mchId = #{mchid,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from majorchange
+    where mchId = #{mchid,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.kexun.hr.model.Majorchange">
+    insert into majorchange (mchId, thirdKindId, majorId, 
+      newThirdKindId, newMajorId, humanId, 
+      salaryStandardId, salarySum, newSalaryStandardId, 
+      newSalarySum, changeReason, checkReason, 
+      checkStatus, register, checker, 
+      registTime, checkTime)
+    values (#{mchid,jdbcType=INTEGER}, #{thirdkindid,jdbcType=INTEGER}, #{majorid,jdbcType=INTEGER}, 
+      #{newthirdkindid,jdbcType=INTEGER}, #{newmajorid,jdbcType=INTEGER}, #{humanid,jdbcType=VARCHAR}, 
+      #{salarystandardid,jdbcType=VARCHAR}, #{salarysum,jdbcType=DOUBLE}, #{newsalarystandardid,jdbcType=VARCHAR},
+      #{newsalarysum,jdbcType=DOUBLE}, #{changereason,jdbcType=VARCHAR}, #{checkreason,jdbcType=VARCHAR},
+      #{checkstatus,jdbcType=INTEGER}, #{register,jdbcType=VARCHAR}, #{checker,jdbcType=VARCHAR}, 
+      #{registtime,jdbcType=DATE}, #{checktime,jdbcType=DATE})
+  </insert>
+    <insert id="insertSelective" parameterType="com.kexun.hr.model.Majorchange">
+        insert into majorchange
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="mchid != null">
+                mchId,
+            </if>
+            <if test="thirdkindid != null">
+                thirdKindId,
+            </if>
+            <if test="majorid != null">
+                majorId,
+            </if>
+            <if test="newthirdkindid != null">
+                newThirdKindId,
+            </if>
+            <if test="newmajorid != null">
+                newMajorId,
+            </if>
+            <if test="humanid != null">
+                humanId,
+            </if>
+            <if test="salarystandardid != null">
+                salaryStandardId,
+            </if>
+            <if test="salarysum != null">
+                salarySum,
+            </if>
+            <if test="newsalarystandardid != null">
+                newSalaryStandardId,
+            </if>
+            <if test="newsalarysum != null">
+                newSalarySum,
+            </if>
+            <if test="changereason != null">
+                changeReason,
+            </if>
+            <if test="checkreason != null">
+                checkReason,
+            </if>
+            <if test="checkstatus != null">
+                checkStatus,
+            </if>
+            <if test="register != null">
+                register,
+            </if>
+            <if test="checker != null">
+                checker,
+            </if>
+            <if test="registtime != null">
+                registTime,
+            </if>
+            <if test="checktime != null">
+                checkTime,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="mchid != null">
+                #{mchid,jdbcType=INTEGER},
+            </if>
+            <if test="thirdkindid != null">
+                #{thirdkindid,jdbcType=INTEGER},
+            </if>
+            <if test="majorid != null">
+                #{majorid,jdbcType=INTEGER},
+            </if>
+            <if test="newthirdkindid != null">
+                #{newthirdkindid,jdbcType=INTEGER},
+            </if>
+            <if test="newmajorid != null">
+                #{newmajorid,jdbcType=INTEGER},
+            </if>
+            <if test="humanid != null">
+                #{humanid,jdbcType=VARCHAR},
+            </if>
+            <if test="salarystandardid != null">
+                #{salarystandardid,jdbcType=VARCHAR},
+            </if>
+            <if test="salarysum != null">
+                #{salarysum,jdbcType=DOUBLE},
+            </if>
+            <if test="newsalarystandardid != null">
+                #{newsalarystandardid,jdbcType=VARCHAR},
+            </if>
+            <if test="newsalarysum != null">
+                #{newsalarysum,jdbcType=DOUBLE},
+            </if>
+            <if test="changereason != null">
+                #{changereason,jdbcType=VARCHAR},
+            </if>
+            <if test="checkreason != null">
+                #{checkreason,jdbcType=VARCHAR},
+            </if>
+            <if test="checkstatus != null">
+                #{checkstatus,jdbcType=INTEGER},
+            </if>
+            <if test="register != null">
+                #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="checker != null">
+                #{checker,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                #{registtime,jdbcType=DATE},
+            </if>
+            <if test="checktime != null">
+                #{checktime,jdbcType=DATE},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.kexun.hr.model.Majorchange">
+        update majorchange
+        <set>
+            <if test="thirdkindid != null">
+                thirdKindId = #{thirdkindid,jdbcType=INTEGER},
+            </if>
+            <if test="majorid != null">
+                majorId = #{majorid,jdbcType=INTEGER},
+            </if>
+            <if test="newthirdkindid != null">
+                newThirdKindId = #{newthirdkindid,jdbcType=INTEGER},
+            </if>
+            <if test="newmajorid != null">
+                newMajorId = #{newmajorid,jdbcType=INTEGER},
+            </if>
+            <if test="humanid != null">
+                humanId = #{humanid,jdbcType=VARCHAR},
+            </if>
+            <if test="salarystandardid != null">
+                salaryStandardId = #{salarystandardid,jdbcType=VARCHAR},
+            </if>
+            <if test="salarysum != null">
+                salarySum = #{salarysum,jdbcType=DOUBLE},
+            </if>
+            <if test="newsalarystandardid != null">
+                newSalaryStandardId = #{newsalarystandardid,jdbcType=VARCHAR},
+            </if>
+            <if test="newsalarysum != null">
+                newSalarySum = #{newsalarysum,jdbcType=DOUBLE},
+            </if>
+            <if test="changereason != null">
+                changeReason = #{changereason,jdbcType=VARCHAR},
+            </if>
+            <if test="checkreason != null">
+                checkReason = #{checkreason,jdbcType=VARCHAR},
+            </if>
+            <if test="checkstatus != null">
+                checkStatus = #{checkstatus,jdbcType=INTEGER},
+            </if>
+            <if test="register != null">
+                register = #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="checker != null">
+                checker = #{checker,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                registTime = #{registtime,jdbcType=DATE},
+            </if>
+            <if test="checktime != null">
+                checkTime = #{checktime,jdbcType=DATE},
+            </if>
+        </set>
+        where mchId = #{mchid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.kexun.hr.model.Majorchange">
+    update majorchange
+    set thirdKindId = #{thirdkindid,jdbcType=INTEGER},
+      majorId = #{majorid,jdbcType=INTEGER},
+      newThirdKindId = #{newthirdkindid,jdbcType=INTEGER},
+      newMajorId = #{newmajorid,jdbcType=INTEGER},
+      humanId = #{humanid,jdbcType=VARCHAR},
+      salaryStandardId = #{salarystandardid,jdbcType=VARCHAR},
+      salarySum = #{salarysum,jdbcType=DOUBLE},
+      newSalaryStandardId = #{newsalarystandardid,jdbcType=VARCHAR},
+      newSalarySum = #{newsalarysum,jdbcType=DOUBLE},
+      changeReason = #{changereason,jdbcType=VARCHAR},
+      checkReason = #{checkreason,jdbcType=VARCHAR},
+      checkStatus = #{checkstatus,jdbcType=INTEGER},
+      register = #{register,jdbcType=VARCHAR},
+      checker = #{checker,jdbcType=VARCHAR},
+      registTime = #{registtime,jdbcType=DATE},
+      checkTime = #{checktime,jdbcType=DATE}
+    where mchId = #{mchid,jdbcType=INTEGER}
+  </update>
+
+    <!-- 多条件查询人力档案 -->
+    <select id="findByMoreIfMajorchange" parameterType="map" resultType="map">
+        SELECT
+        hf.humanId,
+        hf.humanName,
+        hf.humanSex,
+        cffk.firstKindName,
+        cfsk.secondKindName,
+        cftk.thirdKindName,
+        hf.humanProDesignation,
+        cfjk.majorKindName,
+        ssd.`standardName`
+        FROM
+        humanfile hf
+        LEFT JOIN configfilefirstkind cffk
+        ON hf.firstKindId = cffk.firstKindId
+        LEFT JOIN configfilesecondkind cfsk
+        ON hf.secondKindId = cfsk.secondKindId
+        LEFT JOIN configfilethirdkind cftk
+        ON hf.thirdKindId = cftk.thirdKindId
+        LEFT JOIN configMajor cfm
+        ON hf.humanMajorId = cfm.majorId
+        LEFT JOIN configmajorkind cfjk
+        ON cfm.majorKindId = cfjk.majorKindId
+        LEFT JOIN salarystandard ssd
+        ON hf.salaryStandardId = ssd.`standardId`
+        <where>
+            <if test="firstKindId != null">
+                and hf.firstKindId=#{firstKindId}
+            </if>
+            <if test="secondKindId != null">
+                and hf.secondKindId=#{secondKindId}
+            </if>
+            <if test="thirdKindId != null">
+                and hf.thirdKindId=#{thirdKindId}
+            </if>
+            <if test="registTime != null">
+                and hf.registTime>=#{registTime}
+            </if>
+            <if test="registTimetwo != null">
+                and hf.registTime&lt;=#{registTimetwo}
+            </if>
+            and hf.checkStatus=1 and humanFileStatus=0
+        </where>
+        order by hf.humanId DESC
+    </select>
+
+    <!-- 查询未审核通过的所有数据 -->
+    <select id="findByMajorChangeCheckStatusNo" resultType="map">
+		select mc.mchId,yiji.firstKindName,erji.secondKindName,sanji.thirdKindName,ssd.standardName,hf.humanName from majorchange mc
+		LEFT JOIN configfilethirdkind sanji on mc.newThirdKindId=sanji.thirdKindId
+		LEFT JOIN configfilesecondkind erji on sanji.secondKindId=erji.secondKindId
+		LEFT JOIN configfilefirstkind yiji on erji.firstKindId=yiji.firstKindId
+		LEFT JOIN humanfile hf on mc.humanId=hf.humanId
+		LEFT JOIN salaryStandard ssd on mc.newSalaryStandardId=ssd.standardId
+		where mc.checkStatus=0 GROUP BY mc.mchId DESC
+	</select>
+
+    <!-- 根据主键查询单个对象 -->
+    <select id="selectByKeyMajorChangeck" parameterType="int" resultType="map">
+		select mc.mchId,mc.humanId,hf.humanName,yiji.firstKindId,erji.secondKindId,mc.newThirdKindId,cfk.majorKindId,mc.newMajorId,mc.newSalaryStandardId,
+		mc.newSalarySum,mc.changeReason from majorchange mc
+		LEFT JOIN configfilethirdkind sanji on mc.newThirdKindId=sanji.thirdKindId
+		LEFT JOIN configfilesecondkind erji on sanji.secondKindId=erji.secondKindId
+		LEFT JOIN configfilefirstkind yiji on erji.firstKindId=yiji.firstKindId
+		LEFT JOIN humanfile hf on mc.humanId=hf.humanId
+		LEFT JOIN salaryStandard ssd on mc.newSalaryStandardId=ssd.standardId
+		LEFT JOIN configmajor cf on mc.newMajorId=cf.majorId
+		LEFT JOIN configMajorKind cfk on cf.majorKindId=cfk.majorKindId
+		where mchId=#{mchId}
+	</select>
+
+    <!-- 查询已审核通过的所有数据 -->
+    <select id="findByMajorChangeCheckStatusYes" parameterType="map" resultType="map">
+        select mc.mchId,yiji.firstKindName,erji.secondKindName,sanji.thirdKindName,ssd.standardName,hf.humanName from
+        majorchange mc
+        LEFT JOIN configfilethirdkind sanji on mc.newThirdKindId=sanji.thirdKindId
+        LEFT JOIN configfilesecondkind erji on sanji.secondKindId=erji.secondKindId
+        LEFT JOIN configfilefirstkind yiji on erji.firstKindId=yiji.firstKindId
+        LEFT JOIN humanfile hf on mc.humanId=hf.humanId
+        LEFT JOIN salaryStandard ssd on mc.newSalaryStandardId=ssd.standardId
+        LEFT JOIN configmajor cf on mc.newMajorId=cf.majorId
+        LEFT JOIN configMajorKind cfk on cf.majorKindId=cfk.majorKindId
+        <where>
+            <if test="firstKindId != null">
+                and hf.firstKindId=#{firstKindId}
+            </if>
+            <if test="secondKindId != null">
+                and hf.secondKindId=#{secondKindId}
+            </if>
+            <if test="thirdKindId != null">
+                and mc.thirdKindId=#{thirdKindId}
+            </if>
+
+            <if test="majorKindId !=null">
+                and cfk.majorKindId=#{majorKindId}
+            </if>
+            <if test="newMajorId !=null">
+                and mc.newMajorId=#{newMajorId}
+            </if>
+
+            <if test="registTime != null">
+                and hf.registTime>=#{registTime}
+            </if>
+            <if test="registTimetwo != null">
+                and hf.registTime&lt;=#{registTimetwo}
+            </if>
+            and mc.checkStatus=1
+        </where>
+        GROUP BY mc.mchId DESC
+    </select>
+
+    <!-- 根据主键查询调动表里的各数据以及连表查询原数据 -->
+    <select id="selectByKeySingleMajorchange" parameterType="int" resultType="map">
+		select dd.mchId,dd.humanId,hf.humanName,yyiji.firstKindName,yerji.secondKindName,ysanji.thirdKindName,
+		yzwfl.majorKindName,yzwmc.majorName,yxcbz.standardName,dd.salarySum,
+		yiji.firstKindName 'newfirstKindName',erji.secondKindName 'newsecondKindName',sanji.thirdKindName 'newthirdKindName',
+		zwfl.majorKindName 'newmajorKindName',zwmc.majorName 'newmajorName',
+		xcbz.standardName 'newstandardName',dd.newSalarySum,dd.changeReason,
+		dd.register,dd.registTime,dd.checker,dd.checkTime
+		from majorchange dd
+		LEFT JOIN humanfile hf on dd.humanId=hf.humanId
+		LEFT JOIN configfilethirdkind ysanji on dd.thirdKindId=ysanji.thirdKindId
+		LEFT JOIN configfilesecondkind yerji on ysanji.secondKindId=yerji.secondKindId
+		LEFT JOIN configfilefirstkind yyiji on yerji.firstKindId=yyiji.firstKindId
+		LEFT JOIN configmajor yzwmc on dd.majorId=yzwmc.majorId
+		LEFT JOIN configmajorkind yzwfl on yzwmc.majorKindId=yzwfl.majorKindId
+		LEFT JOIN salarystandard yxcbz on dd.salaryStandardId=yxcbz.standardId
+		LEFT JOIN configfilethirdkind sanji on dd.newThirdKindId=sanji.thirdKindId
+		LEFT JOIN configfilesecondkind erji on sanji.secondKindId=erji.secondKindId
+		LEFT JOIN configfilefirstkind yiji on erji.firstKindId=yiji.firstKindId
+		LEFT JOIN configmajor zwmc on dd.newMajorId=zwmc.majorId
+		LEFT JOIN configmajorkind zwfl on zwmc.majorKindId=zwfl.majorKindId
+		LEFT JOIN salarystandard xcbz on xcbz.standardId=dd.newSalaryStandardId
+		where dd.mchId=#{mchid}
+	</select>
+</mapper>

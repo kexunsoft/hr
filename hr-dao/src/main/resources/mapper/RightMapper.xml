@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.RightMapper">
+    <select id="findRights" resultType="right" parameterType="int">
+		SELECT t1.*,(SELECT COUNT(*) FROM `right` t2 WHERE t2.pid=t1.`id` ) 'count' FROM `right` t1 where t1.pid=#{id}
+	</select>
+
+    <select id="findAllRights" resultType="right">
+		SELECT t1.*,(SELECT COUNT(*) FROM `right` t2 WHERE t2.pid=t1.`id` ) 'count' FROM `right` t1
+	</select>
+
+    <select id="findRightByRoleId" parameterType="int"
+            resultType="right">
+		SELECT t1.*,(SELECT COUNT(*) FROM `right` t2 WHERE t2.pid=t1.`id` ) 'count' FROM `right` t1  JOIN roleright t3 ON t1.`id`=t3.`rightId` WHERE t3.`roleId`=#{roleId}
+
+	</select>
+
+
+</mapper>

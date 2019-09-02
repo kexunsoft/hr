@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.EngagesubjectsMapper">
+  <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+  <resultMap id="BaseResultMap" type="com.kexun.hr.model.Engagesubjects">
+    <id column="subId" jdbcType="INTEGER" property="subid" />
+    <result column="secondKindId" jdbcType="INTEGER" property="secondkindid" />
+    <result column="register" jdbcType="VARCHAR" property="register" />
+    <result column="registTime" jdbcType="DATE" property="registtime" />
+    <result column="derivation" jdbcType="VARCHAR" property="derivation" />
+    <result column="correctKey" jdbcType="VARCHAR" property="correctkey" />
+    <result column="changer" jdbcType="VARCHAR" property="changer" />
+    <result column="changeTime" jdbcType="DATE" property="changetime" />
+  </resultMap>
+ 
+</mapper>

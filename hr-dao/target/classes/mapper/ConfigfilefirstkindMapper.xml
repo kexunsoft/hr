@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.ConfigfilefirstkindMapper">
+  <resultMap type="com.kexun.hr.model.Configfilefirstkind" id="ResultMapFirstKind"></resultMap>
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+  <!-- 查询所有一级机构 -->
+  <select id="findConfigfilefirstkind" resultMap="ResultMapFirstKind">
+  	select * from configfilefirstkind
+  </select>
+    <!-- 查询单个机构 -->
+  <select id="findConfigfilefirstkindrById" parameterType="int" resultType="configfilefirstkind">
+  	select * from configfilefirstkind where firstKindId= #{firstkindid,jdbcType=INTEGER}
+  	
+  </select>
+  
+   <insert id="insertSelective" parameterType="configfilefirstkind">
+    insert into configfilefirstkind
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="firstkindid != null">
+        firstKindId,
+      </if>
+      <if test="firstkindname != null">
+        firstKindName,
+      </if>
+      <if test="firstKindSalaryId != null">
+        firstKindSalaryId,
+      </if>
+      <if test="firstKindSaleId != null">
+        firstKindSaleId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="firstkindid != null">
+        #{firstkindid,jdbcType=INTEGER},
+      </if>
+      <if test="firstkindname != null">
+        #{firstkindname,jdbcType=VARCHAR},
+      </if>
+      <if test="firstKindSalaryId != null">
+        #{firstKindSalaryId,jdbcType=VARCHAR},
+      </if>
+      <if test="firstKindSaleId != null">
+        #{firstKindSaleId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  
+   <update id="updateByPrimaryKeySelective" parameterType="configfilefirstkind">
+    update configfilefirstkind
+    <set>
+      <if test="firstkindname != null">
+        firstKindName = #{firstkindname,jdbcType=VARCHAR},
+      </if>
+      <if test="firstKindSalaryId != null">
+        firstKindSalaryId = #{firstKindSalaryId,jdbcType=VARCHAR},
+      </if>
+      <if test="firstKindSaleId != null">
+        firstKindSaleId = #{firstKindSaleId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where firstKindId = #{firstkindid,jdbcType=INTEGER}
+  </update>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from configfilefirstkind
+    where firstKindId = #{firstkindid,jdbcType=INTEGER}
+  </delete>
+</mapper>

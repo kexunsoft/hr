@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.EngageexamMapper">
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+	<resultMap id="BaseResultMap"
+		type="com.kexun.hr.model.Engageexam">
+		<id column="examNumber" jdbcType="INTEGER" property="examnumber" />
+		<result column="majorId" jdbcType="INTEGER" property="majorid" />
+		<result column="register" jdbcType="VARCHAR"
+			property="register" />
+		<result column="registTime" jdbcType="DATE"
+			property="registtime" />
+		<result column="limiteTime" jdbcType="INTEGER"
+			property="limitetime" />
+	</resultMap>
+
+	<delete id="deleteByPrimaryKey"
+		parameterType="java.lang.Integer">
+		delete from engageexam
+		where examNumber =
+		#{examnumber,jdbcType=INTEGER}
+	</delete>
+
+	<insert id="insertSelective"
+		parameterType="com.kexun.hr.model.Engageexam">
+		insert into engageexam
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="examnumber != null">
+				examNumber,
+			</if>
+			<if test="majorid != null">
+				majorId,
+			</if>
+			<if test="register != null">
+				register,
+			</if>
+			<if test="registtime != null">
+				registTime,
+			</if>
+			<if test="limitetime != null">
+				limiteTime,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="examnumber != null">
+				#{examnumber,jdbcType=INTEGER},
+			</if>
+			<if test="majorid != null">
+				#{majorid,jdbcType=INTEGER},
+			</if>
+			<if test="register != null">
+				#{register,jdbcType=VARCHAR},
+			</if>
+			<if test="registtime != null">
+				#{registtime,jdbcType=DATE},
+			</if>
+			<if test="limitetime != null">
+				#{limitetime,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateByPrimaryKeySelective"
+		parameterType="com.kexun.hr.model.Engageexam">
+		update engageexam
+		<set>
+			<if test="majorid != null">
+				majorId = #{majorid,jdbcType=INTEGER},
+			</if>
+			<if test="register != null">
+				register = #{register,jdbcType=VARCHAR},
+			</if>
+			<if test="registtime != null">
+				registTime = #{registtime,jdbcType=DATE},
+			</if>
+			<if test="limitetime != null">
+				limiteTime = #{limitetime,jdbcType=INTEGER},
+			</if>
+		</set>
+		where examNumber = #{examnumber,jdbcType=INTEGER}
+	</update>
+
+</mapper>

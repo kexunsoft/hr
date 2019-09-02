@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+
+    <!-- 注解扫描包 -->
+    <context:component-scan
+            base-package="com.kexun.hr">
+        <!--排除Controller注解的 -->
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!-- 导入配置文件 -->
+    <context:property-placeholder
+            location="classpath:jdbc.properties"/>
+
+    <!--数据源 -->
+    <bean id="dataSource"
+          class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="driverClassName" value="${jdbc.driver}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+
+    <!--mybatis sqlsessionFactory -->
+    <bean id="sessionFactory" name="sessionFactory"
+          class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:conf.xml"></property>
+        <property name="mapperLocations"
+                  value="classpath:mapper/*.xml"></property>
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+
+    <!--mapper 扫描 -->
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName"
+                  value="sessionFactory"></property>
+        <property name="basePackage" value="com.kexun.hr.dao"></property>
+    </bean>
+
+
+</beans>

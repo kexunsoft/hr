@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.SalarygrantMapper">
+    <resultMap id="BaseResultMap" type="com.kexun.hr.model.Salarygrant">
+        <id column="salaryGrantId" jdbcType="VARCHAR" property="salarygrantid"/>
+        <result column="salaryStandardId" jdbcType="VARCHAR" property="salarystandardid"/>
+        <result column="secondKindId" jdbcType="INTEGER" property="secondkindid"/>
+        <result column="humanAmount" jdbcType="INTEGER" property="humanamount"/>
+        <result column="salaryStandardSum" jdbcType="DOUBLE" property="salarystandardsum"/>
+        <result column="salaryPaidSum" jdbcType="DOUBLE" property="salarypaidsum"/>
+        <result column="register" jdbcType="VARCHAR" property="register"/>
+        <result column="registTime" jdbcType="DATE" property="registtime"/>
+        <result column="checker" jdbcType="VARCHAR" property="checker"/>
+        <result column="checkTime" jdbcType="DATE" property="checktime"/>
+        <result column="checkStatus" jdbcType="INTEGER" property="checkstatus"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    salaryGrantId, salaryStandardId, secondKindId, humanAmount, salaryStandardSum, salaryPaidSum,
+    register, registTime, checker, checkTime, checkStatus
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from salarygrant
+        where salaryGrantId = #{salarygrantid,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from salarygrant
+    where salaryGrantId = #{salarygrantid,jdbcType=VARCHAR}
+  </delete>
+
+
+    <!--三个机构查询-->
+
+    <!--一级-->
+    <select id="findFirst" resultType="map">
+    SELECT
+     t2.`firstKindId` 'id',
+      t2.`firstKindName` 'organization',
+      COUNT(*) 'count',
+      SUM(t3.`salarySum`) 'salary'
+    FROM
+      `humanfile` t1
+       JOIN `configfilefirstkind` t2
+        ON t1.`firstKindId` = t2.`firstKindId`
+       JOIN `salarystandard` t3
+        ON t1.`salaryStandardId` = t3.`standardId` GROUP BY t1.`firstKindId`
+    </select>
+    <!--二级-->
+    <select id="findSecound" resultType="map">
+    SELECT
+     t2.`secondKindId` 'id',
+      t2.`secondKindName` 'organization',
+      COUNT(*) 'count',
+      SUM(t3.`salarySum`) 'salary'
+    FROM
+      `humanfile` t1
+       JOIN `configfilesecondkind` t2
+      ON t1.`secondKindId`=t2.`secondKindId`
+       JOIN `salarystandard` t3
+        ON t1.`salaryStandardId` = t3.`standardId` GROUP BY t1.secondKindId
+    </select>
+    <!--三级-->
+    <select id="findThird" resultType="map">
+    SELECT
+    t2.`thirdKindId` 'id',
+      t2.`thirdKindName` 'organization',
+      COUNT(*) 'count',
+      SUM(t3.`salarySum`) 'salary'
+    FROM
+      `humanfile` t1
+       JOIN `configfilethirdkind` t2
+      ON t1.`thirdKindId`=t2.`thirdKindId`
+       JOIN `salarystandard` t3
+        ON t1.`salaryStandardId` = t3.`standardId` GROUP BY t1.`thirdKindId`
+    </select>
+
+    <!--查询三个机构的人-->
+    <select id="findFirstfindHuman" resultType="map">
+        SELECT
+          t1.humanId,
+          t1.humanName,
+          t1.salaryStandardId,
+          t2.`salarySum`,
+          t2.`standardId`,
+          t2.`standardName`
+        FROM
+          humanfile t1
+          LEFT JOIN `salarystandard` t2
+            ON t1.`salaryStandardId` = t2.`standardId`
+            WHERE t1.`firstKindId`=#{pid}
+
+    </select>
+
+    <select id="findSecoundfindHuman" resultType="map">
+         SELECT
+          t1.humanId,
+          t1.humanName,
+          t1.salaryStandardId,
+          t2.`salarySum`,
+          t2.`standardId`,
+          t2.`standardName`
+        FROM
+          humanfile t1
+          LEFT JOIN `salarystandard` t2
+            ON t1.`salaryStandardId` = t2.`standardId`
+            WHERE t1.`secondKindId`=#{pid}
+    </select>
+
+    <select id="findThirdfindHuman" resultType="map">
+         SELECT
+          t1.humanId,
+          t1.humanName,
+          t1.salaryStandardId,
+          t2.`salarySum`,
+          t2.`standardId`,
+          t2.`standardName`
+        FROM
+          humanfile t1
+          LEFT JOIN `salarystandard` t2
+            ON t1.`salaryStandardId` = t2.`standardId`
+            WHERE t1.`thirdKindId`=#{pid}
+    </select>
+
+    <!--根据复核状态查询-->
+    <select id="findByCheckStatus" parameterType="int" resultType="map">
+        SELECT
+          t1.*,
+          t2.`firstKindName`,
+          t3.`secondKindName`,
+          t4.`thirdKindName`
+        FROM
+          `salarygrant` t1
+          LEFT JOIN `configfilefirstkind` t2
+            ON t1.`firstKindId` = t2.`firstKindId`
+          LEFT JOIN `configfilesecondkind` t3
+            ON t1.`secondKindId` = t3.`secondKindId`
+          LEFT JOIN `configfilethirdkind` t4
+            ON t1.`thirdkindId` = t4.`thirdKindId`
+        WHERE t1.`checkStatus` = #{checkStatus}
+        ORDER BY t1.`salaryGrantId` DESC
+    </select>
+
+
+    <insert id="insert" parameterType="com.kexun.hr.model.Salarygrant">
+    insert into salarygrant (salaryGrantId, salaryStandardId,
+      secondKindId, humanAmount, salaryStandardSum,
+      salaryPaidSum, register, registTime,
+      checker, checkTime, checkStatus
+      )
+    values (#{salarygrantid,jdbcType=VARCHAR}, #{salarystandardid,jdbcType=VARCHAR},
+      #{secondkindid,jdbcType=INTEGER}, #{humanamount,jdbcType=INTEGER}, #{salarystandardsum,jdbcType=DOUBLE},
+      #{salarypaidsum,jdbcType=DOUBLE}, #{register,jdbcType=VARCHAR}, #{registtime,jdbcType=DATE},
+      #{checker,jdbcType=VARCHAR}, #{checktime,jdbcType=DATE}, #{checkstatus,jdbcType=INTEGER}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.kexun.hr.model.Salarygrant">
+        insert into salarygrant
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="salarygrantid != null">
+                salaryGrantId,
+            </if>
+            <if test="salarystandardid != null">
+                salaryStandardId,
+            </if>
+            <if test="secondkindid != null">
+                secondKindId,
+            </if>
+            <if test="firstkindId != null">
+                firstkindId,
+            </if>
+            <if test="thirdkindId != null">
+                thirdkindId,
+            </if>
+            <if test="humanamount != null">
+                humanAmount,
+            </if>
+            <if test="salarystandardsum != null">
+                salaryStandardSum,
+            </if>
+            <if test="salarypaidsum != null">
+                salaryPaidSum,
+            </if>
+            <if test="register != null">
+                register,
+            </if>
+            <if test="registtime != null">
+                registTime,
+            </if>
+            <if test="checker != null">
+                checker,
+            </if>
+            <if test="checktime != null">
+                checkTime,
+            </if>
+            <if test="checkstatus != null">
+                checkStatus,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="salarygrantid != null">
+                #{salarygrantid,jdbcType=VARCHAR},
+            </if>
+            <if test="salarystandardid != null">
+                #{salarystandardid,jdbcType=VARCHAR},
+            </if>
+            <if test="secondkindid != null">
+                #{secondkindid,jdbcType=INTEGER},
+            </if>
+            <if test="firstkindId != null">
+                #{firstkindId,jdbcType=INTEGER},
+            </if>
+            <if test="thirdkindId != null">
+                #{thirdkindId,jdbcType=INTEGER},
+            </if>
+            <if test="humanamount != null">
+                #{humanamount,jdbcType=INTEGER},
+            </if>
+            <if test="salarystandardsum != null">
+                #{salarystandardsum,jdbcType=DOUBLE},
+            </if>
+            <if test="salarypaidsum != null">
+                #{salarypaidsum,jdbcType=DOUBLE},
+            </if>
+            <if test="register != null">
+                #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                #{registtime,jdbcType=DATE},
+            </if>
+            <if test="checker != null">
+                #{checker,jdbcType=VARCHAR},
+            </if>
+            <if test="checktime != null">
+                #{checktime,jdbcType=DATE},
+            </if>
+            <if test="checkstatus != null">
+                #{checkstatus,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.kexun.hr.model.Salarygrant">
+        update salarygrant
+        <set>
+            <if test="salarystandardid != null">
+                salaryStandardId = #{salarystandardid,jdbcType=VARCHAR},
+            </if>
+            <if test="secondkindid != null">
+                secondKindId = #{secondkindid,jdbcType=INTEGER},
+            </if>
+            <if test="humanamount != null">
+                humanAmount = #{humanamount,jdbcType=INTEGER},
+            </if>
+            <if test="salarystandardsum != null">
+                salaryStandardSum = #{salarystandardsum,jdbcType=DOUBLE},
+            </if>
+            <if test="salarypaidsum != null">
+                salaryPaidSum = #{salarypaidsum,jdbcType=DOUBLE},
+            </if>
+            <if test="register != null">
+                register = #{register,jdbcType=VARCHAR},
+            </if>
+            <if test="registtime != null">
+                registTime = #{registtime,jdbcType=DATE},
+            </if>
+            <if test="checker != null">
+                checker = #{checker,jdbcType=VARCHAR},
+            </if>
+            <if test="checktime != null">
+                checkTime = #{checktime,jdbcType=DATE},
+            </if>
+            <if test="checkstatus != null">
+                checkStatus = #{checkstatus,jdbcType=INTEGER},
+            </if>
+        </set>
+        where salaryGrantId = #{salarygrantid,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.kexun.hr.model.Salarygrant">
+    update salarygrant
+    set salaryStandardId = #{salarystandardid,jdbcType=VARCHAR},
+      secondKindId = #{secondkindid,jdbcType=INTEGER},
+      humanAmount = #{humanamount,jdbcType=INTEGER},
+      salaryStandardSum = #{salarystandardsum,jdbcType=DOUBLE},
+      salaryPaidSum = #{salarypaidsum,jdbcType=DOUBLE},
+      register = #{register,jdbcType=VARCHAR},
+      registTime = #{registtime,jdbcType=DATE},
+      checker = #{checker,jdbcType=VARCHAR},
+      checkTime = #{checktime,jdbcType=DATE},
+      checkStatus = #{checkstatus,jdbcType=INTEGER}
+    where salaryGrantId = #{salarygrantid,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kexun.hr.dao.ConfigprimarykeyMapper">
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+	<resultMap id="BaseResultMap"
+		type="com.kexun.hr.model.Configprimarykey">
+		<id column="prkId" jdbcType="INTEGER" property="prkid" />
+		<result column="primaryKeyTable" jdbcType="VARCHAR"
+			property="primarykeytable" />
+		<result column="primaryKey" jdbcType="VARCHAR"
+			property="primarykey" />
+		<result column="keyName" jdbcType="VARCHAR" property="keyname" />
+		<result column="primaryKeyStatus" jdbcType="INTEGER"
+			property="primarykeystatus" />
+	</resultMap>
+
+
+
+	<delete id="deleteByPrimaryKey"
+		parameterType="java.lang.Integer">
+		delete from configprimarykey
+		where prkId = #{prkid,jdbcType=INTEGER}
+	</delete>
+
+	<insert id="insertSelective"
+		parameterType="com.kexun.hr.model.Configprimarykey">
+		insert into configprimarykey
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="prkid != null">
+				prkId,
+			</if>
+			<if test="primarykeytable != null">
+				primaryKeyTable,
+			</if>
+			<if test="primarykey != null">
+				primaryKey,
+			</if>
+			<if test="keyname != null">
+				keyName,
+			</if>
+			<if test="primarykeystatus != null">
+				primaryKeyStatus,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="prkid != null">
+				#{prkid,jdbcType=INTEGER},
+			</if>
+			<if test="primarykeytable != null">
+				#{primarykeytable,jdbcType=VARCHAR},
+			</if>
+			<if test="primarykey != null">
+				#{primarykey,jdbcType=VARCHAR},
+			</if>
+			<if test="keyname != null">
+				#{keyname,jdbcType=VARCHAR},
+			</if>
+			<if test="primarykeystatus != null">
+				#{primarykeystatus,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateByPrimaryKeySelective"
+		parameterType="com.kexun.hr.model.Configprimarykey">
+		update configprimarykey
+		<set>
+			<if test="primarykeytable != null">
+				primaryKeyTable = #{primarykeytable,jdbcType=VARCHAR},
+			</if>
+			<if test="primarykey != null">
+				primaryKey = #{primarykey,jdbcType=VARCHAR},
+			</if>
+			<if test="keyname != null">
+				keyName = #{keyname,jdbcType=VARCHAR},
+			</if>
+			<if test="primarykeystatus != null">
+				primaryKeyStatus = #{primarykeystatus,jdbcType=INTEGER},
+			</if>
+		</set>
+		where prkId = #{prkid,jdbcType=INTEGER}
+	</update>
+
+</mapper>
