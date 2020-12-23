@@ -10,17 +10,17 @@
 <head>
     <title></title>
 
-    <link rel="stylesheet" type="text/css" href="/hr/static/js/easyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="/hr/static/js/easyui/themes/icon.css">
-    <script type="text/javascript" src="/hr/static/js/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="/hr/static/js/easyui/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/js/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/js/easyui/themes/icon.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
     <script>
 
         /*查询拥有的权限*/
         $(function () {
             $('#tt').tree({
-                url: '/hr/right/findHaveRights?roleId=${roleId}'
+                url: '${pageContext.request.contextPath}/right/findHaveRights?roleId=${roleId}'
             });
         })
 
@@ -41,7 +41,7 @@
             console.log(rightIds);
             var i;
             $.ajax({
-                url: "/hr/role/allocationRight",
+                url: "${pageContext.request.contextPath}/role/allocationRight",
                 data: {"rightIds": rightIds, "roleId": ${roleId}},
                 type: "post",
                 beforeSend: function () {
@@ -61,7 +61,7 @@
                                 icon: 1,
                                 time: 1000 //2秒关闭（如果不配置，默认是3秒）
                             }, function () {
-                                window.location.href = "/hr/role/roles";
+                                window.location.href = "${pageContext.request.contextPath}/role/roles";
                             }
                         )
                     } else {

@@ -5,10 +5,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title>用户管理</title>
-    <link rel="stylesheet" href="/hr/static/layui/css/layui.css"/>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
 
     <style>
         .notice_nav a:nth-child(3) {
@@ -28,7 +28,7 @@
     <div class="notice_check">
 
         <div class="btn-group r_right">
-            <a class="btn btn-primary" href="/hr/user/useradd">添加用户</a>
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/user/useradd">添加用户</a>
         </div>
         <div class="clear"></div>
     </div>
@@ -63,7 +63,7 @@
                 <td>${u.trueName}</td>
                 <td>${u.uPassword}</td>
                 <td>${u.uRole!=null?u.uRole.roleName:"角色已经被删除"}</td>
-                <td><a href="/hr/user/usermodify?uid=${u.uId}">修改</a><a href="javascript:del(${u.uId})">删除</a></td>
+                <td><a href="${pageContext.request.contextPath}/user/usermodify?uid=${u.uId}">修改</a><a href="javascript:del(${u.uId})">删除</a></td>
             </tr>
         </c:forEach>
         </tbody>
@@ -126,8 +126,8 @@
         </ul>
     </div>
 </div>
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-<script src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
 
     function del(id) {
@@ -135,7 +135,7 @@
 
             var i;
             $.ajax({
-                url: "/hr/user/delUser",
+                url: "${pageContext.request.contextPath}/user/delUser",
                 data: {"uid": id},
                 type: "get",
                 beforeSend: function () {
@@ -154,7 +154,7 @@
                                 icon: 1,
                                 time: 1000 //2秒关闭（如果不配置，默认是3秒）
                             }, function () {
-                                window.location.href = "/hr/user/users";
+                                window.location.href = "${pageContext.request.contextPath}/user/users";
                             }
                         )
                     } else {

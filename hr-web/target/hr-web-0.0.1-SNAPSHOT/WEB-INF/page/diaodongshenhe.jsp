@@ -7,9 +7,9 @@
 	<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
 		<title></title>
-		<link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-		<link href="/hr/static/css/table.css" rel="stylesheet" type="text/css" />
+		<link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css" />
 		<style>
 			.notice_nav a:nth-child(3) {
 				border-top-right-radius: 0;
@@ -22,8 +22,8 @@
 			}
 		</style>
 	</head>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 
 	<body style="background-color: #ecf0f5;font-family: 微软雅黑;color: #475059;min-width: 1000px;overflow: auto">
 		<div class="notice_main">
@@ -62,7 +62,7 @@
 						<td>${ft.thirdKindName }</td>
 						<td>${ft.standardName }</td>
 						<td>${ft.humanName }</td>
-						<td><a href="/hr/MajorChangeController/selectByKeyMajorChangeck?mchId=${ft.mchId }">审核</a></td>
+						<td><a href="${pageContext.request.contextPath}/MajorChangeController/selectByKeyMajorChangeck?mchId=${ft.mchId }">审核</a></td>
 					</tr>
 				</c:forEach>
 			</table>

@@ -7,8 +7,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>科讯后台管理系统登录</title>
-    <link rel="stylesheet" href="/hr/static/layui/css/layui.css" media="all"/>
-    <link rel="stylesheet" href="/hr/static/css/login.css" media="all"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login.css" media="all"/>
     <style>
         /* 覆盖原框架样式 */
         .layui-elem-quote {
@@ -47,7 +47,7 @@
                     <div class="zyl_login_cont"></div>
                 </div>
                 <div>
-                    <img src="/hr/static/img/carousel/01.jpg"/>
+                    <img src="${pageContext.request.contextPath}/static/img/carousel/01.jpg"/>
                 </div>
                 <div>
                     <div class="background">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div>
-                    <img src="/hr/static/img/carousel/03.jpg"/>
+                    <img src="${pageContext.request.contextPath}/static/img/carousel/03.jpg"/>
                 </div>
             </div>
         </div>
@@ -122,15 +122,15 @@
 <!-- LoginForm End -->
 
 <!-- Jquery Js -->
-<script type="text/javascript" src="/hr/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
 <!-- Layui Js -->
-<script type="text/javascript" src="/hr/static/layui/layui.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/layui/layui.js"></script>
 <!-- Jqarticle Js -->
 <script type="text/javascript"
-        src="/hr/static/assembly/jqarticle/jparticle.min.js"></script>
+        src="${pageContext.request.contextPath}/static/assembly/jqarticle/jparticle.min.js"></script>
 <!-- ZylVerificationCode Js-->
 <script type="text/javascript"
-        src="/hr/static/assembly/zylVerificationCode/zylVerificationCode.js"></script>
+        src="${pageContext.request.contextPath}/static/assembly/zylVerificationCode/zylVerificationCode.js"></script>
 <script>
     layui.use(['carousel', 'form'], function () {
         var carousel = layui.carousel, form = layui.form;
@@ -217,7 +217,7 @@
         var formData = $("#form1").serialize();
         $.ajax({
             type: "post",
-            url: "http://127.0.0.1/hr/user/login",
+            url: "${pageContext.request.contextPath}/user/login",
             async: true,
             datatype: "jsonp",
             data: formData,
@@ -228,7 +228,7 @@
             success: function (data) {
                 closeLoad(i);
                 if (data.code == 200) {
-                    window.location.href = "/hr/index";
+                    window.location.href = "${pageContext.request.contextPath}/index";
                     window.sessionStorage.setItem("username",
                         data.data.username);
                 } else {

@@ -5,8 +5,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>薪酬复核</title>
-    <script src="/hr/static/js/bootstrap/js/bootstrap.min.js"></script>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="${pageContext.request.contextPath}/static/js/bootstrap/js/bootstrap.min.js"></script>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -102,8 +102,8 @@
 </form>
 </body>
 
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-<script src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
 
     $(function () {
@@ -163,7 +163,7 @@
 
         var i;
         $.ajax({
-            url: "/hr/salarystandardController/review",
+            url: "${pageContext.request.contextPath}/salarystandardController/review",
             data: formData,
             type: "post",
             beforeSend: function () {
@@ -183,7 +183,7 @@
                             icon: 1,
                             time: 1000 //2秒关闭（如果不配置，默认是3秒）
                         }, function () {
-                            window.location.href = "/hr/salarystandardController/compensationStandards";
+                            window.location.href = "${pageContext.request.contextPath}/salarystandardController/compensationStandards";
                         }
                     )
                 } else {
@@ -191,7 +191,7 @@
                             icon: 2,
                             time: 2000 //2秒关闭（如果不配置，默认是3秒）
                         }, function () {
-                            window.location.href = "/hr/salarystandardController/findAllSalary";
+                            window.location.href = "${pageContext.request.contextPath}/salarystandardController/findAllSalary";
                         }
                     )
                 }

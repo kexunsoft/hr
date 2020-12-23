@@ -5,9 +5,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -49,7 +49,7 @@
                 <td><fmt:formatDate value="${s.registtime}"/></td>
                 <td>${s.salarysum}</td>
                 <td>
-                    <a href="/hr/salarystandardController/updSalary?standardid=${s.standardid}">修改</a>
+                    <a href="${pageContext.request.contextPath}/salarystandardController/updSalary?standardid=${s.standardid}">修改</a>
                 </td>
 
             </tr>

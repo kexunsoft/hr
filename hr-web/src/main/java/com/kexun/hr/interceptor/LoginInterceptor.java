@@ -46,7 +46,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
                 out.println("  <script>\n" +
                         "\n" +
-                        "        top.location.href = \"/hr/login\"\n" +
+                        "        top.location.href =" + request.getContextPath() + " \"/login\"\n" +
                         "\n" +
                         "    </script>");
 

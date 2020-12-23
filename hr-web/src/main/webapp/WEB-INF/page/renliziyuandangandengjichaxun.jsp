@@ -7,11 +7,11 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
 <title>人力资源档案登记查询</title>
-<link href="/hr/static/js/bstable/css/bootstrap.min.css"
+<link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css"
 	rel="stylesheet" type="text/css">
-<link href="/hr/static/js/bstable/css/bootstrap-table.css"
+<link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css"
 	rel="stylesheet" type="text/css">
-<link href="/hr/static/css/table.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css" />
 <style>
 .notice_nav a:nth-child(3) {
 	border-top-right-radius: 0;
@@ -76,8 +76,8 @@
 					<td>${fth.secondKindName }</td>
 					<td>${fth.thirdKindName }</td>
 					<td>${fth.humanProDesignation }</td>
-					<td><a href="/hr/HumanFile/selectByPrimaryKey?humanid=${fth.humanId}">复核</a></td>
-					<td><a href="/hr/HumanFile/selectByPrimaryKey_update?humanid=${fth.humanId}">修改</a></td>
+					<td><a href="${pageContext.request.contextPath}/HumanFile/selectByPrimaryKey?humanid=${fth.humanId}">复核</a></td>
+					<td><a href="${pageContext.request.contextPath}/HumanFile/selectByPrimaryKey_update?humanid=${fth.humanId}">修改</a></td>
 				</tr>
 			</c:forEach>
 		</table>

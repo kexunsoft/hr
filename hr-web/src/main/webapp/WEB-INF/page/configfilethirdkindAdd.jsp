@@ -5,19 +5,19 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>III级机构添加</title>
-    <link rel="stylesheet" href="/hr/static/layui/css/layui.css"/>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css"
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css"
           rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css"
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css"
           rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
-    <script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
     <script type="text/javascript">
 
         $(function () {
             // /发送查询一级机构请求/
-            $.get('/hr/Configfilefirstkind/findConfigfilefirstkind', function (data) {
+            $.get('${pageContext.request.contextPath}/Configfilefirstkind/findConfigfilefirstkind', function (data) {
                 $.each(data, function (index, item) {
                     $("#oneji").append(
                         "<option value=" + item.firstkindid + ">"
@@ -29,7 +29,7 @@
                 $("#twoji option:gt(0)").remove();
                 $("#threeji option:gt(0)").remove();
                 var oneid = $(this).val();
-                $.get('/hr/Configfilesecondkind/findByFirstKindId', {
+                $.get('${pageContext.request.contextPath}/Configfilesecondkind/findByFirstKindId', {
                     'firstKindId': oneid
                 }, function (data) {
                     $.each(data, function (index, item) {
@@ -123,8 +123,8 @@
 
     <br> <br>
 </form>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
     function save() {
 
@@ -132,7 +132,7 @@
         var i;
         $
             .ajax({
-                url: "/hr/Configfilethirdkind/configfilethirdkindadd",
+                url: "${pageContext.request.contextPath}/Configfilethirdkind/configfilethirdkindadd",
                 data: formData,
                 type: "post",
                 beforeSend: function () {
@@ -157,7 +157,7 @@
                                     //2秒关闭（如果不配置，默认是3秒）
                                 },
                                 function () {
-                                    window.location.href = "/hr/Configfilethirdkind/configfilethirdkindQueryAll";
+                                    window.location.href = "${pageContext.request.contextPath}/Configfilethirdkind/configfilethirdkindQueryAll";
                                 })
                     } else {
                         layer.msg(data.message, {

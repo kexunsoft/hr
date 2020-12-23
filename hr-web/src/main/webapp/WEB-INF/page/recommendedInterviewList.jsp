@@ -5,9 +5,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title>推荐面试列表</title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -25,7 +25,7 @@
 <div class="notice_main">
     <div class="notice_check">
         <div class="l_left">
-            <form class="form-inline" action="/hr/engageInterview/recommendedInterviewList">
+            <form class="form-inline" action="${pageContext.request.contextPath}/engageInterview/recommendedInterviewList">
                 <div class="form-group form-group-sm">
                     <label>职位分类</label>
                     <select class="form-control" id="zwfl" name="majorKindId">
@@ -109,7 +109,7 @@
                 <td>
                         ${r.interviewStatus==0?"待面试":"推荐面试"}
                 </td>
-                <td><a href="/hr/engageInterview/register?resumeId=${r.resId}">面试登记</a></td>
+                <td><a href="${pageContext.request.contextPath}/engageInterview/register?resumeId=${r.resId}">面试登记</a></td>
             </tr>
         </c:forEach>
     </table>
@@ -169,12 +169,12 @@
         </ul>
     </div>
 </div>
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-<script src="/hr/static/js/bstable/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/bstable/js/bootstrap.min.js"></script>
 <script>
     $(function () {
         /*发送查询职位分类请求*/
-        $.get('/hr/Configmajorkind/findConfigmajorkind', function (data) {
+        $.get('${pageContext.request.contextPath}/Configmajorkind/findConfigmajorkind', function (data) {
             $.each(data, function (index, item) {
                 $("#zwfl").append("<option value=" + item.majorkindid + ">" + item.majorKindName + "</option>")
             });
@@ -183,7 +183,7 @@
         $("#zwfl").change(function () {
             $("#zwname option:gt(0)").remove();
             var flid = $(this).val();
-            $.get('/hr/Configmajor/findByidMajorKindIdConfigmajor', {'majorKindId': flid}, function (data) {
+            $.get('${pageContext.request.contextPath}/Configmajor/findByidMajorKindIdConfigmajor', {'majorKindId': flid}, function (data) {
                 $.each(data, function (index, item) {
                     $("#zwname").append("<option value=" + item.majorid + ">" + item.majorname + "</option>")
                 });

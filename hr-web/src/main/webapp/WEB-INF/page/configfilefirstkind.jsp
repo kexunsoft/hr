@@ -7,11 +7,11 @@
 <head>
     <meta charset=utf-8"/>
     <title>I级机构查询</title>
-    <link rel="stylesheet" href="/hr/static/layui/css/layui.css"/>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
-	<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
+	<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
 			
     <style>
         .notice_nav a:nth-child(3){border-top-right-radius: 0;border-bottom-right-radius:0}
@@ -23,7 +23,7 @@
 			<div class="notice_check">
 				
 				<div class="btn-group r_right">
-					<a class="btn btn-default btn-sm" href="/hr/Configfilefirstkind/configfilefirstkindadd"><span class="glyphicon glyphicon-plus"></span>新增</a>
+					<a class="btn btn-default btn-sm" href="${pageContext.request.contextPath}/Configfilefirstkind/configfilefirstkindadd"><span class="glyphicon glyphicon-plus"></span>新增</a>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -43,7 +43,7 @@
 							<td>${cf.firstkindname}</td>
 							<td>${cf.firstKindSalaryId}</td>
 							<td>${cf.firstKindSaleId}</td>
-							<td><a href="/hr/Configfilefirstkind/configfilefirstkindmodify?firstkindid=${cf.firstkindid}">变更</a>	
+							<td><a href="${pageContext.request.contextPath}/Configfilefirstkind/configfilefirstkindmodify?firstkindid=${cf.firstkindid}">变更</a>	
 							</th>
 							<td><a href="javascript:del(${cf.firstkindid})">删除</a></td>
 						</tr>
@@ -112,7 +112,7 @@
 <script src="js/bstable/js/bootstrap-table.js"></script>
 <script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
 <script src="js/layer_v2.1/layer/layer.js"></script>
-<script src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script type="text/javascript">
     
     function change(){
@@ -149,7 +149,7 @@
 
             var i;
             $.ajax({
-                url: "/hr/Configfilefirstkind/deleterconfigfilefirstkin",
+                url: "${pageContext.request.contextPath}/Configfilefirstkind/deleterconfigfilefirstkin",
                 data: {"firstkindid": firstkindid},
                 type: "get",
                 beforeSend: function () {
@@ -168,7 +168,7 @@
                                 icon: 1,
                                 time: 1000 //2秒关闭（如果不配置，默认是3秒）
                             }, function () {
-                                window.location.href = "/hr/Configfilefirstkind/QueryAllConfigfilefirstkind";
+                                window.location.href = "${pageContext.request.contextPath}/Configfilefirstkind/QueryAllConfigfilefirstkind";
                             }
                         )
                     } else {

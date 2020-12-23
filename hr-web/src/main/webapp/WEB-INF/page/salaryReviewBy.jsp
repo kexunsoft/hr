@@ -4,9 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -62,7 +62,7 @@
                 <td>${s.humanAmount}</td>
                 <td>${s.salaryStandardSum}</td>
                 <td>
-                    <a href="/hr/salaryGrant/details?salaryGrantId=${s.salaryGrantId}&humanAmount=${s.humanAmount}&salaryStandardSum=${s.salaryStandardSum}">详情</a>
+                    <a href="${pageContext.request.contextPath}/salaryGrant/details?salaryGrantId=${s.salaryGrantId}&humanAmount=${s.humanAmount}&salaryStandardSum=${s.salaryStandardSum}">详情</a>
                 </td>
             </tr>
         </c:forEach>
@@ -122,9 +122,9 @@
             </ul>
         </div>
     </div>
-    <script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-    <script src="/hr/static/js/bstable/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/js/bstable/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
     <script>
         function sub() {
             layer.alert('复核成功', function (index) {

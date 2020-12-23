@@ -7,9 +7,9 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
 		<title></title>
-		<link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-		<link href="/hr/static/css/table.css" rel="stylesheet" type="text/css" />
+		<link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css" />
 		<style>
 			.notice_nav a:nth-child(3) {
 				border-top-right-radius: 0;
@@ -22,12 +22,12 @@
 			}
 		</style>
 	</head>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
     $(function() {
     	 /*发送查询一级机构请求*/
-        $.get('/hr/Configfilefirstkind/findConfigfilefirstkind',
+        $.get('${pageContext.request.contextPath}/Configfilefirstkind/findConfigfilefirstkind',
             function (data) {
                 $.each(data, function (index, item) {
                 	//绑定一级机构
@@ -41,7 +41,7 @@
                 $("#twoji option:gt(0)").remove();
                 $("#threeji option:gt(0)").remove();
                 var oneid = $(this).val();
-                $.get('/hr/Configfilesecondkind/findByFirstKindId', {
+                $.get('${pageContext.request.contextPath}/Configfilesecondkind/findByFirstKindId', {
                     'firstKindId': oneid
                 }, function (data) {
                     $.each(data, function (index, item) {
@@ -57,7 +57,7 @@
                     $("#threeji option:gt(0)").remove();
                     var twoid = $(this).val();
                     $.get(
-                            '/hr/Configfilethirdkind/findBysecondKindIdConfigfilethirdkind',
+                            '${pageContext.request.contextPath}/Configfilethirdkind/findBysecondKindIdConfigfilethirdkind',
                             {
                                 'secondkindid': twoid
                             },
@@ -68,7 +68,7 @@
                             })
                 })
         /*发送查询职位分类请求*/
-        $.get('/hr/Configmajorkind/findConfigmajorkind', function (data) {
+        $.get('${pageContext.request.contextPath}/Configmajorkind/findConfigmajorkind', function (data) {
             $.each(data, function (index, item) {
             	//绑定职位分类参数
               	$("#zwfl").append("<option value=" + item.majorkindid + ">"+ item.majorKindName + "</option>")
@@ -80,7 +80,7 @@
             function () {
                 $("#zwname option:gt(0)").remove();
                 var flid = $(this).val();
-                $.get('/hr/Configmajor/findByidMajorKindIdConfigmajor', {
+                $.get('${pageContext.request.contextPath}/Configmajor/findByidMajorKindIdConfigmajor', {
                     'majorKindId': flid
                 }, function (data) {
                     $.each(data, function (index, item) {
@@ -176,7 +176,7 @@
 						<td>${fth.thirdKindName }</td>
 						<td>${fth.standardName }</td>
 						<td>${fth.humanName }</td>
-						<td><a href="/hr/MajorChangeController/selectByKeySingleMajorchange?mchid=${fth.mchId }">查看</a></td>
+						<td><a href="${pageContext.request.contextPath}/MajorChangeController/selectByKeySingleMajorchange?mchid=${fth.mchId }">查看</a></td>
 					</tr>
 				</c:forEach>
 			</table>

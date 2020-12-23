@@ -8,20 +8,20 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>人力资源档案登记</title>
-<link href="/hr/static/css/index.css" rel="stylesheet" type="text/css" />
-<link href="/hr/static/css/bootstrap.min.css" rel="stylesheet"
+<link href="${pageContext.request.contextPath}/static/css/index.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet"
 	type="text/css" />
 </head>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
 <script type="text/javascript"
-	src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+	src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 
 <script>
 	function update() {
 		var formData = new FormData($("#formHumanfile")[0]);
 		var i;
 		$.ajax({
-			url : '/hr/HumanFile/updateHumanfile',
+			url : '${pageContext.request.contextPath}/HumanFile/updateHumanfile',
 			data : formData,
 			contentType : false,
 			processData : false,
@@ -43,7 +43,7 @@
 						time : 1000
 					//2秒关闭（如果不配置，默认是3秒）
 					}, function() {
-						window.location.href="/hr/HumanFile/findMoreTableHumanfile"
+						window.location.href="${pageContext.request.contextPath}/HumanFile/findMoreTableHumanfile"
 					})
 				} else {
 					layer.msg(data.message, {

@@ -4,10 +4,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link rel="stylesheet" href="/hr/static/layui/css/layui.css"/>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -26,7 +26,7 @@
     <div class="notice_check">
 
         <div class="btn-group r_right">
-            <a class="btn btn-primary" href="/hr/role/addRole">添加角色</a>
+            <a class="btn btn-primary" href="${pageContext.request.contextPath}/role/addRole">添加角色</a>
         </div>
         <div class="clear"></div>
     </div>
@@ -57,9 +57,9 @@
                         ${r.roleDesc}
                 </td>
                 <td>
-                    <a href="/hr/role/updRole?roleId= ${r.roleId}">修改</a>
+                    <a href="${pageContext.request.contextPath}/role/updRole?roleId= ${r.roleId}">修改</a>
                     <a href="javascript:del(${r.roleId})">删除</a>
-                    <a href="/hr/role/allocationRight?roleId=${r.roleId}">分配权限</a>
+                    <a href="${pageContext.request.contextPath}/role/allocationRight?roleId=${r.roleId}">分配权限</a>
                 </td>
             </tr>
         </c:forEach>
@@ -67,8 +67,8 @@
 
 </div>
 
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-<script src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script type="text/javascript">
 
     function del(id) {
@@ -76,7 +76,7 @@
 
             var i;
             $.ajax({
-                url: "/hr/role/delRole",
+                url: "${pageContext.request.contextPath}/role/delRole",
                 data: {"roleId": id},
                 type: "get",
                 beforeSend: function () {
@@ -95,7 +95,7 @@
                                 icon: 1,
                                 time: 1000 //2秒关闭（如果不配置，默认是3秒）
                             }, function () {
-                                window.location.href = "/hr/role/roles";
+                                window.location.href = "${pageContext.request.contextPath}/role/roles";
                             }
                         )
                     } else {

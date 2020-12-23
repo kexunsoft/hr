@@ -4,13 +4,13 @@
 <head>
     <meta charset=utf-8"/>
     <title>简历登记</title>
-    <link href="/hr/static/css/index.css" rel="stylesheet" type="text/css"/>
-    <link href="/hr/static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
+    <link href="${pageContext.request.contextPath}/static/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
     <script>
         $(function () {
             /*发送查询职位分类请求*/
-            $.get('/hr/Configmajorkind/findConfigmajorkind', function (data) {
+            $.get('${pageContext.request.contextPath}/Configmajorkind/findConfigmajorkind', function (data) {
                 $.each(data, function (index, item) {
                     $("#zwfl").append("<option value=" + item.majorkindid + ">" + item.majorKindName + "</option>")
                 });
@@ -19,14 +19,14 @@
             $("#zwfl").change(function () {
                 $("#zwname option:gt(0)").remove();
                 var flid = $(this).val();
-                $.get('/hr/Configmajor/findByidMajorKindIdConfigmajor', {'majorKindId': flid}, function (data) {
+                $.get('${pageContext.request.contextPath}/Configmajor/findByidMajorKindIdConfigmajor', {'majorKindId': flid}, function (data) {
                     $.each(data, function (index, item) {
                         $("#zwname").append("<option value=" + item.majorid + ">" + item.majorname + "</option>")
                     });
                 })
             })
             /*查询招聘类型*/
-            $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {'attributekind': '招聘类型'}, function (data) {
+            $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {'attributekind': '招聘类型'}, function (data) {
                 $.each(data, function (index, item) {
                     $("#ruitmenttype").append("<option value=" + item.attributename + ">" + item.attributename + "</option>")
                 });
@@ -301,8 +301,8 @@
     <br> <br>
 </form>
 </body>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
     $("#file").change(function () {
 
@@ -332,7 +332,7 @@
         var i;
         $
             .ajax({
-                url: '/hr/engageResume/register',
+                url: '${pageContext.request.contextPath}/engageResume/register',
                 data: formData,
                 contentType: false,
                 processData: false,
@@ -358,7 +358,7 @@
                                     //2秒关闭（如果不配置，默认是3秒）
                                 },
                                 function () {
-                                    window.location.href = "/hr/engageResume/resumeFilterList"
+                                    window.location.href = "${pageContext.request.contextPath}/engageResume/resumeFilterList"
                                 })
                     } else {
                         layer.msg(data.message, {

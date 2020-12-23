@@ -6,10 +6,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
     <title>III级机构查询</title>
-     <link rel="stylesheet" href="/hr/static/layui/css/layui.css"/>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3){border-top-right-radius: 0;border-bottom-right-radius:0}
         .notice_nav a:nth-child(4){border-top-right-radius: 4px;border-bottom-right-radius: 4px}
@@ -20,7 +20,7 @@
 			<div class="notice_check">
 				
 				<div class="btn-group r_right">
-					<a class="btn btn-default btn-sm" href="/hr/Configfilethirdkind/configfilethirdkindadd"><span class="glyphicon glyphicon-plus"></span>新增</a>
+					<a class="btn btn-default btn-sm" href="${pageContext.request.contextPath}/Configfilethirdkind/configfilethirdkindadd"><span class="glyphicon glyphicon-plus"></span>新增</a>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -43,7 +43,7 @@
 							<td>${ct.thirdKindName}</td>
 							<td>${ct.thirdKindSaleId}</td>
 							<td>${ct.thirdKindIsRetail}</td>
-							<td><a href="/hr/Configfilethirdkind/configfilethirdkindmodify?thirdkindid=${ct.thirdKindId}">变更</a></th>
+							<td><a href="${pageContext.request.contextPath}/Configfilethirdkind/configfilethirdkindmodify?thirdkindid=${ct.thirdKindId}">变更</a></th>
 							</th>
 							<td><a href="javascript:del(${ct.thirdKindId})">删除</a></td>
 						</tr>
@@ -107,9 +107,9 @@
     </div>
 </div>
 
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
 
-<script src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script type="text/javascript">
     
 function change(){
@@ -147,7 +147,7 @@ function del(thirdkindid) {
 
         var i;
         $.ajax({
-            url: "/hr/Configfilethirdkind/deleteconfigfilethirdkind",
+            url: "${pageContext.request.contextPath}/Configfilethirdkind/deleteconfigfilethirdkind",
             data: {"thirdkindid": thirdkindid},
             type: "get",
             beforeSend: function () {
@@ -166,7 +166,7 @@ function del(thirdkindid) {
                             icon: 1,
                             time: 1000 //2秒关闭（如果不配置，默认是3秒）
                         }, function () {
-                            window.location.href = "/hr/Configfilethirdkind/configfilethirdkindQueryAll";
+                            window.location.href = "${pageContext.request.contextPath}/Configfilethirdkind/configfilethirdkindQueryAll";
                         }
                     )
                 } else {

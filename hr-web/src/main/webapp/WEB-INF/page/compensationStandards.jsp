@@ -5,9 +5,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -50,7 +50,7 @@
                 <td><fmt:formatDate value="${s.registtime}" pattern="yyyy-MM-dd"/></td>
                 <td>${s.salarysum}</td>
                 <td>
-                    <a href="/hr/salarystandardController/details?standardid=${s.standardid}">查看详情</a>
+                    <a href="${pageContext.request.contextPath}/salarystandardController/details?standardid=${s.standardid}">查看详情</a>
                 </td>
 
             </tr>

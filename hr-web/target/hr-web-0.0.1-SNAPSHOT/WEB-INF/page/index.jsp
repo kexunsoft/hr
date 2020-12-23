@@ -5,18 +5,18 @@
     <title>科讯人力资源管理系统</title>
     <meta charset="UTF-8">
     <link rel="stylesheet"
-          href="/hr/static/js/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/hr/static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/hr/static/css/index.css">
-    <link rel="stylesheet" href="/hr/static/css/skins/_all-skins.css">
-    <link rel="stylesheet" href="/hr/static/layui/css/layui.css" media="all"/>
+          href="${pageContext.request.contextPath}/static/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/index.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/skins/_all-skins.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all"/>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini"
       style="overflow: hidden;">
 <div id="ajax-loader"
      style="cursor: progress; position: fixed; top: -50%; left: -50%; width: 200%; height: 200%; background: #fff; z-index: 10000; overflow: hidden;">
-    <img src="/hr/static/img/ajax-loader.gif"
+    <img src="${pageContext.request.contextPath}/static/img/ajax-loader.gif"
          style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto;"/>
 </div>
 <div class="wrapper">
@@ -44,7 +44,7 @@
                     </a></li>
                     <li class="dropdown user user-menu"><a href="#"
                                                            class="dropdown-toggle" data-toggle="dropdown"> <img
-                            src="/hr/static/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            src="${pageContext.request.contextPath}/static/img/user2-160x160.jpg" class="user-image" alt="User Image">
                         <span class="hidden-xs" id="user">administrator</span>
                     </a>
                         <ul class="dropdown-menu pull-right">
@@ -122,16 +122,16 @@
             <div class="mainContent" id="content-main"
                  style="margin: 10px; margin-bottom: 0; padding: 0;">
                 <iframe id="myFrame" class="LRADMS_iframe" width="100%"
-                        height="100%" src="/hr/home" frameborder="0"
+                        height="100%" src="${pageContext.request.contextPath}/home" frameborder="0"
                         data-id="default.html"></iframe>
             </div>
         </div>
     </div>
 </div>
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
-<script src="/hr/static/js/bootstrap/js/bootstrap.min.js"></script>
-<script src="/hr/static/js/index.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/index.js"></script>
 <script>
     var colorIndex = 0;
     $(function () {
@@ -165,7 +165,7 @@
     function loginout() {
         var i;
         $.ajax({
-            url: "/hr/user/loginout",
+            url: "${pageContext.request.contextPath}/user/loginout",
             type: "get",
             beforeSend: function () {
                 i = layer.msg('正在退出,请稍后...', {
@@ -184,7 +184,7 @@
                             icon: 1,
                             time: 2000 //2秒关闭（如果不配置，默认是3秒）
                         }, function () {
-                            window.location.href = "/hr/login";
+                            window.location.href = "${pageContext.request.contextPath}/login";
                         }
                     )
 

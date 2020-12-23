@@ -5,11 +5,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
-    <script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
-    <link rel="stylesheet" href="/hr/static/layui/css/layui.css" media="all"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -99,7 +99,7 @@
         <div class="clear"></div>
     </div>
 
-    <form action="/hr/statement/executeExportXML" method="post" id="f1">
+    <form action="${pageContext.request.contextPath}/statement/executeExportXML" method="post" id="f1">
         <input type="hidden" name="tableName" value="${tableName}">
         <table id="table" class="table table-condensed " style="margin: 0 auto">
             <tbody id="fields">

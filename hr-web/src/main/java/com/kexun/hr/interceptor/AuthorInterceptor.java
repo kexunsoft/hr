@@ -25,7 +25,7 @@ public class AuthorInterceptor extends HandlerInterceptorAdapter {
         String path = request.getServletPath();
 
         //加上项目的名字 数据库了存放的地址都有项目 的地址
-        path = "/hr" + path;
+        path = path;
 
         System.out.println("您正在访问的地址为" + path);
 
@@ -41,7 +41,7 @@ public class AuthorInterceptor extends HandlerInterceptorAdapter {
             List<Right> rights = user.getuRole().getRoleRights();
 
             //排除的链接
-            if ("/hr/right/rights".equals(path)) {
+            if ("/right/rights".equals(path)) {
                 return true;
             }
 

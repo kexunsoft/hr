@@ -5,9 +5,9 @@
 <head>
     <meta charset=utf-8"/>
     <title>无标题文档</title>
-    <link href="/hr/static/css/index.css" rel="stylesheet" type="text/css"/>
-    <link href="/hr/static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="/hr/static/layui/css/layui.css" media="all"/>
+    <link href="${pageContext.request.contextPath}/static/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css" media="all"/>
 </head>
 
 <body>
@@ -47,8 +47,8 @@
 
 </mvc:form>
 </body>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
 
     function update() {
@@ -56,7 +56,7 @@
         var formData = $("#form1").serialize();
         var i;
         $.ajax({
-            url: "/hr/role/updRole",
+            url: "${pageContext.request.contextPath}/role/updRole",
             data: formData,
             type: "post",
             beforeSend: function () {
@@ -76,7 +76,7 @@
                             icon: 1,
                             time: 1000 //2秒关闭（如果不配置，默认是3秒）
                         }, function () {
-                            window.location.href = "/hr/role/roles";
+                            window.location.href = "${pageContext.request.contextPath}/role/roles";
                         }
                     )
                 } else {

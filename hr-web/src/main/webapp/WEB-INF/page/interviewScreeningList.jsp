@@ -5,9 +5,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -47,7 +47,7 @@
                 <td>${m.registeTime}</td>
                 <td>${m.multiQualityDegree}</td>
                 <td>
-                    <a href="/hr/engageInterview/interviewScreening?einId=${m.einId}">筛选</a>
+                    <a href="${pageContext.request.contextPath}/engageInterview/interviewScreening?einId=${m.einId}">筛选</a>
                 </td>
 
             </tr>
@@ -113,8 +113,8 @@
     </div>
 </div>
 
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-<script src="/hr/static/js/bstable/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/bstable/js/bootstrap.min.js"></script>
 </body>
 
 </html>

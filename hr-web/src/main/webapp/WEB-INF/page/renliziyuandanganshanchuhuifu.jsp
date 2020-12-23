@@ -7,11 +7,11 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
 <title>人力资源档案登记查询</title>
-<link href="/hr/static/js/bstable/css/bootstrap.min.css"
+<link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css"
 	rel="stylesheet" type="text/css">
-<link href="/hr/static/js/bstable/css/bootstrap-table.css"
+<link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css"
 	rel="stylesheet" type="text/css">
-<link href="/hr/static/css/table.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css" />
 <style>
 .notice_nav a:nth-child(3) {
 	border-top-right-radius: 0;
@@ -24,13 +24,13 @@
 }
 </style>
 </head>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script type="text/javascript">
 	    function huifu(obj) {
 			var i;
 			$.ajax({
-						url : '/hr/HumanFile/huiguByKeyHumanfileBy1?humanid='+obj,
+						url : '${pageContext.request.contextPath}/HumanFile/huiguByKeyHumanfileBy1?humanid='+obj,
 						type : 'get',
 						beforeSend : function() {
 							i = layer.msg('请稍后....', {
@@ -53,7 +53,7 @@
 												//2秒关闭（如果不配置，默认是3秒）
 												},
 												function() {
-													window.location.href='/hr/HumanFile/selectBydelete';
+													window.location.href='${pageContext.request.contextPath}/HumanFile/selectBydelete';
 												})
 							} else {
 								layer.msg(data.message, {
@@ -71,7 +71,7 @@
 	    	if(flag){
 	    		var i;
 				$.ajax({
-						url : '/hr/HumanFile/deleteByKeyHumanfile?humanid='+obj,
+						url : '${pageContext.request.contextPath}/HumanFile/deleteByKeyHumanfile?humanid='+obj,
 						type : 'get',
 						beforeSend : function() {
 							i = layer.msg('请稍后....', {
@@ -94,7 +94,7 @@
 												//2秒关闭（如果不配置，默认是3秒）
 												},
 												function() {
-													window.location.href='/hr/HumanFile/selectBydelete';
+													window.location.href='${pageContext.request.contextPath}/HumanFile/selectBydelete';
 												})
 							} else {
 								layer.msg(data.message, {

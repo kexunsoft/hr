@@ -5,12 +5,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>职位新增</title>
-    <link rel="stylesheet" href="/hr/static/layui/css/layui.css"/>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css"
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/layui/css/layui.css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css"
           rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css"
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css"
           rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet"
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet"
           type="text/css"/>
     <script src="js/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/bstable/js/jquery-2.2.0.min.js"></script>
@@ -72,9 +72,9 @@
 
     <br> <br>
 </form>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
 <script type="text/javascript"
-        src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+        src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
     function save() {
 
@@ -82,7 +82,7 @@
         var i;
         $
             .ajax({
-                url: "/hr/Configmajor/configmajorAdd",
+                url: "${pageContext.request.contextPath}/Configmajor/configmajorAdd",
                 data: formData,
                 type: "post",
                 beforeSend: function () {
@@ -107,7 +107,7 @@
                                     //2秒关闭（如果不配置，默认是3秒）
                                 },
                                 function () {
-                                    window.location.href = "/hr/Configmajor/configmajorQueryAll";
+                                    window.location.href = "${pageContext.request.contextPath}/Configmajor/configmajorQueryAll";
                                 })
                     } else {
                         layer.msg(data.message, {

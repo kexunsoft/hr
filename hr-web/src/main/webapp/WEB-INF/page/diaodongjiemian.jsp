@@ -8,18 +8,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>无标题文档</title>
-    <link href="/hr/static/css/index.css" rel="stylesheet" type="text/css"/>
-    <link href="/hr/static/css/bootstrap.min.css" rel="stylesheet"
+    <link href="${pageContext.request.contextPath}/static/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet"
           type="text/css"/>
-    <link href="/hr/static/css/zTreeStyle/zTreeStyle.css" rel="stylesheet"
+    <link href="${pageContext.request.contextPath}/static/css/zTreeStyle/zTreeStyle.css" rel="stylesheet"
           type="text/css"/>
 </head>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
     $(function () {
         /*发送查询一级机构请求*/
-        $.get('/hr/Configfilefirstkind/findConfigfilefirstkind',
+        $.get('${pageContext.request.contextPath}/Configfilefirstkind/findConfigfilefirstkind',
             function (data) {
                 $.each(data, function (index, item) {
                     //绑定一级机构
@@ -33,7 +33,7 @@
             });
 
         //自动绑定二级机构
-        $.get('/hr/Configfilesecondkind/findByFirstKindId', {
+        $.get('${pageContext.request.contextPath}/Configfilesecondkind/findByFirstKindId', {
             'firstKindId': ${hdiaodong.firstKindId==null?0:hdiaodong.firstKindId}
         }, function (data) {
             $.each(data, function (index, item) {
@@ -47,7 +47,7 @@
         })
 
         //自动绑定三级机构
-        $.get('/hr/Configfilethirdkind/findBysecondKindIdConfigfilethirdkind', {'secondkindid': ${hdiaodong.secondKindId==null?0:hdiaodong.secondKindId}},
+        $.get('${pageContext.request.contextPath}/Configfilethirdkind/findBysecondKindIdConfigfilethirdkind', {'secondkindid': ${hdiaodong.secondKindId==null?0:hdiaodong.secondKindId}},
             function (data) {
 
                 $.each(data, function (index, item) {
@@ -67,7 +67,7 @@
                 $("#twoji option:gt(0)").remove();
                 $("#threeji option:gt(0)").remove();
                 var oneid = $(this).val();
-                $.get('/hr/Configfilesecondkind/findByFirstKindId', {
+                $.get('${pageContext.request.contextPath}/Configfilesecondkind/findByFirstKindId', {
                     'firstKindId': oneid
                 }, function (data) {
                     $.each(data, function (index, item) {
@@ -83,7 +83,7 @@
                     $("#threeji option:gt(0)").remove();
                     var twoid = $(this).val();
                     $.get(
-                        '/hr/Configfilethirdkind/findBysecondKindIdConfigfilethirdkind',
+                        '${pageContext.request.contextPath}/Configfilethirdkind/findBysecondKindIdConfigfilethirdkind',
                         {
                             'secondkindid': twoid
                         },
@@ -94,7 +94,7 @@
                         })
                 })
         /*发送查询职位分类请求*/
-        $.get('/hr/Configmajorkind/findConfigmajorkind', function (data) {
+        $.get('${pageContext.request.contextPath}/Configmajorkind/findConfigmajorkind', function (data) {
             $.each(data, function (index, item) {
                 //绑定职位分类参数
                 if (item.majorkindid ==${hdiaodong.majorKindId==null?0:hdiaodong.majorKindId}) {
@@ -106,7 +106,7 @@
         })
 
         //自动绑定职位名称
-        $.get('/hr/Configmajor/findByidMajorKindIdConfigmajor', {
+        $.get('${pageContext.request.contextPath}/Configmajor/findByidMajorKindIdConfigmajor', {
             'majorKindId': ${hdiaodong.majorKindId==null?0:hdiaodong.majorKindId}
         }, function (data) {
             $.each(data, function (index, item) {
@@ -123,7 +123,7 @@
             function () {
                 $("#zwname option:gt(0)").remove();
                 var flid = $(this).val();
-                $.get('/hr/Configmajor/findByidMajorKindIdConfigmajor', {
+                $.get('${pageContext.request.contextPath}/Configmajor/findByidMajorKindIdConfigmajor', {
                     'majorKindId': flid
                 }, function (data) {
                     $.each(data, function (index, item) {
@@ -138,7 +138,7 @@
             if (standardId == "") {
                 $("#a").val(0)
             } else {
-                $.get('/hr/MajorChangeController/selectByStandardIdsalarySum', {'standardId': standardId}, function (data) {
+                $.get('${pageContext.request.contextPath}/MajorChangeController/selectByStandardIdsalarySum', {'standardId': standardId}, function (data) {
                     $("#a").val(data)
                 })
             }
@@ -153,7 +153,7 @@
         var formData = $("#form1").serialize();
         var i;
         $.ajax({
-            url: "/hr/MajorChangeController/SavemajorChange",
+            url: "${pageContext.request.contextPath}/MajorChangeController/SavemajorChange",
             data: formData,
             type: "post",
             beforeSend: function () {
@@ -173,7 +173,7 @@
                             icon: 1,
                             time: 1000 //2秒关闭（如果不配置，默认是3秒）
                         }, function () {
-                            window.location.href = "/hr/MajorChangeController/findMajorChangeControllerAll";
+                            window.location.href = "${pageContext.request.contextPath}/MajorChangeController/findMajorChangeControllerAll";
                         }
                     )
                 } else {

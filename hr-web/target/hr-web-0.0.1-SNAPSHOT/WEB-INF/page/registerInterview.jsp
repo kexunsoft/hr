@@ -13,9 +13,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title>面试登记</title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -372,8 +372,8 @@
 
 
 </div>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
 
     function save() {
@@ -381,7 +381,7 @@
         var formData = $("#form1").serialize();
         var i;
         $.ajax({
-            url: '/hr/engageInterview/register',
+            url: '${pageContext.request.contextPath}/engageInterview/register',
             data: formData,
             type: 'post',
             beforeSend: function () {
@@ -405,7 +405,7 @@
                                 //2秒关闭（如果不配置，默认是3秒）
                             },
                             function () {
-                                window.location.href = "/hr/engageInterview/interviewScreeningList";
+                                window.location.href = "${pageContext.request.contextPath}/engageInterview/interviewScreeningList";
                             })
                 } else {
                     layer.msg(data.message, {

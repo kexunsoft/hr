@@ -1,10 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="hr-web:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f92c0f84-fc53-49f2-9d66-79ecd4eb121f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/AuthorInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/AuthorInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/a.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/addPosition.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/addPosition.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/addResume.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/addResume.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/addRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/addRole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/allocationRight.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/allocationRight.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/applyPosition.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/applyPosition.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/compensationStandards.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/compensationStandards.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilefirstkind.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilefirstkind.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilefirstkindadd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilefirstkindadd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilefirstkindmodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilefirstkindmodify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilesecondkind.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilesecondkind.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilesecondkindadd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilesecondkindadd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilesecondkindmodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilesecondkindmodify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilethirdkind.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilethirdkind.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilethirdkindAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilethirdkindAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilethirdkindmodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configfilethirdkindmodify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajorAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajorAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajordesignation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajordesignation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajorkind.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajorkind.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajorkindAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configmajorkindAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configpublicchar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configpublicchar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configpubliccharAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/configpubliccharAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongchaxun.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongchaxun.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongchaxunchakananniu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongchaxunchakananniu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongdengji.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongdengji.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongjiemian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongjiemian.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongshenhe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongshenhe.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongshenheanniu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/diaodongshenheanniu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/effectiveResumeList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/effectiveResumeList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employmentApplication.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employmentApplication.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employmentApplicationList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employmentApplicationList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employmentApproval.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employmentApproval.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employmentApprovalList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/employmentApprovalList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/exportExcel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/exportExcel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/exportPDF.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/exportPDF.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/exportXML.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/exportXML.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/findEmployList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/findEmployList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/findNoChange.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/findNoChange.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/interviewScreening.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/interviewScreening.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/interviewScreeningList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/interviewScreeningList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/noChecksalaryGrantList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/noChecksalaryGrantList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/payoff.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/payoff.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/payrollRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/payrollRegistration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/payrollRegistrationList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/payrollRegistrationList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/positions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/positions.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/recommendedInterviewList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/recommendedInterviewList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/registerInterview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/registerInterview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/registerResume.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/registerResume.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/registerSalary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/registerSalary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandanganchaxun.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandanganchaxun.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandangandengji.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandangandengji.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandangandengjichaxun.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandangandengjichaxun.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandangandengjifuheanniu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandangandengjifuheanniu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandanganshanchuhuifu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandanganshanchuhuifu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandanganxiugai.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/renliziyuandanganxiugai.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/resumeFilterList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/resumeFilterList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/resumeInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/resumeInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/resumeScreeningReview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/resumeScreeningReview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/reviewSalaryGrant.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/reviewSalaryGrant.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/roleModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/roleModify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/roles.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/roles.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryGrantDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryGrantDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryReview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryReview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryReviewBy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salaryReviewBy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salarystandarddetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salarystandarddetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salarystandarddetailsAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/salarystandarddetailsAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/updMajor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/updMajor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/updSalary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/updSalary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/useradd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/useradd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/usermodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/usermodify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/classes/com/kexun/hr/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/classes/com/kexun/hr/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/classes/com/kexun/hr/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/classes/com/kexun/hr/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-model-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-model-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/a.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/addPosition.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/addPosition.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/addResume.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/addResume.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/addRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/addRole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/allocationRight.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/allocationRight.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/applyPosition.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/applyPosition.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/compensationStandards.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/compensationStandards.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilefirstkind.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilefirstkind.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilefirstkindadd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilefirstkindadd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilefirstkindmodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilefirstkindmodify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilesecondkind.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilesecondkind.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilesecondkindadd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilesecondkindadd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilesecondkindmodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilesecondkindmodify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilethirdkind.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilethirdkind.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilethirdkindAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilethirdkindAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilethirdkindmodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configfilethirdkindmodify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajorAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajorAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajordesignation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajordesignation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajorkind.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajorkind.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajorkindAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configmajorkindAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configpublicchar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configpublicchar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configpubliccharAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/configpubliccharAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongchaxun.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongchaxun.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongchaxunchakananniu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongchaxunchakananniu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongdengji.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongdengji.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongjiemian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongjiemian.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongshenhe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongshenhe.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongshenheanniu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/diaodongshenheanniu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/effectiveResumeList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/effectiveResumeList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employmentApplication.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employmentApplication.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employmentApplicationList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employmentApplicationList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employmentApproval.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employmentApproval.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employmentApprovalList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/employmentApprovalList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/exportExcel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/exportExcel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/exportPDF.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/exportPDF.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/exportXML.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/exportXML.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/findEmployList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/findEmployList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/findNoChange.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/findNoChange.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/interviewScreening.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/interviewScreening.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/interviewScreeningList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/interviewScreeningList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/noChecksalaryGrantList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/noChecksalaryGrantList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/payoff.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/payoff.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/payrollRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/payrollRegistration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/payrollRegistrationList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/payrollRegistrationList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/positions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/positions.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/recommendedInterviewList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/recommendedInterviewList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/registerInterview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/registerInterview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/registerResume.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/registerResume.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/registerSalary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/registerSalary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandanganchaxun.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandanganchaxun.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandangandengji.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandangandengji.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandangandengjichaxun.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandangandengjichaxun.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandangandengjifuheanniu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandangandengjifuheanniu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandanganshanchuhuifu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandanganshanchuhuifu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandanganxiugai.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/renliziyuandanganxiugai.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/resumeFilterList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/resumeFilterList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/resumeInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/resumeInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/resumeScreeningReview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/resumeScreeningReview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/reviewSalaryGrant.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/reviewSalaryGrant.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/roleModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/roleModify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/roles.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/roles.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryGrantDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryGrantDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryReview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryReview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryReviewBy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salaryReviewBy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salarystandarddetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salarystandarddetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salarystandarddetailsAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/salarystandarddetailsAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/updMajor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/updMajor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/updSalary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/updSalary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/useradd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/useradd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/usermodify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/usermodify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/static/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,12 +181,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\Java\maven\repository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="E:\Java\maven\settings.xml" />
+        <option name="localRepository" value="E:\Java\Maven\Repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../Maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="E:\Java\Maven\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -44,14 +218,170 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.61" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.61" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="hr-web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_61_hr" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60499" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="hr-web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.61" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="hr-web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_hr" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60499" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="hr-web:war exploded" />
+        </option>
+      </method>
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -70,7 +400,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566751274088</updated>
       <workItem from="1566751275504" duration="1986000" />
-      <workItem from="1608735699300" duration="213000" />
+      <workItem from="1608735699300" duration="3956000" />
     </task>
     <task id="LOCAL-00001">
       <created>1566753239957</created>
@@ -79,32 +409,100 @@
       <option name="project" value="LOCAL" />
       <updated>1566753239957</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改bug">
+      <created>1608735960764</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608735960764</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="修改bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改bug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608735841648">
+    <state x="360" y="80" key="#Tomcat_Server" timestamp="1608736591810">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="223" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1608735841648" />
-    <state x="549" y="177" key="FileChooserDialogImpl" timestamp="1608735838023">
+    <state x="360" y="80" key="#Tomcat_Server/0.0.1536.834@0.0.1536.834" timestamp="1608736591810" />
+    <state x="223" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608737395916">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="177" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1608735838023" />
-    <state x="272" y="64" key="SettingsEditor" timestamp="1608735911514">
+    <state x="223" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1608737395916" />
+    <state x="385" y="15" key="CommitChangelistDialog2" timestamp="1608735959871">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="272" y="64" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1608735911514" />
+    <state x="385" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1608735959871" />
+    <state x="148" y="150" key="FileChooserDialogImpl" timestamp="1608736590352">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="148" y="150" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1608736590352" />
+    <state width="1024" height="152" key="GridCell.Tab.0.bottom" timestamp="1608739666741">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608739666741" />
+    <state width="1024" height="152" key="GridCell.Tab.0.center" timestamp="1608739666741">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1608739666741" />
+    <state width="1024" height="152" key="GridCell.Tab.0.left" timestamp="1608739666741">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1608739666741" />
+    <state width="1024" height="152" key="GridCell.Tab.0.right" timestamp="1608739666741">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1608739666741" />
+    <state width="1024" height="152" key="GridCell.Tab.1.bottom" timestamp="1608739666678">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608739666678" />
+    <state width="1024" height="152" key="GridCell.Tab.1.center" timestamp="1608739666678">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1608739666678" />
+    <state width="1024" height="152" key="GridCell.Tab.1.left" timestamp="1608739666678">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1608739666678" />
+    <state width="1024" height="152" key="GridCell.Tab.1.right" timestamp="1608739666678">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1608739666678" />
+    <state width="1024" height="152" key="GridCell.Tab.2.bottom" timestamp="1608739666679">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608739666679" />
+    <state width="1024" height="152" key="GridCell.Tab.2.center" timestamp="1608739666679">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1608739666679" />
+    <state width="1024" height="152" key="GridCell.Tab.2.left" timestamp="1608739666678">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1608739666678" />
+    <state width="1024" height="152" key="GridCell.Tab.2.right" timestamp="1608739666679">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="152" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1608739666679" />
+    <state x="272" y="64" key="SettingsEditor" timestamp="1608736005622">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="272" y="64" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1608736005622" />
     <state x="564" y="337" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608735918487">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="564" y="337" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1608735918487" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1608738406648">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1608738406648" />
   </component>
   <component name="masterDetails">
     <states>

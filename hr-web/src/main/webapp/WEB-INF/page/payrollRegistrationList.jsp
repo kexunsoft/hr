@@ -5,10 +5,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
-    <link href="/hr/static/css/news.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/css/news.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body style="background-color: #ecf0f5;font-family: 微软雅黑;color: #475059;min-width: 1000px;overflow: auto">
@@ -57,7 +57,7 @@
                     </td>
                     <td>
                             <%--pid机构id p.organization机构名称 rank:级别--%>
-                        <a href="/hr/salaryGrant/register?pid=${p.id}&organization=${p.organization}&count=${p.count}&salary=${p.salary}&rank=${organization}">登
+                        <a href="${pageContext.request.contextPath}/salaryGrant/register?pid=${p.id}&organization=${p.organization}&count=${p.count}&salary=${p.salary}&rank=${organization}">登
                             记</a>
                     </td>
                 </tr>
@@ -67,7 +67,7 @@
     <div class="clear"></div>
 
 </div>
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
 
 </body>
 

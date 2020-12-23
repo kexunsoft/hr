@@ -301,7 +301,7 @@
             var data = [];
             $.ajax({
                 type: "get",
-                url: "/hr/right/rights",
+                url: "/right/rights",
                 async: false,
                 success: function (d) {
                     data = d;

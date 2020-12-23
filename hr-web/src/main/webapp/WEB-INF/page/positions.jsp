@@ -4,9 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -71,8 +71,8 @@
                 <td>${e.humanAmount}</td>
                 <td>${e.registtime}</td>
                 <td>${e.deadline}</td>
-                <td><a href="/hr/engageMajorRelease/apply?pid=${e.mreId}">申请职位</a><a
-                        href="/hr/engageMajorRelease/updMajor?majorId=${e.mreId}">修改</a><a
+                <td><a href="${pageContext.request.contextPath}/engageMajorRelease/apply?pid=${e.mreId}">申请职位</a><a
+                        href="${pageContext.request.contextPath}/engageMajorRelease/updMajor?majorId=${e.mreId}">修改</a><a
                         href="javascript:del(${e.mreId})">删除</a></td>
             </tr>
         </c:forEach>
@@ -135,8 +135,8 @@
         </ul>
     </div>
 </div>
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-<script src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
 
     function del(id) {
@@ -144,7 +144,7 @@
 
             var i;
             $.ajax({
-                url: "/hr/engageMajorRelease/delMajor",
+                url: "${pageContext.request.contextPath}/engageMajorRelease/delMajor",
                 data: {"majorId": id},
                 type: "get",
                 beforeSend: function () {

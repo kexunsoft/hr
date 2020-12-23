@@ -5,9 +5,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -316,8 +316,8 @@
 
     </table>
 </div>
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-<script src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
     function del() {
 
@@ -325,7 +325,7 @@
 
             var i;
             $.ajax({
-                url: "/hr/engageInterview/interviewResult?state=0&resumeId=${interview.resumeId}&einId=${interview.einId}",
+                url: "${pageContext.request.contextPath}/engageInterview/interviewResult?state=0&resumeId=${interview.resumeId}&einId=${interview.einId}",
                 type: "get",
                 beforeSend: function () {
                     i = layer.msg('请稍后...', {
@@ -343,7 +343,7 @@
                                 icon: 1,
                                 time: 1000 //2秒关闭（如果不配置，默认是3秒）
                             }, function () {
-                                window.location.href = "/hr/engageInterview/interviewScreeningList";
+                                window.location.href = "${pageContext.request.contextPath}/engageInterview/interviewScreeningList";
                             }
                         )
                     } else {
@@ -362,7 +362,7 @@
     function save() {
         var i;
         $.ajax({
-            url: "/hr/engageInterview/interviewResult?state=1&resumeId=${interview.resumeId}&einId=${interview.einId}",
+            url: "${pageContext.request.contextPath}/engageInterview/interviewResult?state=1&resumeId=${interview.resumeId}&einId=${interview.einId}",
             type: "get",
             beforeSend: function () {
                 i = layer.msg('请稍后...', {
@@ -380,7 +380,7 @@
                             icon: 1,
                             time: 1000 //2秒关闭（如果不配置，默认是3秒）
                         }, function () {
-                            window.location.href = "/hr/engageInterview/interviewScreeningList";
+                            window.location.href = "${pageContext.request.contextPath}/engageInterview/interviewScreeningList";
                         }
                     )
                 } else {

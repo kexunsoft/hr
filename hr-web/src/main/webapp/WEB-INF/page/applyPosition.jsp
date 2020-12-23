@@ -5,9 +5,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
     <title></title>
-    <link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <link href="/hr/static/css/table.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css"/>
     <style>
         .notice_nav a:nth-child(3) {
             border-top-right-radius: 0;
@@ -38,7 +38,7 @@
         </div>
         <div class="btn-group r_right">
             <a class="btn btn-sm btn-success"
-               href="/hr/engageMajorRelease/register?engageType=${major.engageType}&majorKindId=${major.majorKindId}&majorKindName=${major.majorKindName}&majorId=${major.majorId}&majorName=${major.majorName}">确认申请</a>
+               href="${pageContext.request.contextPath}/engageMajorRelease/register?engageType=${major.engageType}&majorKindId=${major.majorKindId}&majorKindName=${major.majorKindName}&majorId=${major.majorId}&majorName=${major.majorName}">确认申请</a>
             <a class="btn btn-sm btn-default" href="javascript:history.back()">返回</a>
         </div>
         <div class="clear"></div>
@@ -142,8 +142,8 @@
 
     </table>
 </div>
-<script src="/hr/static/js/jquery/jQuery-2.2.0.min.js"></script>
-<script src="/hr/static/js/bstable/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/bstable/js/bootstrap.min.js"></script>
 <script>
 
 </script>

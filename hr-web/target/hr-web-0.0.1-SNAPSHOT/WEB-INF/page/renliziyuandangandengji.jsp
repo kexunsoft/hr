@@ -6,16 +6,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>人力资源档案登记</title>
-    <link href="/hr/static/css/index.css" rel="stylesheet" type="text/css"/>
-    <link href="/hr/static/css/bootstrap.min.css" rel="stylesheet"
+    <link href="${pageContext.request.contextPath}/static/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet"
           type="text/css"/>
 </head>
-<script src="/hr/static/js/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="/hr/static/js/layer_v2.1/layer/layer.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script>
     $(function () {
         // /发送查询一级机构请求/
-        $.get('/hr/Configfilefirstkind/findConfigfilefirstkind',
+        $.get('${pageContext.request.contextPath}/Configfilefirstkind/findConfigfilefirstkind',
             function (data) {
                 $.each(data, function (index, item) {
                     $("#oneji").append(
@@ -29,7 +29,7 @@
                 $("#twoji option:gt(0)").remove();
                 $("#threeji option:gt(0)").remove();
                 var oneid = $(this).val();
-                $.get('/hr/Configfilesecondkind/findByFirstKindId', {
+                $.get('${pageContext.request.contextPath}/Configfilesecondkind/findByFirstKindId', {
                     'firstKindId': oneid
                 }, function (data) {
                     $.each(data, function (index, item) {
@@ -50,7 +50,7 @@
                     var twoid = $(this).val();
                     $
                         .get(
-                            '/hr/Configfilethirdkind/findBysecondKindIdConfigfilethirdkind',
+                            '${pageContext.request.contextPath}/Configfilethirdkind/findBysecondKindIdConfigfilethirdkind',
                             {
                                 'secondkindid': twoid
                             },
@@ -70,7 +70,7 @@
                             })
                 })
         // / 发送查询职位分类请求 /
-        $.get('/hr/Configmajorkind/findConfigmajorkind', function (data) {
+        $.get('${pageContext.request.contextPath}/Configmajorkind/findConfigmajorkind', function (data) {
             $.each(data, function (index, item) {
                 $("#zwfl").append(
                     "<option value=" + item.majorkindid + ">"
@@ -82,7 +82,7 @@
             function () {
                 $("#zwname option:gt(0)").remove();
                 var flid = $(this).val();
-                $.get('/hr/Configmajor/findByidMajorKindIdConfigmajor', {
+                $.get('${pageContext.request.contextPath}/Configmajor/findByidMajorKindIdConfigmajor', {
                     'majorKindId': flid
                 }, function (data) {
                     $.each(data, function (index, item) {
@@ -93,7 +93,7 @@
                 })
             })
         // / 发送查询所有职称请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '职称'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -103,7 +103,7 @@
             });
         })
         // / 发送查询所有学历的请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '学历'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -113,7 +113,7 @@
             });
         })
         // / 发送查询所有专业的请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '学历专业'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -123,7 +123,7 @@
             });
         })
         // / 发送查询所有特长的请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '特长'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -133,7 +133,7 @@
             });
         })
         // / 发送查询所有国籍的请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '国籍'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -143,7 +143,7 @@
             });
         })
         // / 发送查询所有民族的请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '民族'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -155,7 +155,7 @@
             });
         })
         // / 发送查询所有宗教信仰的请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '宗教信仰'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -168,7 +168,7 @@
             });
         })
         // / 发送查询所有政治面貌的请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '政治面貌'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -180,7 +180,7 @@
             });
         })
         // / 发送查询所有爱好的请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '爱好'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -190,7 +190,7 @@
             });
         })
         // / 发送查询所有薪酬项目名的请求 /
-        $.get('/hr/salarystandardController/findByCheckStatus', function (
+        $.get('${pageContext.request.contextPath}/salarystandardController/findByCheckStatus', function (
             data) {
             $.each(data, function (index, item) {
                 $("#xcname").append(
@@ -200,7 +200,7 @@
         })
 
         // / 发送查询所有教育年限的请求 /
-        $.get('/hr/Configpublicchar/findConfigpubliccharXueli', {
+        $.get('${pageContext.request.contextPath}/Configpublicchar/findConfigpubliccharXueli', {
             'attributekind': '教育年限'
         }, function (data) {
             $.each(data, function (index, item) {
@@ -217,7 +217,7 @@
         var formData = new FormData($("#formHumanfile")[0]);
         var i;
         $.ajax({
-            url: '/hr/HumanFile/insertHumanFile',
+            url: '${pageContext.request.contextPath}/HumanFile/insertHumanFile',
             data: formData,
             contentType: false,
             processData: false,
@@ -243,7 +243,7 @@
                                 //2秒关闭（如果不配置，默认是3秒）
                             },
                             function () {
-                                window.location.href = "/hr/HumanFile/findMoreTableHumanfile"
+                                window.location.href = "${pageContext.request.contextPath}/HumanFile/findMoreTableHumanfile"
                             })
                 } else {
                     layer.msg(data.message, {

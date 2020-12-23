@@ -8,9 +8,9 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
 		<title></title>
-		<link href="/hr/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/static/js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<link href="/ht/static/js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
-		<link href="/hr/static/css/table.css" rel="stylesheet" type="text/css" />
+		<link href="${pageContext.request.contextPath}/static/css/table.css" rel="stylesheet" type="text/css" />
 		<style>
 			.notice_nav a:nth-child(3) {
 				border-top-right-radius: 0;
