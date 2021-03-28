@@ -6,56 +6,190 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f92c0f84-fc53-49f2-9d66-79ecd4eb121f" name="Default Changelist" comment="">
+    <list default="true" id="f92c0f84-fc53-49f2-9d66-79ecd4eb121f" name="Default Changelist" comment="修改bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/hr-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/hr-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilefirstkindTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilefirstkindTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilesecondkindTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilesecondkindTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilethirdkindTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilethirdkindTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajordesignationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajordesignationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorkindTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorkindTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigpubliccharTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigpubliccharTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.HumanFileTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.HumanFileTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.MajorChangeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.MajorChangeTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandardTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandardTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandarddetailsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandarddetailsTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.UserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.UserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilefirstkindTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilefirstkindTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilesecondkindTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilesecondkindTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilethirdkindTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilethirdkindTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajordesignationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajordesignationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorkindTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorkindTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigpubliccharTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigpubliccharTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.HumanFileTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.HumanFileTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.MajorChangeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.MajorChangeTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandardTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandardTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandarddetailsTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandarddetailsTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.UserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.UserTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-model/target/hr-model-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-model/target/hr-model-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-model/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/chcache.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/BonusMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigfilefirstkindMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigfilesecondkindMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigfilethirdkindMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigmajorMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigmajordesignationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigmajorkindMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigprimarykeyMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigpubliccharMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigquestionfirstkindMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/ConfigquestionsecondkindMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/EngageanswerMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/EngageanswerdetailsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/EngageexamMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/EngageexamdetailsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/EngageinterviewMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/EngagemajorreleaseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/EngageresumeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/EngagesubjectsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/GeneratorSqlmap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/HumanfileMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/HumanfiledigMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/MajorchangeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/RightMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/RoleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/SalarygrantMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/SalarygrantdetailsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/SalarystandardMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/SalarystandarddetailsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/TableMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/TrainingMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/com/kexun/hr/dao/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/conf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/BonusMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigfilefirstkindMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigfilesecondkindMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigfilethirdkindMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigmajorMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigmajordesignationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigmajorkindMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigprimarykeyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigpubliccharMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigquestionfirstkindMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/ConfigquestionsecondkindMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/EngageanswerMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/EngageanswerdetailsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/EngageexamMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/EngageexamdetailsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/EngageinterviewMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/EngagemajorreleaseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/EngageresumeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/EngagesubjectsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/HumanfileMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/HumanfiledigMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/MajorchangeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/RightMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/RoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/SalarygrantMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/SalarygrantdetailsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/SalarystandardMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/SalarystandarddetailsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/TableMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/TrainingMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/spring-mybatis.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/hr-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilefirstkindTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilesecondkindTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilethirdkindTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajordesignationTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorkindTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigpubliccharTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.HumanFileTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.MajorChangeTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandardTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandarddetailsTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.UserTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilefirstkindTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilesecondkindTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilethirdkindTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajordesignationTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorkindTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigpubliccharTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.HumanFileTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.MajorChangeTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandardTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandarddetailsTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.UserTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/ConfigfilefirstkindTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/ConfigfilesecondkindTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/ConfigfilethirdkindTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/ConfigmajorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/ConfigmajordesignationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/ConfigmajorkindTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/ConfigpubliccharTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/HumanFileTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/MajorChangeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/SalarystandardTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/SalarystandarddetailsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/test-classes/com/kexun/hr/dao/UserTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Bonus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configfilefirstkind.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configfilesecondkind.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configfilethirdkind.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configmajor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configmajordesignation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configmajorkind.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configprimarykey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configpublicchar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configquestionfirstkind.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Configquestionsecondkind.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Engageanswer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Engageanswerdetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Engageexam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Engageexamdetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Engageinterview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Engagemajorrelease.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Engageresume.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Engagesubjects.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Humanfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Humanfiledig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Majorchange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Msg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Right.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Salarygrant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Salarygrantdetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Salarystandard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Salarystandarddetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Training.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/classes/com/kexun/hr/model/Users.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/hr-model-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/target/hr-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/target/hr-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/commonality/ConfigpubliccharService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/interview/EngageInterviewService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/manpowerResource/HumanFileService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/organization/ConfigfilefirstkindService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/organization/ConfigfilesecondkindService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/organization/ConfigfilethirdkindService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/position/ConfigmajorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/position/ConfigmajordesignationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/position/ConfigmajorkindService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/position/EngageMajorReleaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/resume/EngageResumeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/salary/SalaryGrantService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/salary/SalaryGrantdetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/salary/SalaryStandardService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/salary/SalarystandarddetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/system/RightService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/system/RoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/system/TableService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/system/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/com/kexun/hr/service/transfer/MajorchangeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/spring-service.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/utils/ExcelUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/utils/PDFUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/utils/RightUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/classes/utils/XMLUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/hr-service-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/AuthorInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/AuthorInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/classes/com/kexun/hr/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/classes/com/kexun/hr/interceptor/LoginInterceptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/classes/com/kexun/hr/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/classes/com/kexun/hr/interceptor/LoginInterceptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-model-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-model-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
@@ -113,6 +247,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -134,6 +269,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1m3wh09QQQSE2h7kLtGSl2pKHVx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -336,7 +474,7 @@
       <workItem from="1608983325052" duration="270000" />
       <workItem from="1610262586368" duration="372000" />
       <workItem from="1616862565083" duration="3377000" />
-      <workItem from="1616899316853" duration="1333000" />
+      <workItem from="1616899316853" duration="3601000" />
     </task>
     <task id="LOCAL-00001">
       <created>1566753239957</created>
@@ -366,7 +504,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610262620693</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改部分已知bug">
+      <created>1616900838302</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616900838302</updated>
+    </task>
+    <task id="LOCAL-00006" summary="项目启动教程">
+      <created>1616901242766</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616901242766</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +526,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改bug" />
+    <MESSAGE value="修改部分已知bug" />
+    <MESSAGE value="项目启动教程" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目启动教程" />
   </component>
   <component name="WindowStateProjectService">
     <state x="480" y="107" key="#Tomcat_Server" timestamp="1616862888569">
@@ -387,37 +541,37 @@
     </state>
     <state x="223" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1608737395916" />
     <state x="297" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1616863648505" />
-    <state x="446" y="20" width="969" height="968" key="CommitChangelistDialog2" timestamp="1616900714305">
+    <state x="446" y="20" width="969" height="968" key="CommitChangelistDialog2" timestamp="1616901241846">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="385" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1608739807746" />
-    <state x="446" y="20" width="969" height="968" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1616900714305" />
+    <state x="446" y="20" width="969" height="968" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1616901241846" />
     <state x="513" y="20" key="CommitChangelistDialog2/0.0.2048.1122@0.0.2048.1122" timestamp="1610262619274" />
     <state x="197" y="200" key="FileChooserDialogImpl" timestamp="1616863949235">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="148" y="150" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1608736590352" />
     <state x="197" y="200" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1616863949235" />
-    <state width="2005" height="353" key="GridCell.Tab.0.bottom" timestamp="1616900719820">
+    <state width="2005" height="353" key="GridCell.Tab.0.bottom" timestamp="1616902281244">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608740226159" />
-    <state width="2005" height="353" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1616900719820" />
-    <state width="2005" height="353" key="GridCell.Tab.0.center" timestamp="1616900719820">
+    <state width="2005" height="353" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1616902281244" />
+    <state width="2005" height="353" key="GridCell.Tab.0.center" timestamp="1616902281244">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1608740226159" />
-    <state width="2005" height="353" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1616900719820" />
-    <state width="2005" height="353" key="GridCell.Tab.0.left" timestamp="1616900719820">
+    <state width="2005" height="353" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1616902281244" />
+    <state width="2005" height="353" key="GridCell.Tab.0.left" timestamp="1616902281243">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1608740226159" />
-    <state width="2005" height="353" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1616900719820" />
-    <state width="2005" height="353" key="GridCell.Tab.0.right" timestamp="1616900719820">
+    <state width="2005" height="353" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1616902281243" />
+    <state width="2005" height="353" key="GridCell.Tab.0.right" timestamp="1616902281244">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1608740226159" />
-    <state width="2005" height="353" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1616900719820" />
+    <state width="2005" height="353" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1616902281244" />
     <state width="1754" height="531" key="GridCell.Tab.1.bottom" timestamp="1616865946503">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -464,14 +618,16 @@
     <state x="272" y="64" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1608983478594" />
     <state x="363" y="85" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1616863952112" />
     <state x="363" y="86" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1610262601706" />
-    <state x="617" y="295" key="Vcs.Push.Dialog.v2" timestamp="1610262630975">
-      <screen x="0" y="0" width="2048" height="1122" />
+    <state x="617" y="292" key="Vcs.Push.Dialog.v2" timestamp="1616901303864">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="617" y="292" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1616901303864" />
     <state x="617" y="295" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1610262630975" />
-    <state x="564" y="337" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608735918487">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="752" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616900873135">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="564" y="337" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1608735918487" />
+    <state x="752" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1616900873135" />
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1608738406648">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

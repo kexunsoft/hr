@@ -1,17 +1,12 @@
 package com.kexun.hr.interceptor;
 
-import java.io.PrintWriter;
-import java.util.HashSet;
-import java.util.List;
+import com.kexun.hr.model.Users;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import com.kexun.hr.model.Right;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-
-import com.kexun.hr.model.Users;
+import java.io.PrintWriter;
 
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 
@@ -41,18 +36,9 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
                 return false;
             } else {
 //                response.sendRedirect("/hr/login");
-
                 PrintWriter out = response.getWriter();
-
-                out.println("  <script>\n" +
-                        "\n" +
-                        "        top.location.href =" + request.getContextPath() + " \"/login\"\n" +
-                        "\n" +
-                        "    </script>");
-
+                out.println("<script>top.location.href ='" + request.getContextPath() + "/login'" + "</script>");
                 out.close();
-
-
                 return false;
             }
         }
