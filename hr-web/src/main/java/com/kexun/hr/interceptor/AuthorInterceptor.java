@@ -2,6 +2,11 @@ package com.kexun.hr.interceptor;
 
 import com.kexun.hr.model.Right;
 import com.kexun.hr.model.Users;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.List;

@@ -44,7 +44,8 @@
                     </a></li>
                     <li class="dropdown user user-menu"><a href="#"
                                                            class="dropdown-toggle" data-toggle="dropdown"> <img
-                            src="${pageContext.request.contextPath}/static/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            src="${pageContext.request.contextPath}/static/img/user2-160x160.jpg" class="user-image"
+                            alt="User Image">
                         <span class="hidden-xs" id="user">administrator</span>
                     </a>
                         <ul class="dropdown-menu pull-right">
@@ -128,6 +129,9 @@
         </div>
     </div>
 </div>
+<script>
+    var kexunBaseUrl = '${pageContext.request.contextPath}';
+</script>
 <script src="${pageContext.request.contextPath}/static/js/jquery/jQuery-2.2.0.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/layer_v2.1/layer/layer.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/bootstrap/js/bootstrap.min.js"></script>

@@ -8,12 +8,108 @@
   <component name="ChangeListManager">
     <list default="true" id="f92c0f84-fc53-49f2-9d66-79ecd4eb121f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/hr-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/hr-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilefirstkindTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilefirstkindTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilesecondkindTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilesecondkindTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilethirdkindTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigfilethirdkindTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajordesignationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajordesignationTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorkindTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigmajorkindTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigpubliccharTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.ConfigpubliccharTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.HumanFileTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.HumanFileTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.MajorChangeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.MajorChangeTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandardTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandardTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandarddetailsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.SalarystandarddetailsTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.UserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/TEST-com.kexun.hr.dao.UserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilefirstkindTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilefirstkindTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilesecondkindTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilesecondkindTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilethirdkindTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigfilethirdkindTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajordesignationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajordesignationTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorkindTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigmajorkindTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigpubliccharTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.ConfigpubliccharTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.HumanFileTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.HumanFileTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.MajorChangeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.MajorChangeTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandardTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandardTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandarddetailsTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.SalarystandarddetailsTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.UserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-dao/target/surefire-reports/com.kexun.hr.dao.UserTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/hr-model-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-model/target/hr-model-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-model/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-model/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/hr-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/target/hr-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/AuthorInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/java/com/kexun/hr/interceptor/AuthorInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/WEB-INF/page/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/src/main/webapp/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/src/main/webapp/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-model-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-model-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/lib/hr-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/WEB-INF/page/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/hr-web-0.0.1-SNAPSHOT/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/surefire-reports/TEST-Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/surefire-reports/TEST-Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/surefire-reports/TEST-Test2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/surefire-reports/TEST-Test2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/surefire-reports/TEST-Test3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/surefire-reports/TEST-Test3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/surefire-reports/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/surefire-reports/Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/surefire-reports/Test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/surefire-reports/Test2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/surefire-reports/Test3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hr-web/target/surefire-reports/Test3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/logs/access_log.2019-08-26" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/addPosition_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/addPosition_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/error_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/error_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/exportExcel_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/exportExcel_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/exportPDF_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/exportPDF_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/exportXML_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/exportXML_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/home_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/home_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/index_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/index_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/login_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/login_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/positions_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/positions_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/renliziyuandangandengji_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/renliziyuandangandengji_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/renliziyuandangandengjichaxun_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/renliziyuandangandengjichaxun_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/roles_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/roles_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/users_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-web/target/tomcat/work/Tomcat/localhost/hr/org/apache/jsp/WEB_002dINF/page/users_jsp.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,9 +124,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\Java\Maven\Repository" />
+        <option name="localRepository" value="F:\Java\Maven\Repository" />
         <option name="mavenHome" value="$PROJECT_DIR$/../../Maven/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="E:\Java\Maven\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="userSettingsFile" value="F:\Java\Maven\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -47,9 +143,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -59,6 +157,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.61" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.61" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="hr-web:war exploded">
@@ -207,6 +306,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.1118421" />
           <treeState>
             <expand>
               <path>
@@ -234,7 +334,9 @@
       <workItem from="1566751275504" duration="1986000" />
       <workItem from="1608735699300" duration="4523000" />
       <workItem from="1608983325052" duration="270000" />
-      <workItem from="1610262586368" duration="16000" />
+      <workItem from="1610262586368" duration="372000" />
+      <workItem from="1616862565083" duration="3377000" />
+      <workItem from="1616899316853" duration="1333000" />
     </task>
     <task id="LOCAL-00001">
       <created>1566753239957</created>
@@ -257,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608739809702</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改bug">
+      <created>1610262620693</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610262620693</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,75 +377,97 @@
     <option name="LAST_COMMIT_MESSAGE" value="修改bug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="360" y="80" key="#Tomcat_Server" timestamp="1608736591810">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="480" y="107" key="#Tomcat_Server" timestamp="1616862888569">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="360" y="80" key="#Tomcat_Server/0.0.1536.834@0.0.1536.834" timestamp="1608736591810" />
-    <state x="223" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608737395916">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="480" y="107" key="#Tomcat_Server/0.0.2048.1112@0.0.2048.1112" timestamp="1616862888569" />
+    <state x="297" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616863648505">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="223" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1608737395916" />
-    <state x="385" y="15" key="CommitChangelistDialog2" timestamp="1608739807746">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="297" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1616863648505" />
+    <state x="446" y="20" width="969" height="968" key="CommitChangelistDialog2" timestamp="1616900714305">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="385" y="15" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1608739807746" />
-    <state x="148" y="150" key="FileChooserDialogImpl" timestamp="1608736590352">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="446" y="20" width="969" height="968" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1616900714305" />
+    <state x="513" y="20" key="CommitChangelistDialog2/0.0.2048.1122@0.0.2048.1122" timestamp="1610262619274" />
+    <state x="197" y="200" key="FileChooserDialogImpl" timestamp="1616863949235">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="148" y="150" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1608736590352" />
-    <state width="1024" height="152" key="GridCell.Tab.0.bottom" timestamp="1608740226159">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="197" y="200" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1616863949235" />
+    <state width="2005" height="353" key="GridCell.Tab.0.bottom" timestamp="1616900719820">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608740226159" />
-    <state width="1024" height="152" key="GridCell.Tab.0.center" timestamp="1608740226159">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="2005" height="353" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1616900719820" />
+    <state width="2005" height="353" key="GridCell.Tab.0.center" timestamp="1616900719820">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1608740226159" />
-    <state width="1024" height="152" key="GridCell.Tab.0.left" timestamp="1608740226159">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="2005" height="353" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1616900719820" />
+    <state width="2005" height="353" key="GridCell.Tab.0.left" timestamp="1616900719820">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1608740226159" />
-    <state width="1024" height="152" key="GridCell.Tab.0.right" timestamp="1608740226159">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="2005" height="353" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1616900719820" />
+    <state width="2005" height="353" key="GridCell.Tab.0.right" timestamp="1616900719820">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1608740226159" />
-    <state width="1024" height="152" key="GridCell.Tab.1.bottom" timestamp="1608740226160">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="2005" height="353" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1616900719820" />
+    <state width="1754" height="531" key="GridCell.Tab.1.bottom" timestamp="1616865946503">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608740226160" />
-    <state width="1024" height="152" key="GridCell.Tab.1.center" timestamp="1608740226160">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1754" height="531" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1616865946503" />
+    <state width="1754" height="531" key="GridCell.Tab.1.center" timestamp="1616865946503">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1608740226160" />
-    <state width="1024" height="152" key="GridCell.Tab.1.left" timestamp="1608740226160">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1754" height="531" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1616865946503" />
+    <state width="1754" height="531" key="GridCell.Tab.1.left" timestamp="1616865946502">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1608740226160" />
-    <state width="1024" height="152" key="GridCell.Tab.1.right" timestamp="1608740226160">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1754" height="531" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1616865946502" />
+    <state width="1754" height="531" key="GridCell.Tab.1.right" timestamp="1616865946503">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1608740226160" />
-    <state width="1024" height="152" key="GridCell.Tab.2.bottom" timestamp="1608740226160">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1754" height="531" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1616865946503" />
+    <state width="1754" height="531" key="GridCell.Tab.2.bottom" timestamp="1616865946503">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608740226160" />
-    <state width="1024" height="152" key="GridCell.Tab.2.center" timestamp="1608740226160">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1754" height="531" key="GridCell.Tab.2.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1616865946503" />
+    <state width="1754" height="531" key="GridCell.Tab.2.center" timestamp="1616865946503">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1608740226160" />
-    <state width="1024" height="152" key="GridCell.Tab.2.left" timestamp="1608740226160">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1754" height="531" key="GridCell.Tab.2.center/0.0.2048.1112@0.0.2048.1112" timestamp="1616865946503" />
+    <state width="1754" height="531" key="GridCell.Tab.2.left" timestamp="1616865946503">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1608740226160" />
-    <state width="1024" height="152" key="GridCell.Tab.2.right" timestamp="1608740226160">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1754" height="531" key="GridCell.Tab.2.left/0.0.2048.1112@0.0.2048.1112" timestamp="1616865946503" />
+    <state width="1754" height="531" key="GridCell.Tab.2.right" timestamp="1616865946503">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1024" height="152" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1608740226160" />
-    <state x="363" y="86" key="SettingsEditor" timestamp="1610262601706">
-      <screen x="0" y="0" width="2048" height="1122" />
+    <state width="1754" height="531" key="GridCell.Tab.2.right/0.0.2048.1112@0.0.2048.1112" timestamp="1616865946503" />
+    <state x="363" y="85" key="SettingsEditor" timestamp="1616863952112">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="272" y="64" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1608983478594" />
+    <state x="363" y="85" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1616863952112" />
     <state x="363" y="86" key="SettingsEditor/0.0.2048.1122@0.0.2048.1122" timestamp="1610262601706" />
+    <state x="617" y="295" key="Vcs.Push.Dialog.v2" timestamp="1610262630975">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="617" y="295" key="Vcs.Push.Dialog.v2/0.0.2048.1122@0.0.2048.1122" timestamp="1610262630975" />
     <state x="564" y="337" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608735918487">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

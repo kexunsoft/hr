@@ -301,7 +301,7 @@
             var data = [];
             $.ajax({
                 type: "get",
-                url: "/right/rights",
+                url: kexunBaseUrl + "/right/rights",
                 async: false,
                 success: function (d) {
                     data = d;
@@ -336,12 +336,12 @@
                                 _html += '<ul class="treeview-menu">';
                                 $.each(subchildNodes, function (i) {
                                     var subchildNodesrow = subchildNodes[i];
-                                    _html += '<li><a class="menuItem" data-id="' + subchildNodesrow.F_ModuleId + '" href="' + subchildNodesrow.F_UrlAddress + '"><i class="' + subchildNodesrow.F_Icon + '"></i>' + subchildNodesrow.F_FullName + '</a></li>';
+                                    _html += '<li><a class="menuItem" data-id="' + subchildNodesrow.F_ModuleId + '" href="' + kexunBaseUrl + subchildNodesrow.F_UrlAddress + '"><i class="' + subchildNodesrow.F_Icon + '"></i>' + subchildNodesrow.F_FullName + '</a></li>';
                                 });
                                 _html += '</ul>';
 
                             } else {
-                                _html += '<a class="menuItem" data-id="' + subrow.F_ModuleId + '" href="' + subrow.F_UrlAddress + '"><i class="' + subrow.F_Icon + '"></i>' + subrow.F_FullName + '</a>';
+                                _html += '<a class="menuItem" data-id="' + subrow.F_ModuleId + '" href="' + kexunBaseUrl + subrow.F_UrlAddress + '"><i class="' + subrow.F_Icon + '"></i>' + subrow.F_FullName + '</a>';
                             }
                             _html += '</li>';
                         });
