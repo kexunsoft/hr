@@ -18,7 +18,7 @@
 
 **此项目未经过市场检验,无法达到商业要求,仅供个人学习钻研如需定制系统,可与我联系**
 
-项目演示地址:	http://demo.kexunsoftware.com/hr/login
+项目演示地址:	http://demo.kexunsoftware.com:8080/hr/login
 账号:lidong  密码:123
 
 ######科讯软件工作室########
