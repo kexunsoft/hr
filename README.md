@@ -21,7 +21,7 @@
 项目演示地址:	http://demo.kexunsoftware.com:8080/hr/login
 账号:lidong  密码:123
 
-
+sql文件获取地址: http://demo.kexunsoftware.com/sql.html
 
 
 
