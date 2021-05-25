@@ -18,8 +18,10 @@
 
 **此项目未经过市场检验,无法达到商业要求,仅供个人学习钻研如需定制系统,可与我联系**
 
-项目演示地址:	http://demo.kexunsoftware.com:8080/hr/login
+项目演示地址:	http://demo.kexunsoftware.com:8080/hr/login  **(若访问报错,可与我联系修复;访问案例地址的时候不要编辑权限因为可能导致系统故障)**
 账号:lidong  密码:123
+
+
 
 sql文件获取地址: http://demo.kexunsoftware.com/sql.html
 
