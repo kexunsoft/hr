@@ -41,7 +41,7 @@
       t1.`deadline`
     FROM
       `engagemajorrelease` t1
-      LEFT JOIN configMajor t2
+      LEFT JOIN configmajor t2
         ON t1.`majorId` = t2.`majorId`
       LEFT JOIN `configfilethirdkind` t3
         ON t1.`thirdKindId` = t3.`thirdKindId` ORDER BY t1.`mreId` DESC
@@ -200,7 +200,7 @@
             ON t2.`secondKindId` = t3.`secondKindId`
           LEFT JOIN `configfilefirstkind` t4
             ON t3.`firstKindId` = t4.`firstKindId`
-          LEFT JOIN configMajor t5
+          LEFT JOIN configmajor t5
             ON t1.`majorId` = t5.`majorId`
           LEFT JOIN `configmajorkind` t6
             ON t5.`majorKindId` = t6.`majorKindId`

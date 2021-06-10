@@ -676,7 +676,7 @@
             ON hf.secondKindId = cfsk.secondKindId
           LEFT JOIN configfilethirdkind cftk
             ON hf.thirdKindId = cftk.thirdKindId
-          LEFT JOIN configMajor cfm
+          LEFT JOIN configmajor cfm
             ON hf.humanMajorId = cfm.majorId
           LEFT JOIN configmajorkind cfjk
             ON cfm.majorKindId = cfjk.majorKindId
@@ -702,7 +702,7 @@
   		select hf.humanId,hf.humanName,hf.humanSex,cffk.firstKindName,cfsk.secondKindName,cftk.thirdKindName,hf.humanProDesignation,cfjk.majorKindName
  		from humanfile hf LEFT JOIN configfilefirstkind cffk on hf.firstKindId=cffk.firstKindId
 		LEFT JOIN configfilesecondkind cfsk on hf.secondKindId=cfsk.secondKindId LEFT JOIN configfilethirdkind cftk on hf.thirdKindId=cftk.thirdKindId
-		LEFT JOIN configMajor cfm on hf.humanMajorId=cfm.majorId LEFT JOIN configmajorkind cfjk on cfm.majorKindId=cfjk.majorKindId
+		LEFT JOIN configmajor cfm on hf.humanMajorId=cfm.majorId LEFT JOIN configmajorkind cfjk on cfm.majorKindId=cfjk.majorKindId
 		where checkStatus=1 and humanFileStatus=1 order by hf.humanId DESC
   	</select>
 

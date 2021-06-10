@@ -8,9 +8,9 @@
         <result column="newThirdKindId" jdbcType="INTEGER" property="newthirdkindid"/>
         <result column="newMajorId" jdbcType="INTEGER" property="newmajorid"/>
         <result column="humanId" jdbcType="VARCHAR" property="humanid"/>
-        <result column="salaryStandardId" jdbcType="VARCHAR" property="salarystandardid"/>
+        <result column="salarystandardId" jdbcType="VARCHAR" property="salarystandardid"/>
         <result column="salarySum" jdbcType="DOUBLE" property="salarysum"/>
-        <result column="newSalaryStandardId" jdbcType="VARCHAR" property="newsalarystandardid"/>
+        <result column="newsalarystandardId" jdbcType="VARCHAR" property="newsalarystandardid"/>
         <result column="newSalarySum" jdbcType="DOUBLE" property="newsalarysum"/>
         <result column="changeReason" jdbcType="VARCHAR" property="changereason"/>
         <result column="checkReason" jdbcType="VARCHAR" property="checkreason"/>
@@ -21,8 +21,8 @@
         <result column="checkTime" jdbcType="DATE" property="checktime"/>
     </resultMap>
     <sql id="Base_Column_List">
-    mchId, thirdKindId, majorId, newThirdKindId, newMajorId, humanId, salaryStandardId, 
-    salarySum, newSalaryStandardId, newSalarySum, changeReason, checkReason, checkStatus, 
+    mchId, thirdKindId, majorId, newThirdKindId, newMajorId, humanId, salarystandardId, 
+    salarySum, newsalarystandardId, newSalarySum, changeReason, checkReason, checkStatus, 
     register, checker, registTime, checkTime
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -38,7 +38,7 @@
     <insert id="insert" parameterType="com.kexun.hr.model.Majorchange">
     insert into majorchange (mchId, thirdKindId, majorId, 
       newThirdKindId, newMajorId, humanId, 
-      salaryStandardId, salarySum, newSalaryStandardId, 
+      salarystandardId, salarySum, newsalarystandardId, 
       newSalarySum, changeReason, checkReason, 
       checkStatus, register, checker, 
       registTime, checkTime)
@@ -71,13 +71,13 @@
                 humanId,
             </if>
             <if test="salarystandardid != null">
-                salaryStandardId,
+                salarystandardId,
             </if>
             <if test="salarysum != null">
                 salarySum,
             </if>
             <if test="newsalarystandardid != null">
-                newSalaryStandardId,
+                newsalarystandardId,
             </if>
             <if test="newsalarysum != null">
                 newSalarySum,
@@ -177,13 +177,13 @@
                 humanId = #{humanid,jdbcType=VARCHAR},
             </if>
             <if test="salarystandardid != null">
-                salaryStandardId = #{salarystandardid,jdbcType=VARCHAR},
+                salarystandardId = #{salarystandardid,jdbcType=VARCHAR},
             </if>
             <if test="salarysum != null">
                 salarySum = #{salarysum,jdbcType=DOUBLE},
             </if>
             <if test="newsalarystandardid != null">
-                newSalaryStandardId = #{newsalarystandardid,jdbcType=VARCHAR},
+                newsalarystandardId = #{newsalarystandardid,jdbcType=VARCHAR},
             </if>
             <if test="newsalarysum != null">
                 newSalarySum = #{newsalarysum,jdbcType=DOUBLE},
@@ -219,9 +219,9 @@
       newThirdKindId = #{newthirdkindid,jdbcType=INTEGER},
       newMajorId = #{newmajorid,jdbcType=INTEGER},
       humanId = #{humanid,jdbcType=VARCHAR},
-      salaryStandardId = #{salarystandardid,jdbcType=VARCHAR},
+      salarystandardId = #{salarystandardid,jdbcType=VARCHAR},
       salarySum = #{salarysum,jdbcType=DOUBLE},
-      newSalaryStandardId = #{newsalarystandardid,jdbcType=VARCHAR},
+      newsalarystandardId = #{newsalarystandardid,jdbcType=VARCHAR},
       newSalarySum = #{newsalarysum,jdbcType=DOUBLE},
       changeReason = #{changereason,jdbcType=VARCHAR},
       checkReason = #{checkreason,jdbcType=VARCHAR},
@@ -253,12 +253,12 @@
         ON hf.secondKindId = cfsk.secondKindId
         LEFT JOIN configfilethirdkind cftk
         ON hf.thirdKindId = cftk.thirdKindId
-        LEFT JOIN configMajor cfm
+        LEFT JOIN configmajor cfm
         ON hf.humanMajorId = cfm.majorId
         LEFT JOIN configmajorkind cfjk
         ON cfm.majorKindId = cfjk.majorKindId
         LEFT JOIN salarystandard ssd
-        ON hf.salaryStandardId = ssd.`standardId`
+        ON hf.salarystandardId = ssd.`standardId`
         <where>
             <if test="firstKindId != null">
                 and hf.firstKindId=#{firstKindId}
@@ -287,21 +287,21 @@
 		LEFT JOIN configfilesecondkind erji on sanji.secondKindId=erji.secondKindId
 		LEFT JOIN configfilefirstkind yiji on erji.firstKindId=yiji.firstKindId
 		LEFT JOIN humanfile hf on mc.humanId=hf.humanId
-		LEFT JOIN salaryStandard ssd on mc.newSalaryStandardId=ssd.standardId
+		LEFT JOIN salarystandard ssd on mc.newsalarystandardId=ssd.standardId
 		where mc.checkStatus=0 GROUP BY mc.mchId DESC
 	</select>
 
     <!-- 根据主键查询单个对象 -->
     <select id="selectByKeyMajorChangeck" parameterType="int" resultType="map">
-		select mc.mchId,mc.humanId,hf.humanName,yiji.firstKindId,erji.secondKindId,mc.newThirdKindId,cfk.majorKindId,mc.newMajorId,mc.newSalaryStandardId,
+		select mc.mchId,mc.humanId,hf.humanName,yiji.firstKindId,erji.secondKindId,mc.newThirdKindId,cfk.majorKindId,mc.newMajorId,mc.newsalarystandardId,
 		mc.newSalarySum,mc.changeReason from majorchange mc
 		LEFT JOIN configfilethirdkind sanji on mc.newThirdKindId=sanji.thirdKindId
 		LEFT JOIN configfilesecondkind erji on sanji.secondKindId=erji.secondKindId
 		LEFT JOIN configfilefirstkind yiji on erji.firstKindId=yiji.firstKindId
 		LEFT JOIN humanfile hf on mc.humanId=hf.humanId
-		LEFT JOIN salaryStandard ssd on mc.newSalaryStandardId=ssd.standardId
+		LEFT JOIN salarystandard ssd on mc.newsalarystandardId=ssd.standardId
 		LEFT JOIN configmajor cf on mc.newMajorId=cf.majorId
-		LEFT JOIN configMajorKind cfk on cf.majorKindId=cfk.majorKindId
+		LEFT JOIN configmajorkind cfk on cf.majorKindId=cfk.majorKindId
 		where mchId=#{mchId}
 	</select>
 
@@ -313,9 +313,9 @@
         LEFT JOIN configfilesecondkind erji on sanji.secondKindId=erji.secondKindId
         LEFT JOIN configfilefirstkind yiji on erji.firstKindId=yiji.firstKindId
         LEFT JOIN humanfile hf on mc.humanId=hf.humanId
-        LEFT JOIN salaryStandard ssd on mc.newSalaryStandardId=ssd.standardId
+        LEFT JOIN salarystandard ssd on mc.newsalarystandardId=ssd.standardId
         LEFT JOIN configmajor cf on mc.newMajorId=cf.majorId
-        LEFT JOIN configMajorKind cfk on cf.majorKindId=cfk.majorKindId
+        LEFT JOIN configmajorkind cfk on cf.majorKindId=cfk.majorKindId
         <where>
             <if test="firstKindId != null">
                 and hf.firstKindId=#{firstKindId}
@@ -360,13 +360,13 @@
 		LEFT JOIN configfilefirstkind yyiji on yerji.firstKindId=yyiji.firstKindId
 		LEFT JOIN configmajor yzwmc on dd.majorId=yzwmc.majorId
 		LEFT JOIN configmajorkind yzwfl on yzwmc.majorKindId=yzwfl.majorKindId
-		LEFT JOIN salarystandard yxcbz on dd.salaryStandardId=yxcbz.standardId
+		LEFT JOIN salarystandard yxcbz on dd.salarystandardId=yxcbz.standardId
 		LEFT JOIN configfilethirdkind sanji on dd.newThirdKindId=sanji.thirdKindId
 		LEFT JOIN configfilesecondkind erji on sanji.secondKindId=erji.secondKindId
 		LEFT JOIN configfilefirstkind yiji on erji.firstKindId=yiji.firstKindId
 		LEFT JOIN configmajor zwmc on dd.newMajorId=zwmc.majorId
 		LEFT JOIN configmajorkind zwfl on zwmc.majorKindId=zwfl.majorKindId
-		LEFT JOIN salarystandard xcbz on xcbz.standardId=dd.newSalaryStandardId
+		LEFT JOIN salarystandard xcbz on xcbz.standardId=dd.newsalarystandardId
 		where dd.mchId=#{mchid}
 	</select>
 </mapper>
