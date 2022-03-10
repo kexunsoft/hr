@@ -16,15 +16,15 @@ java8 maven3 mysql5.x
 
 **项目启动步骤:**
 
-1.将项目导入到开发工具 这里推荐使用idea (eclipse也可以)
-2.配置好idea maven本地仓库及配置文件(入已配置略过此步骤)
-3.配置好maven后 找到hr-parent父项目 先执行clear操作 
-4.导入sql脚本和配置数据库
-1)下载sql脚本 [下载地址](http://demo.kexunsoftware.com/page/sql.html) 使用记事本打开复制到可视化工具或者使用可视化工具直接导入 接下来创建数据库名为hr 执行sql脚本
-2)找到hr-dao>src>main>resources>jdbc.properties 将username,password 修改为自己数据库的用户名和密码
-5.找到启动按钮>Edit Configurations...>点击左上角+找到Tomcat Server 选择Local
-添加成功后在点击Deployment 点击右边的+ 选择第一个Artifact >选择hr-web:war exploded 点击ok>点击右下角的apply>点击ok
-6.点击启动按钮启动项目
+1. 将项目导入到开发工具 这里推荐使用idea (eclipse也可以)
+2. 配置好idea maven本地仓库及配置文件(入已配置略过此步骤)
+3. 配置好maven后 找到hr-parent父项目 先执行clear操作 
+4. 导入sql脚本和配置数据库
+   1)下载sql脚本 [下载地址](http://demo.kexunsoftware.com/page/sql.html) 使用记事本打开复制到可视化工具或者使用可视化工具直接导入 接下来创建数据库名为hr 执行sql脚本
+   2)找到hr-dao>src>main>resources>jdbc.properties 将username,password 修改为自己数据库的用户名和密码
+5. 找到启动按钮>Edit Configurations...>点击左上角+找到Tomcat Server 选择Local
+   添加成功后在点击Deployment 点击右边的+ 选择第一个Artifact >选择hr-web:war exploded 点击ok>点击右下角的apply>点击ok
+6. 点击启动按钮启动项目
 
 启动视频教程: [视频教程](https://v.douyin.com/LW1pbj7/)
 
