@@ -1,39 +1,37 @@
-项目环境: jdk1.8  tomcat8  mysql5.6
+**科讯人力资源管理系统**
+
+项目演示地址:[http://demo.kexunsoftware.com/login](http://demo.kexunsoftware.com/login)
+账号:lidong 密码:123
+**注:若访问报错或者无法访问,可与我联系修复**
+微信:kexunsoftware QQ:3275208135
+
+
+**项目使用到的技术及项目运行环境**
+
+**主要技术:**
+java spring mybatis mysql jsp layui ajax
+
+**运行环境:**
+java8 maven3 mysql5.x
 
 **项目启动步骤:**
 
-1.配置好maven参考
+1.将项目导入到开发工具 这里推荐使用idea (eclipse也可以)
+2.配置好idea maven本地仓库及配置文件(入已配置略过此步骤)
+3.配置好maven后 找到hr-parent父项目 先执行clear操作 
+4.导入sql脚本和配置数据库
+1)下载sql脚本 [下载地址](http://demo.kexunsoftware.com/page/sql.html) 使用记事本打开复制到可视化工具或者使用可视化工具直接导入 接下来创建数据库名为hr 执行sql脚本
+2)找到hr-dao>src>main>resources>jdbc.properties 将username,password 修改为自己数据库的用户名和密码
+5.找到启动按钮>Edit Configurations...>点击左上角+找到Tomcat Server 选择Local
+添加成功后在点击Deployment 点击右边的+ 选择第一个Artifact >选择hr-web:war exploded 点击ok>点击右下角的apply>点击ok
+6.点击启动按钮启动项目
 
-2.对hr-parent 执行 mvn install
+启动视频教程: [视频教程](https://v.douyin.com/LW1pbj7/)
 
-3.对hr-web进行打包
-
-注:
-
-打包hr-web 修改war包为 hr.war 放到tomcat内
-
-也可以使用idea导入tomcat也可启动
-
-项目访问:后面必须跟上/hr   可自行修改
-
-**本系统仅供研究学习使用,商用请联系客服获取商业版源码**
-
-项目演示地址:	http://demo.kexunsoftware.com/login  **(若访问报错,可与我联系修复;访问案例地址的时候不要编辑权限因为可能导致系统故障)**
-账号:lidong  密码:123
+注意:如启动不了可能是端口占用,可到启动配置里面修改端口
 
 
 
-sql文件获取地址: http://demo.kexunsoftware.com/page/sql.html
 
 
-######科讯软件工作室########
-
-##餐饮外卖商城系统定制##
-
-##软件定制开发 ##
-微信小程序       APP开发 
-H5开发          web网站开发
-企业管理系统    自动化办公系统
-
-微信:kexunsoftware    QQ:3275208135
 
