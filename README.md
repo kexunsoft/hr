@@ -30,7 +30,7 @@ java8 maven3 mysql5.x
 启动视频教程: [视频教程](https://v.douyin.com/LW1pbj7/)
 
 关注公众号 回复: hr  获取sql脚本文件
-
+![http://demo.kexunsoftware.com/image/wxcode.png](http://demo.kexunsoftware.com/image/wxcode.png)
 
 
 
