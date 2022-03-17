@@ -25,7 +25,7 @@ java8 maven3 mysql5.x
    添加成功后在点击Deployment 点击右边的+ 选择第一个Artifact >选择hr-web:war exploded 点击ok>点击右下角的apply>点击ok
 7. 点击启动按钮启动项目
 
-sql获取地址:http://demo.kexunsoftware.com/page/sql.html
+sql获取地址:http://www.kexunsoftware.com/#/productDetail/1fcb5e618a87b911ff0f79a7a8be3459
 
 > 注意:如启动不了可能是端口占用,可到启动配置里面修改端口
 
